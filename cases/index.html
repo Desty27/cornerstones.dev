@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CornerStones | Case Studies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=Inconsolata:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-highest": "#36352b",
+                      "secondary": "#8bd79b",
+                      "primary": "#ffffff",
+                      "silver": "#a0a0a0",
+                      "secondary-fixed-dim": "#8bd79b",
+                      "on-primary-container": "#666900",
+                      "surface-container-low": "#1c1c13",
+                      "primary-fixed-dim": "#c9ce3c",
+                      "forest-green": "#166534",
+                      "olive-dark": "#161600",
+                      "error-container": "#93000a",
+                      "on-secondary-fixed-variant": "#005226",
+                      "tertiary": "#ffffff",
+                      "on-primary": "#313300",
+                      "dark-forest": "#14572f",
+                      "secondary-container": "#005829",
+                      "primary-fixed": "#e5ea57",
+                      "on-secondary-container": "#81cc90",
+                      "charcoal": "rgba(65, 65, 65, 0.8)",
+                      "inverse-surface": "#e5e3d3",
+                      "surface-container": "#202016",
+                      "surface-container-lowest": "#0e0f06",
+                      "surface-dim": "#14140b",
+                      "border-olive": "#4f5100",
+                      "on-tertiary": "#173537",
+                      "inverse-on-surface": "#313126",
+                      "primary-container": "#e5ea57",
+                      "on-secondary-fixed": "#00210b",
+                      "error": "#ffb4ab",
+                      "on-surface-variant": "#c9c8af",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-container": "#c9e8ea",
+                      "neon-volt": "#faff69",
+                      "tertiary-fixed-dim": "#adccce",
+                      "deep-charcoal": "#343434",
+                      "outline-variant": "#484835",
+                      "surface-variant": "#36352b",
+                      "on-tertiary-fixed": "#002022",
+                      "hover-gray": "#3a3a3a",
+                      "on-primary-fixed": "#1c1d00",
+                      "tertiary-fixed": "#c9e8ea",
+                      "surface": "#14140b",
+                      "outline": "#93927c",
+                      "on-surface": "#e5e3d3",
+                      "inverse-primary": "#5f6200",
+                      "surface-container-high": "#2b2b20",
+                      "secondary-fixed": "#a6f4b5",
+                      "on-secondary": "#003918",
+                      "near-black": "#141414",
+                      "on-tertiary-container": "#4c696b",
+                      "on-primary-fixed-variant": "#484a00",
+                      "on-background": "#e5e3d3",
+                      "surface-tint": "#c9ce3c",
+                      "background": "#14140b",
+                      "pure-black": "#000000",
+                      "surface-bright": "#3a3a2f",
+                      "on-error": "#690005",
+                      "pale-yellow": "#f4f692",
+                      "on-tertiary-fixed-variant": "#2f4b4d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "xs": "4px",
+                      "container-max": "2200px",
+                      "md": "24px",
+                      "base": "8px",
+                      "lg": "48px",
+                      "xl": "64px",
+                      "sm": "12px"
+              },
+              "fontFamily": {
+                      "display-hero": ["Inter", "sans-serif"],
+                      "body-standard": ["Inter", "sans-serif"],
+                      "feature-heading": ["Arial", "sans-serif"],
+                      "body-large": ["Inter", "sans-serif"],
+                      "uppercase-label": ["Inter", "sans-serif"],
+                      "code-block": ["Inconsolata", "monospace"],
+                      "display-mega": ["Inter", "sans-serif"],
+                      "sub-heading": ["Inter", "sans-serif"]
+              },
+              "fontSize": {
+                      "display-hero": ["72px", { "lineHeight": "1.0", "letterSpacing": "normal", "fontWeight": "700" }],
+                      "body-standard": ["16px", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "400" }],
+                      "feature-heading": ["36px", { "lineHeight": "1.3", "letterSpacing": "normal", "fontWeight": "600" }],
+                      "body-large": ["18px", { "lineHeight": "1.56", "letterSpacing": "normal", "fontWeight": "400" }],
+                      "uppercase-label": ["14px", { "lineHeight": "1.43", "letterSpacing": "1.4px", "fontWeight": "600" }],
+                      "code-block": ["16px", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "600" }],
+                      "display-mega": ["96px", { "lineHeight": "1.0", "letterSpacing": "normal", "fontWeight": "900" }],
+                      "sub-heading": ["24px", { "lineHeight": "1.2", "letterSpacing": "normal", "fontWeight": "700" }]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        /* Base Dark Void Setup */
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Custom Utilities for specifically required effects */
+        .inset-active:active {
+            box-shadow: 0px 4px 25px rgba(0,0,0,0.14) inset;
+        }
+        
+        .border-charcoal-custom {
+            border: 1px solid rgba(65, 65, 65, 0.8);
+        }
+        
+        /* Hide scrollbar for clean horizontal scrolls if needed */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-pure-black min-h-screen flex flex-col overflow-y-scroll">
+<!-- TopAppBar -->
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md shadow-[0_4_25px_rgba(0,0,0,0.14)_inset] border-b border-white/10">
+<div class="flex justify-between items-center px-8 py-4 max-w-[2200px] mx-auto">
+<a href="../" class="flex items-center gap-2 text-2xl font-black italic tracking-tighter text-white">
+<img class="h-8 w-auto" src="../assets/logo-dark.svg" alt="CornerStones logo">
+<span>CornerStones</span>
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../">Home</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../services/">Services</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../squad/">Squads</a>
+<a class="font-uppercase-label text-uppercase-label text-[#faff69] border-b-2 border-[#faff69] pb-1 hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../cases/">Case Studies</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../pricing/">Pricing</a>
+</div>
+<button class="bg-[#faff69] text-[#141414] font-uppercase-label text-uppercase-label px-4 py-2 rounded-DEFAULT hover:bg-white transition-all active:scale-95 hidden md:block">Deploy Now</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-white hover:text-[#faff69]">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-32 pb-xl px-8 md:px-lg max-w-container-max mx-auto w-full">
+<!-- Hero Section -->
+<section class="mb-xl max-w-4xl">
+<h1 class="font-display-hero text-display-hero text-primary mb-6">PROVEN MASS.</h1>
+<p class="font-body-large text-body-large text-silver max-w-2xl">
+                We deploy terminal-grade architecture for enterprises requiring extreme speed and raw power. Review our operational payload across finance, AI, and fintech sectors.
+            </p>
+</section>
+<!-- Trust Bar -->
+<section class="mb-xl border-y border-charcoal-custom py-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 bg-surface-dim px-8 rounded">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-neon-volt text-3xl" style="font-variation-settings: 'FILL' 1;">public</span>
+<div>
+<div class="font-uppercase-label text-uppercase-label text-silver">Global Infrastructure</div>
+<div class="font-sub-heading text-sub-heading text-primary">Deployed in 14+ Regions</div>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-neon-volt text-3xl" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div>
+<div class="font-uppercase-label text-uppercase-label text-silver">Security Protocol</div>
+<div class="font-sub-heading text-sub-heading text-primary">SOC2 Type II Verified</div>
+</div>
+</div>
+<div class="flex items-center space-x-4">
+<div class="flex space-x-1">
+<span class="material-symbols-outlined text-neon-volt" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-neon-volt" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-neon-volt" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-neon-volt" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-neon-volt" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div>
+<div class="font-uppercase-label text-uppercase-label text-silver">Enterprise Trust</div>
+<div class="font-sub-heading text-sub-heading text-primary">99.9% Positive Outcomes</div>
+</div>
+</div>
+</section>
+<!-- Case Studies Bento Grid -->
+<section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Card 1: Sentinel -->
+<a class="group block bg-near-black border-charcoal-custom hover:border-neon-volt rounded transition-colors duration-200 p-8 flex flex-col justify-between min-h-[400px] inset-active relative overflow-hidden" href="../case_rag/">
+<!-- Decorative Graphic -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-[url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;q=80&amp;w=800')] bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity mix-blend-luminosity" data-alt="abstract digital data flow matrix visualization in deep green and black tones"></div>
+<div class="z-10">
+<div class="flex justify-between items-start mb-12">
+<span class="font-uppercase-label text-uppercase-label text-silver border border-silver px-3 py-1 rounded">Finance RAG</span>
+<span class="material-symbols-outlined text-silver group-hover:text-neon-volt transition-colors">arrow_outward</span>
+</div>
+<h2 class="font-feature-heading text-feature-heading text-primary mb-4">Project Sentinel</h2>
+<div class="font-code-block text-code-block text-neon-volt mb-2">&gt; DIAGNOSTIC_LOG:</div>
+<p class="font-body-standard text-body-standard text-silver max-w-md">
+                        Legacy systems caused critical delays in unstructured document retrieval, crippling analyst throughput during peak trading hours.
+                    </p>
+</div>
+<div class="z-10 mt-12">
+<div class="font-uppercase-label text-uppercase-label text-silver mb-2">Performance Delta</div>
+<div class="font-display-mega text-display-mega text-neon-volt tracking-tighter">85%</div>
+<div class="font-sub-heading text-sub-heading text-primary mt-2">Faster Analysis Validation</div>
+</div>
+</a>
+<!-- Card 2: Catalyst -->
+<a class="group block bg-near-black border-charcoal-custom hover:border-neon-volt rounded transition-colors duration-200 p-8 flex flex-col justify-between min-h-[400px] inset-active relative overflow-hidden" href="../case_catalyst/">
+<div class="absolute bottom-0 right-0 w-full h-1/2 bg-gradient-to-t from-[#141414] to-transparent z-0"></div>
+<div class="absolute top-0 left-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1620825937374-87fc7d628301?auto=format&amp;fit=crop&amp;q=80&amp;w=800')] bg-cover bg-center opacity-5 group-hover:opacity-10 transition-opacity mix-blend-screen" data-alt="abstract glowing neon lines simulating neural network activity against absolute black void"></div>
+<div class="z-10">
+<div class="flex justify-between items-start mb-12">
+<span class="font-uppercase-label text-uppercase-label text-silver border border-silver px-3 py-1 rounded">AI Support</span>
+<span class="material-symbols-outlined text-silver group-hover:text-neon-volt transition-colors">arrow_outward</span>
+</div>
+<h2 class="font-feature-heading text-feature-heading text-primary mb-4">Project Catalyst</h2>
+<div class="font-code-block text-code-block text-neon-volt mb-2">&gt; DIAGNOSTIC_LOG:</div>
+<p class="font-body-standard text-body-standard text-silver max-w-md">
+                        Exponential volume growth overwhelmed tier-1 human agents, resulting in unmanageable resolution times and collapsing CSAT scores.
+                    </p>
+</div>
+<div class="z-10 mt-12">
+<div class="font-uppercase-label text-uppercase-label text-silver mb-2">Automation Impact</div>
+<div class="font-display-mega text-display-mega text-neon-volt tracking-tighter">60%</div>
+<div class="font-sub-heading text-sub-heading text-primary mt-2">Autonomous Deflection Rate</div>
+</div>
+</a>
+<!-- Card 3: Velocity -->
+<a class="group block bg-near-black border-charcoal-custom hover:border-neon-volt rounded transition-colors duration-200 p-8 flex flex-col justify-between min-h-[400px] inset-active lg:col-span-2 relative overflow-hidden" href="../case_velocity/">
+<div class="absolute right-0 top-0 w-1/2 h-full bg-[url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&amp;fit=crop&amp;q=80&amp;w=1200')] bg-cover bg-center opacity-10 group-hover:opacity-20 transition-opacity mix-blend-luminosity mask-image:linear-gradient(to_left,black,transparent)" data-alt="high contrast macro shot of server rack motherboard microchips illuminated by harsh single source light"></div>
+<div class="z-10 w-full lg:w-1/2">
+<div class="flex justify-between items-start mb-12 lg:hidden">
+<span class="font-uppercase-label text-uppercase-label text-silver border border-silver px-3 py-1 rounded">Fintech</span>
+<span class="material-symbols-outlined text-silver group-hover:text-neon-volt transition-colors">arrow_outward</span>
+</div>
+<div class="hidden lg:flex items-center space-x-4 mb-12">
+<span class="font-uppercase-label text-uppercase-label text-silver border border-silver px-3 py-1 rounded">Fintech Scalability</span>
+</div>
+<h2 class="font-feature-heading text-feature-heading text-primary mb-4">Project Velocity</h2>
+<div class="font-code-block text-code-block text-neon-volt mb-2">&gt; DIAGNOSTIC_LOG:</div>
+<p class="font-body-standard text-body-standard text-silver max-w-md mb-8">
+                        Database deadlocks and severe system bottlenecks occurred predictably during high-volume micro-transaction surges, risking data integrity.
+                    </p>
+</div>
+<div class="z-10 flex flex-col lg:flex-row lg:items-end justify-between w-full mt-auto">
+<div>
+<div class="font-uppercase-label text-uppercase-label text-silver mb-2">Capacity Multiplier</div>
+<div class="font-display-mega text-display-mega text-neon-volt tracking-tighter">10x</div>
+<div class="font-sub-heading text-sub-heading text-primary mt-2">Peak Throughput Achieved</div>
+</div>
+<div class="hidden lg:block">
+<span class="material-symbols-outlined text-4xl text-silver group-hover:text-neon-volt transition-colors">arrow_outward</span>
+</div>
+</div>
+</a>
+<!-- Card 4: Apex -->
+<a class="group block bg-surface-dim border-charcoal-custom hover:border-neon-volt rounded transition-colors duration-200 p-8 flex flex-col justify-between min-h-[400px] inset-active lg:col-span-2 relative overflow-hidden" href="../case_apex/">
+<div class="z-10 flex flex-col md:flex-row justify-between w-full h-full gap-8">
+<div class="flex-1 flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-12">
+<span class="font-uppercase-label text-uppercase-label text-silver border border-silver px-3 py-1 rounded">Predictive Retail</span>
+</div>
+<h2 class="font-feature-heading text-feature-heading text-primary mb-4">Project Apex</h2>
+<div class="font-code-block text-code-block text-neon-volt mb-2">&gt; DIAGNOSTIC_LOG:</div>
+<p class="font-body-standard text-body-standard text-silver max-w-md">
+                                Historical-only data models led to highly inaccurate inventory forecasting, resulting in massive capital tie-up in dead stock across regional hubs.
+                            </p>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-end md:items-end md:text-right border-t md:border-t-0 md:border-l border-charcoal-custom pt-8 md:pt-0 md:pl-8">
+<div class="w-full md:w-auto">
+<div class="font-uppercase-label text-uppercase-label text-silver mb-2">Financial Impact</div>
+<div class="font-display-mega text-display-mega text-neon-volt tracking-tighter">+22%</div>
+<div class="font-sub-heading text-sub-heading text-primary mt-2">Gross Margin Increase</div>
+</div>
+<div class="mt-8 flex justify-end w-full">
+<span class="material-symbols-outlined text-4xl text-silver group-hover:text-neon-volt transition-colors">arrow_outward</span>
+</div>
+</div>
+</div>
+</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6 max-w-[2200px] mx-auto bg-black border-t border-zinc-800 mt-xl">
+<div class="flex items-center gap-2 text-xl font-black text-white mb-4">
+<img class="h-8 w-auto" src="../assets/logo-dark.svg" alt="CornerStones logo">
+<span>CornerStones</span>
+</div>
+<div class="flex flex-wrap gap-6 justify-center">
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">GDPR_COMPLIANT</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">ISO_27001</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">PRIVACY_POLICY</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">GITHUB</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">LINKEDIN</a>
+</div>
+<div class="font-inter text-[10px] tracking-widest uppercase font-bold text-[#faff69]">
+            © 2026 CornerStones. ALL SYSTEMS NOMINAL.
+        </div>
+</footer>
+</body></html>

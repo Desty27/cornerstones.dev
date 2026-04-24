@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <rect width="120" height="120" rx="20" fill="#F3EAF8"/>
+  <circle cx="60" cy="44" r="28" fill="#8C5AF7"/>
+  <text x="60" y="78" font-family="Manrope, Arial, sans-serif" font-size="28" fill="#2B0F5A" font-weight="700" text-anchor="middle">SM</text>
+</svg>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CornerStones | Case Study</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=Inconsolata:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#36352b",
+                        "secondary": "#8bd79b",
+                        "primary": "#ffffff",
+                        "silver": "#a0a0a0",
+                        "secondary-fixed-dim": "#8bd79b",
+                        "on-primary-container": "#666900",
+                        "surface-container-low": "#1c1c13",
+                        "primary-fixed-dim": "#c9ce3c",
+                        "forest-green": "#166534",
+                        "olive-dark": "#161600",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#005226",
+                        "tertiary": "#ffffff",
+                        "on-primary": "#313300",
+                        "dark-forest": "#14572f",
+                        "secondary-container": "#005829",
+                        "primary-fixed": "#e5ea57",
+                        "on-secondary-container": "#81cc90",
+                        "charcoal": "rgba(65, 65, 65, 0.8)",
+                        "inverse-surface": "#e5e3d3",
+                        "surface-container": "#202016",
+                        "surface-container-lowest": "#0e0f06",
+                        "surface-dim": "#14140b",
+                        "border-olive": "#4f5100",
+                        "on-tertiary": "#173537",
+                        "inverse-on-surface": "#313126",
+                        "primary-container": "#e5ea57",
+                        "on-secondary-fixed": "#00210b",
+                        "error": "#ffb4ab",
+                        "on-surface-variant": "#c9c8af",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#c9e8ea",
+                        "neon-volt": "#faff69",
+                        "tertiary-fixed-dim": "#adccce",
+                        "deep-charcoal": "#343434",
+                        "outline-variant": "#484835",
+                        "surface-variant": "#36352b",
+                        "on-tertiary-fixed": "#002022",
+                        "hover-gray": "#3a3a3a",
+                        "on-primary-fixed": "#1c1d00",
+                        "tertiary-fixed": "#c9e8ea",
+                        "surface": "#14140b",
+                        "outline": "#93927c",
+                        "on-surface": "#e5e3d3",
+                        "inverse-primary": "#5f6200",
+                        "surface-container-high": "#2b2b20",
+                        "secondary-fixed": "#a6f4b5",
+                        "on-secondary": "#003918",
+                        "near-black": "#141414",
+                        "on-tertiary-container": "#4c696b",
+                        "on-primary-fixed-variant": "#484a00",
+                        "on-background": "#e5e3d3",
+                        "surface-tint": "#c9ce3c",
+                        "background": "#14140b",
+                        "pure-black": "#000000",
+                        "surface-bright": "#3a3a2f",
+                        "on-error": "#690005",
+                        "pale-yellow": "#f4f692",
+                        "on-tertiary-fixed-variant": "#2f4b4d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xs": "4px",
+                        "container-max": "2200px",
+                        "md": "24px",
+                        "base": "8px",
+                        "lg": "48px",
+                        "xl": "64px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "display-hero": ["Inter", "sans-serif"],
+                        "body-standard": ["Inter", "sans-serif"],
+                        "feature-heading": ["Inter", "sans-serif"],
+                        "body-large": ["Inter", "sans-serif"],
+                        "uppercase-label": ["Inter", "sans-serif"],
+                        "code-block": ["Inconsolata", "monospace"],
+                        "display-mega": ["Inter", "sans-serif"],
+                        "sub-heading": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "display-hero": ["72px", { "lineHeight": "1.0", "letterSpacing": "normal", "fontWeight": "700" }],
+                        "body-standard": ["16px", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "400" }],
+                        "feature-heading": ["36px", { "lineHeight": "1.3", "letterSpacing": "normal", "fontWeight": "600" }],
+                        "body-large": ["18px", { "lineHeight": "1.56", "letterSpacing": "normal", "fontWeight": "400" }],
+                        "uppercase-label": ["14px", { "lineHeight": "1.43", "letterSpacing": "1.4px", "fontWeight": "600" }],
+                        "code-block": ["16px", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "600" }],
+                        "display-mega": ["96px", { "lineHeight": "1.0", "letterSpacing": "normal", "fontWeight": "900" }],
+                        "sub-heading": ["24px", { "lineHeight": "1.2", "letterSpacing": "normal", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: theme('colors.pure-black'); color: theme('colors.primary'); }
+        .inset-shadow { box-shadow: 0px 4px 25px rgba(0,0,0,0.14) inset; }
+        .glass-panel { background: rgba(20, 20, 20, 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid theme('colors.charcoal'); }
+    </style>
+</head>
+<body class="font-body-standard text-body-standard bg-pure-black text-primary overflow-x-hidden pt-24 overflow-y-scroll">
+<!-- TopAppBar -->
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md shadow-[0_4_25px_rgba(0,0,0,0.14)_inset] border-b border-white/10">
+<div class="flex justify-between items-center px-8 py-4 max-w-[2200px] mx-auto">
+<a href="../" class="flex items-center gap-2 text-2xl font-black italic tracking-tighter text-white">
+<img class="h-8 w-auto" src="../assets/logo-dark.svg" alt="CornerStones logo">
+<span>CornerStones</span>
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../">Home</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../services/">Services</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../squad/">Squads</a>
+<a class="font-uppercase-label text-uppercase-label text-[#faff69] border-b-2 border-[#faff69] pb-1 hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../cases/">Case Studies</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../pricing/">Pricing</a>
+</div>
+<button class="bg-[#faff69] text-[#141414] font-uppercase-label text-uppercase-label px-4 py-2 rounded-DEFAULT hover:bg-white transition-all active:scale-95 hidden md:block">Deploy Now</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-white hover:text-[#faff69]">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Case Studies Navigation -->
+<section class="max-w-[2200px] mx-auto px-8 pt-32 pb-4">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-zinc-800 pb-4">
+        <a href="../cases/" class="flex items-center gap-2 text-silver hover:text-[#faff69] transition-colors font-uppercase-label text-uppercase-label text-xs">
+            <span class="material-symbols-outlined text-sm">arrow_back</span>
+            Back to All Case Studies
+        </a>
+        <div class="flex flex-wrap gap-4 font-uppercase-label text-uppercase-label text-xs">
+            <span class="text-zinc-500">Explore:</span>
+            <a href="../case_velocity/" class="text-silver hover:text-white transition-colors">Velocity</a>
+            <a href="../case_apex/" class="text-silver hover:text-white transition-colors">Apex</a>
+            <a href="../case_catalyst/" class="text-silver hover:text-white transition-colors">Catalyst</a>
+            <a href="../case_rag/" class="text-silver hover:text-white transition-colors">Sentinel</a>
+        </div>
+    </div>
+</section>
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-8 md:px-12 py-xl">
+<div class="flex flex-col gap-8">
+<div class="inline-flex items-center gap-2 border border-neon-volt bg-olive-dark px-4 py-2 rounded w-fit">
+<span class="material-symbols-outlined text-neon-volt text-sm">rocket_launch</span>
+<span class="font-uppercase-label text-uppercase-label text-neon-volt">CASE STUDY // FINTECH</span>
+</div>
+<h1 class="font-display-hero text-display-hero max-w-4xl tracking-tighter">PROJECT VELOCITY: MONOLITH-TO-MICROSERVICES DECOUPLING</h1>
+<p class="font-body-large text-body-large text-silver max-w-2xl">
+                Re-architecting a legacy high-volume financial engine for zero-downtime scalability and sub-millisecond perceived latency.
+            </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-lg">
+<!-- Squad Box -->
+<div class="p-6 border border-charcoal rounded-lg bg-surface-container-low flex flex-col gap-4">
+<span class="font-uppercase-label text-uppercase-label text-silver">DEPLOYMENT SQUAD</span>
+<ul class="flex flex-col gap-2">
+<li class="flex items-center gap-3">
+<img alt="Emily Chen portrait" class="w-10 h-10 rounded-full border border-charcoal grayscale" data-alt="Black and white professional headshot of an Asian woman in tech" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEfxasXXaHK8q14lPB0QtWKPCEQRN0d7UVwg8ApiRTD9HRylNEU5eS-JOn0Uq7-CcLEnVwE2vCBOf8XO_0bGveIuIThvPyA_kIRi0yBiR8Cuu5nH8Zdw3uP6WYmT6lSv9LMVkn6Bd8OATI0RFNEjJwAhnTHJO--Vipge6AIq33zJ4alEf7-7Sntt8RCj9z7XQR6WRGJyEOJN5g3-WPLeWfYfArTR630xv9xI0wQZxR3Ipw57P__xeU-tCqKU8kYahNaVLjuyy1t7Bj"/>
+<div>
+<div class="font-bold">Emily Chen</div>
+<div class="text-sm text-silver">Lead Architect</div>
+</div>
+</li>
+<li class="flex items-center gap-3">
+<img alt="Rajesh Kumar portrait" class="w-10 h-10 rounded-full border border-charcoal grayscale" data-alt="Black and white professional headshot of a South Asian man in tech" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAf_Rm5CRWXAAKA4q0V502YxnKEgBYddCNUqFy2ZibDGY7cpofiiQmOuLR_tig7Fq-AppxQWI1AAAi6S9EKZpRO3kFlE2ByUiL86J9PtlYEEopvy0acuXJJwLnUi5dQd8wnoCtjLsfjNbSh7Wy9UUrpz5UlKJIcL6MA5MrDpED0ons461kXWvuturMp4b4LM2RzPHQvPnNRTPucbzEIMQV9EfFZZFfQ9ku85QXk0qEoRXb14QE6i6-7V3EzE6Hr-WNkk5auh0fsawvh"/>
+<div>
+<div class="font-bold">Rajesh Kumar</div>
+<div class="text-sm text-silver">Backend Eng</div>
+</div>
+</li>
+<li class="flex items-center gap-3">
+<img alt="Priya Sharma portrait" class="w-10 h-10 rounded-full border border-charcoal grayscale" data-alt="Black and white professional headshot of a South Asian woman in tech" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPym9632MsBuuQr9XcZ_iFugcdkI5B8YGCT1JKsFTIq8ZKgUXe0JAEs_yRH2gFd7kkH1Vc98C2sboAmACcWbHW2RF0DXq_dCQ02cNSgL6nsNwwtz_8gLO8zkq-b7oHFe4CoO492SxILM1uBo8cmzZL2aWfVpcgoSIWVjxF2zQqhBke3VO-qC6DFJ2b7YCN5R9kfE_abco1mkTmJjYmp0NbI_ZEibErNY50F9AF_-iAmRcfdqiaulewCfV89yryLXM8wlK6Jc5-_Tj2"/>
+<div>
+<div class="font-bold">Priya Sharma</div>
+<div class="text-sm text-silver">DevOps</div>
+</div>
+</li>
+</ul>
+</div>
+<!-- Business Pain -->
+<div class="p-6 border border-error-container rounded-lg bg-surface-container-low flex flex-col gap-4">
+<span class="font-uppercase-label text-uppercase-label text-error">PRE-MIGRATION STATE</span>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-error text-4xl">timer</span>
+<div class="font-sub-heading text-sub-heading">4s Page Loads</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-error text-4xl">trending_down</span>
+<div class="font-sub-heading text-sub-heading">30% Drop-off</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-error text-4xl">gpp_bad</span>
+<div class="font-sub-heading text-sub-heading">Downtime Req.</div>
+</div>
+</div>
+<!-- Impact -->
+<div class="p-6 border border-neon-volt rounded-lg bg-surface-container-low flex flex-col justify-between">
+<span class="font-uppercase-label text-uppercase-label text-neon-volt">POST-MIGRATION IMPACT</span>
+<div class="flex flex-col gap-1">
+<div class="font-display-mega text-display-mega text-neon-volt">0<span class="text-4xl">ms</span></div>
+<div class="font-sub-heading text-sub-heading text-white">Perceived Latency</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Architecture & Bento Grid -->
+<section class="max-w-container-max mx-auto px-8 md:px-12 py-xl bg-surface-dim">
+<h2 class="font-feature-heading text-feature-heading mb-12 border-l-4 border-neon-volt pl-4">ARCHITECTURE &amp; EXECUTION</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6">
+<!-- Large Main Architecture Card -->
+<div class="md:col-span-3 md:row-span-2 glass-panel rounded-xl p-8 relative overflow-hidden group">
+<div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&amp;fit=crop&amp;q=80')] bg-cover bg-center opacity-20 mix-blend-luminosity z-0" data-alt="Abstract glowing circuit board pattern representing data flow and servers"></div>
+<div class="relative z-10 flex flex-col h-full justify-between">
+<div class="flex justify-between items-start">
+<span class="font-uppercase-label text-uppercase-label text-neon-volt bg-black/50 px-3 py-1 rounded border border-neon-volt/30">STRANGLER FIG MIGRATION</span>
+<span class="material-symbols-outlined text-silver">account_tree</span>
+</div>
+<div class="mt-8 mb-12">
+<h3 class="font-sub-heading text-sub-heading mb-4">Zero-Downtime Transition</h3>
+<p class="font-body-standard text-body-standard text-silver max-w-xl">
+                            We implemented a Strangler Fig pattern to systematically decouple the monolithic legacy system. By routing traffic intelligently at the edge, new microservices slowly replaced legacy endpoints without end-user disruption.
+                        </p>
+</div>
+<!-- Flow Diagram Representation -->
+<div class="grid grid-cols-3 gap-4 border border-charcoal bg-black/80 p-6 rounded-lg backdrop-blur-md">
+<div class="flex flex-col items-center gap-2 text-center">
+<span class="material-symbols-outlined text-silver text-3xl">public</span>
+<span class="font-uppercase-label text-uppercase-label text-xs text-silver">EDGE ROUTING</span>
+</div>
+<div class="flex flex-col justify-center items-center gap-2">
+<div class="w-full h-px bg-neon-volt relative">
+<div class="absolute right-0 -top-1 w-2 h-2 bg-neon-volt rounded-full"></div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="border border-neon-volt bg-surface-container-high p-3 rounded text-center">
+<span class="font-code-block text-code-block text-neon-volt text-sm">Next.js (Vercel)</span>
+</div>
+<div class="border border-charcoal bg-surface-container-high p-3 rounded text-center opacity-50">
+<span class="font-code-block text-code-block text-silver text-sm">Legacy PHP</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Tech Stack -->
+<div class="md:col-span-1 border border-charcoal bg-surface-container-low rounded-xl p-6 flex flex-col gap-6">
+<span class="font-uppercase-label text-uppercase-label text-silver">THE STACK</span>
+<div class="flex items-center gap-4 border-b border-charcoal pb-4">
+<div class="w-10 h-10 rounded bg-black flex items-center justify-center border border-charcoal">
+<span class="material-symbols-outlined text-white">web</span>
+</div>
+<div>
+<div class="font-bold text-sm">Frontend</div>
+<div class="font-code-block text-code-block text-xs text-neon-volt">Next.js</div>
+</div>
+</div>
+<div class="flex items-center gap-4 border-b border-charcoal pb-4">
+<div class="w-10 h-10 rounded bg-black flex items-center justify-center border border-charcoal">
+<span class="material-symbols-outlined text-white">memory</span>
+</div>
+<div>
+<div class="font-bold text-sm">Services</div>
+<div class="font-code-block text-code-block text-xs text-neon-volt">Node.js on K8s</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded bg-black flex items-center justify-center border border-charcoal">
+<span class="material-symbols-outlined text-white">storage</span>
+</div>
+<div>
+<div class="font-bold text-sm">Caching</div>
+<div class="font-code-block text-code-block text-xs text-neon-volt">Redis Replicas</div>
+</div>
+</div>
+</div>
+<!-- Stats Card -->
+<div class="md:col-span-1 border border-neon-volt bg-olive-dark rounded-xl p-6 flex flex-col justify-between">
+<div>
+<span class="font-uppercase-label text-uppercase-label text-neon-volt block mb-2">COST EFFICIENCY</span>
+<p class="font-body-standard text-body-standard text-silver text-sm">Optimized resource allocation via K8s leading to significant infrastructure savings.</p>
+</div>
+<div class="mt-6">
+<div class="font-display-hero text-display-hero text-white tracking-tighter">22<span class="text-neon-volt">%</span></div>
+<div class="font-bold text-sm uppercase tracking-wider text-silver mt-1">AWS Cost Reduction</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Code/Tech Details Section -->
+<section class="max-w-container-max mx-auto px-8 md:px-12 py-xl border-t border-charcoal">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-feature-heading text-feature-heading mb-6">400% SURGE HANDLING</h2>
+<p class="font-body-standard text-body-standard text-silver mb-8">
+                    By aggressively caching read-heavy endpoints with Redis and horizontally scaling Node.js containers on Kubernetes, the system effortlessly absorbed Black Friday traffic spikes without a single dropped transaction.
+                </p>
+<div class="flex gap-4">
+<button class="bg-forest-green text-white px-6 py-3 rounded font-uppercase-label text-uppercase-label hover:bg-hover-gray hover:text-pale-yellow active:inset-shadow transition-all">
+                        VIEW INFRA LOGS
+                    </button>
+</div>
+</div>
+<div class="bg-near-black border border-charcoal rounded-lg p-6 relative">
+<div class="absolute top-0 left-0 w-full h-8 bg-black border-b border-charcoal rounded-t-lg flex items-center px-4 gap-2">
+<div class="w-3 h-3 rounded-full bg-charcoal"></div>
+<div class="w-3 h-3 rounded-full bg-charcoal"></div>
+<div class="w-3 h-3 rounded-full bg-charcoal"></div>
+<span class="ml-4 font-code-block text-code-block text-xs text-silver">k8s-hpa-config.yaml</span>
+</div>
+<pre class="font-code-block text-code-block text-sm pt-8 overflow-x-auto text-silver leading-relaxed"><span class="text-white">apiVersion:</span> autoscaling/v2
+<span class="text-white">kind:</span> HorizontalPodAutoscaler
+<span class="text-white">metadata:</span>
+  <span class="text-white">name:</span> core-tx-service
+<span class="text-white">spec:</span>
+  <span class="text-white">scaleTargetRef:</span>
+    <span class="text-white">apiVersion:</span> apps/v1
+    <span class="text-white">kind:</span> Deployment
+    <span class="text-white">name:</span> core-tx-service
+  <span class="text-neon-volt">minReplicas:</span> 3
+  <span class="text-neon-volt">maxReplicas:</span> 50
+  <span class="text-white">metrics:</span>
+  - <span class="text-white">type:</span> Resource
+    <span class="text-white">resource:</span>
+      <span class="text-white">name:</span> cpu
+      <span class="text-neon-volt">target:</span>
+        <span class="text-neon-volt">type:</span> Utilization
+        <span class="text-neon-volt">averageUtilization:</span> 70
+                </pre>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6 max-w-[2200px] mx-auto bg-black border-t border-zinc-800 mt-xl">
+<div class="flex items-center gap-2 text-xl font-black text-white mb-4">
+<img class="h-8 w-auto" src="../assets/logo-dark.svg" alt="CornerStones logo">
+<span>CornerStones</span>
+</div>
+<div class="flex flex-wrap gap-6 justify-center">
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">GDPR_COMPLIANT</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">ISO_27001</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">PRIVACY_POLICY</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">GITHUB</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">LINKEDIN</a>
+</div>
+<div class="font-inter text-[10px] tracking-widest uppercase font-bold text-[#faff69]">
+            © 2026 CornerStones. ALL SYSTEMS NOMINAL.
+        </div>
+</footer>
+</body></html>

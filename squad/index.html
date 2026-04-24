@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CornerStones | Squad</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed": "#00210b",
+                        "background": "#14140b",
+                        "hover-gray": "#3a3a3a",
+                        "on-primary-fixed": "#1c1d00",
+                        "primary-fixed": "#e5ea57",
+                        "on-tertiary-container": "#4c696b",
+                        "neon-volt": "#faff69",
+                        "pale-yellow": "#f4f692",
+                        "pure-black": "#000000",
+                        "on-tertiary-fixed": "#002022",
+                        "inverse-surface": "#e5e3d3",
+                        "secondary-container": "#005829",
+                        "on-error-container": "#ffdad6",
+                        "primary-container": "#e5ea57",
+                        "surface-container": "#202016",
+                        "forest-green": "#166534",
+                        "border-olive": "#4f5100",
+                        "on-background": "#e5e3d3",
+                        "near-black": "#141414",
+                        "surface-bright": "#3a3a2f",
+                        "outline-variant": "#484835",
+                        "surface-container-highest": "#36352b",
+                        "surface-container-high": "#2b2b20",
+                        "deep-charcoal": "#343434",
+                        "on-tertiary-fixed-variant": "#2f4b4d",
+                        "charcoal": "rgba(65, 65, 65, 0.8)",
+                        "on-error": "#690005",
+                        "secondary": "#8bd79b",
+                        "surface-container-lowest": "#0e0f06",
+                        "surface": "#14140b",
+                        "on-primary-fixed-variant": "#484a00",
+                        "olive-dark": "#161600",
+                        "outline": "#93927c",
+                        "on-secondary-container": "#81cc90",
+                        "on-primary": "#313300",
+                        "on-primary-container": "#666900",
+                        "dark-forest": "#14572f",
+                        "inverse-on-surface": "#313126",
+                        "on-secondary": "#003918",
+                        "secondary-fixed": "#a6f4b5",
+                        "on-tertiary": "#173537",
+                        "error": "#ffb4ab",
+                        "primary": "#ffffff",
+                        "primary-fixed-dim": "#c9ce3c",
+                        "tertiary-fixed": "#c9e8ea",
+                        "error-container": "#93000a",
+                        "on-surface-variant": "#c9c8af",
+                        "on-surface": "#e5e3d3",
+                        "surface-dim": "#14140b",
+                        "inverse-primary": "#5f6200",
+                        "tertiary-container": "#c9e8ea",
+                        "surface-container-low": "#1c1c13",
+                        "silver": "#a0a0a0",
+                        "secondary-fixed-dim": "#8bd79b",
+                        "surface-variant": "#36352b",
+                        "tertiary-fixed-dim": "#adccce",
+                        "surface-tint": "#c9ce3c",
+                        "tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#005226"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "container-max": "2200px",
+                        "base": "8px",
+                        "xl": "64px",
+                        "xs": "4px",
+                        "lg": "48px",
+                        "sm": "12px"
+                    },
+                    "fontFamily": {
+                        "sub-heading": ["Inter"],
+                        "uppercase-label": ["Inter"],
+                        "body-standard": ["Inter"],
+                        "feature-heading": ["Arial"],
+                        "code-block": ["monospace"],
+                        "body-large": ["Inter"],
+                        "display-mega": ["Inter"],
+                        "display-hero": ["Inter"]
+                    },
+                    "fontSize": {
+                        "sub-heading": ["24px", { "lineHeight": "1.2", "letterSpacing": "normal", "fontWeight": "900" }],
+                        "uppercase-label": ["14px", { "lineHeight": "1.43", "letterSpacing": "1.4px", "fontWeight": "600" }],
+                        "body-standard": ["16px", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "400" }],
+                        "feature-heading": ["36px", { "lineHeight": "1.3", "letterSpacing": "normal", "fontWeight": "600" }],
+                        "code-block": ["16px", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "600" }],
+                        "body-large": ["18px", { "lineHeight": "1.56", "letterSpacing": "normal", "fontWeight": "400" }],
+                        "display-mega": ["96px", { "lineHeight": "1.0", "letterSpacing": "normal", "fontWeight": "900" }],
+                        "display-hero": ["72px", { "lineHeight": "1.0", "letterSpacing": "normal", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #000000; color: #ffffff; }
+    </style>
+</head>
+<body class="bg-pure-black text-primary font-body-standard overflow-x-hidden overflow-y-scroll">
+<!-- TopAppBar -->
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md shadow-[0_4_25px_rgba(0,0,0,0.14)_inset] border-b border-white/10">
+<div class="flex justify-between items-center px-8 py-4 max-w-[2200px] mx-auto">
+<a href="../" class="flex items-center gap-2 text-2xl font-black italic tracking-tighter text-white">
+<img class="h-8 w-auto" src="../assets/logo-dark.svg" alt="CornerStones logo">
+<span>CornerStones</span>
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../">Home</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../services/">Services</a>
+<a class="font-uppercase-label text-uppercase-label text-[#faff69] border-b-2 border-[#faff69] pb-1 hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../squad/">Squads</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../cases/">Case Studies</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../pricing/">Pricing</a>
+</div>
+<button class="bg-[#faff69] text-[#141414] font-uppercase-label text-uppercase-label px-4 py-2 rounded-DEFAULT hover:bg-white transition-all active:scale-95 hidden md:block">Deploy Now</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-white hover:text-[#faff69]">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-xl max-w-container-max mx-auto px-8 md:px-16">
+<!-- Hero Section -->
+<section class="mb-xl border-l-4 border-neon-volt pl-8 py-lg">
+<h1 class="font-display-hero text-display-hero text-white mb-md">
+                The Elite Stack:<br/>
+<span class="text-neon-volt">8 Specialists, Zero Friction.</span>
+</h1>
+<p class="font-body-large text-body-large text-silver max-w-3xl">
+                Terminal-grade performance delivered by a synchronized unit of highly specialized engineers. We architect systems built for absolute precision and raw power.
+            </p>
+</section>
+<!-- Team Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg">
+<!-- Profile 1 -->
+<article class="border border-charcoal bg-near-black rounded-DEFAULT p-md hover:border-neon-volt transition-colors relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-sm bg-neon-volt text-pure-black font-uppercase-label text-uppercase-label">AI/AGENTS</div>
+<div class="flex flex-col md:flex-row gap-md">
+<div class="w-32 h-32 md:w-48 md:h-48 shrink-0 border border-charcoal bg-surface-container-highest">
+<img alt="Professional dark mode portrait of a male lead AI engineer with high contrast rim lighting" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Professional dark mode portrait of a male lead AI engineer with high contrast rim lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHYyNLanDKFzxhjGcZwrwaY4mZIMzuR3LiIky6KUmdZOaqhsKDp9-WiapEBnaMoQXwlaE0nJsZ53NJyJ_DqfP6tm6wkbwuqiFJ9aiuiSQa-kQ89reu1um7mpNMBOQTtaG9UCHR15-bt-59DXCkekgZWpZP7cAEvp-mt5bJ3yO8rKYnYm4T4ceEy2SI0ogYMCL_RXbNTWQ3pVqj5YLIc9GOncUarqUkz248bD1lkfdzaxd1Lmqb351foY_-iJcugYkgq0xCBe4SyKKq"/>
+</div>
+<div class="flex-1 pt-12 md:pt-0 pr-4 md:pr-48">
+<h2 class="font-sub-heading text-sub-heading text-white mb-xs">Avinash Singh</h2>
+<div class="flex items-center gap-sm mb-sm text-silver font-uppercase-label text-uppercase-label text-[10px]">
+<span>Lead AI &amp; Agentic Systems</span>
+<span class="w-1 h-1 bg-neon-volt rounded-full"></span>
+<span>India</span>
+</div>
+<div class="space-y-sm">
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Education</span>
+<p class="font-body-standard text-body-standard text-white text-sm">M.S. in Computer Science</p>
+</div>
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Core Expertise</span>
+<p class="font-body-standard text-body-standard text-white text-sm">Autonomous Agents, LLM Orchestration</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Impact Highlight</span>
+<p class="font-body-standard text-body-standard text-white text-xl font-bold">20% efficiency boost</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Challenge Solved</span>
+<p class="font-body-standard text-body-standard text-silver text-sm">Automating complex workflows with autonomous AI agents to eliminate manual bottlenecks.</p>
+</div>
+<div class="flex flex-wrap gap-xs pt-2">
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Python</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">LangChain</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">AutoGPT</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Profile 2 -->
+<article class="border border-charcoal bg-near-black rounded-DEFAULT p-md hover:border-neon-volt transition-colors relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-sm bg-neon-volt text-pure-black font-uppercase-label text-uppercase-label">FULL-STACK</div>
+<div class="flex flex-col md:flex-row gap-md">
+<div class="w-32 h-32 md:w-48 md:h-48 shrink-0 border border-charcoal bg-surface-container-highest">
+<img alt="Professional dark mode portrait of a female senior full stack engineer with dramatic side lighting" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Professional dark mode portrait of a female senior full stack engineer with dramatic side lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCS2KGyQG4KZGa-CyiSRiCP8xGUthDC9qPL6RMQgZw9xK_FKBQXaDbp8111uXfRWbJXRKJluDPd_GsXOoSdtQAvtA708PCmUdomUqptJTdOhEFHCUG03v1lFBo9XvZ6r-FHZ7xfDb4Gek_eHpu81hmt8nTZtxAMRWAtfv0T9czSHqo0A6BBJWbY1Iu9Gtqqacu6E-rRxqAy5oB0N3s3J3P1t3eXsPHWzdIStZ6Pt2ssr-dPfPS4gTvgIhPHnOU-emHOnmTVRZi2QU7"/>
+</div>
+<div class="flex-1 pt-12 md:pt-0 pr-4 md:pr-48">
+<h2 class="font-sub-heading text-sub-heading text-white mb-xs">Emily Chen</h2>
+<div class="flex items-center gap-sm mb-sm text-silver font-uppercase-label text-uppercase-label text-[10px]">
+<span>Senior Full-Stack Developer</span>
+<span class="w-1 h-1 bg-neon-volt rounded-full"></span>
+<span>USA</span>
+</div>
+<div class="space-y-sm">
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Education</span>
+<p class="font-body-standard text-body-standard text-white text-sm">B.S. in Software Engineering</p>
+</div>
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Core Expertise</span>
+<p class="font-body-standard text-body-standard text-white text-sm">Micro-frontends, Scalable Architectures</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Impact Highlight</span>
+<p class="font-body-standard text-body-standard text-white text-xl font-bold">60% load time reduction</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Challenge Solved</span>
+<p class="font-body-standard text-body-standard text-silver text-sm">Refactoring monolithic architectures into high-performance, micro-frontend ecosystems.</p>
+</div>
+<div class="flex flex-wrap gap-xs pt-2">
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">React</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Node.js</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">GraphQL</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Profile 3 -->
+<article class="border border-charcoal bg-near-black rounded-DEFAULT p-md hover:border-neon-volt transition-colors relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-sm bg-neon-volt text-pure-black font-uppercase-label text-uppercase-label">DATA ARCHITECT</div>
+<div class="flex flex-col md:flex-row gap-md">
+<div class="w-32 h-32 md:w-48 md:h-48 shrink-0 border border-charcoal bg-surface-container-highest">
+<div class="w-full h-full bg-surface-container flex items-center justify-center text-silver">Photo placeholder</div>
+</div>
+<div class="flex-1 pt-12 md:pt-0 pr-4 md:pr-48">
+<h2 class="font-sub-heading text-sub-heading text-white mb-xs">Rajesh Kumar</h2>
+<div class="flex items-center gap-sm mb-sm text-silver font-uppercase-label text-uppercase-label text-[10px]">
+<span>Predictive Ops &amp; Data Architect</span>
+<span class="w-1 h-1 bg-neon-volt rounded-full"></span>
+<span>India</span>
+</div>
+<div class="space-y-sm">
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Education</span>
+<p class="font-body-standard text-body-standard text-white text-sm">Ph.D. in Data Science</p>
+</div>
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Core Expertise</span>
+<p class="font-body-standard text-body-standard text-white text-sm">Predictive Analytics, Data Pipelines</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Impact Highlight</span>
+<p class="font-body-standard text-body-standard text-white text-xl font-bold">45% cost reduction</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Challenge Solved</span>
+<p class="font-body-standard text-body-standard text-silver text-sm">Optimizing resource allocation through predictive modeling.</p>
+</div>
+<div class="flex flex-wrap gap-xs pt-2">
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">SQL</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Spark</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">AWS</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Profile 4 -->
+<article class="border border-charcoal bg-near-black rounded-DEFAULT p-md hover:border-neon-volt transition-colors relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-sm bg-neon-volt text-pure-black font-uppercase-label text-uppercase-label">E-COMMERCE</div>
+<div class="flex flex-col md:flex-row gap-md">
+<div class="w-32 h-32 md:w-48 md:h-48 shrink-0 border border-charcoal bg-surface-container-highest">
+<div class="w-full h-full bg-surface-container flex items-center justify-center text-silver">Photo placeholder</div>
+</div>
+<div class="flex-1 pt-12 md:pt-0 pr-4 md:pr-48">
+<h2 class="font-sub-heading text-sub-heading text-white mb-xs">Sarah Jenkins</h2>
+<div class="flex items-center gap-sm mb-sm text-silver font-uppercase-label text-uppercase-label text-[10px]">
+<span>E-Commerce &amp; Shopify Specialist</span>
+<span class="w-1 h-1 bg-neon-volt rounded-full"></span>
+<span>USA</span>
+</div>
+<div class="space-y-sm">
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Education</span>
+<p class="font-body-standard text-body-standard text-white text-sm">B.A. in Marketing and IT</p>
+</div>
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Core Expertise</span>
+<p class="font-body-standard text-body-standard text-white text-sm">Custom Shopify themes, Conversion Optimization</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Impact Highlight</span>
+<p class="font-body-standard text-body-standard text-white text-xl font-bold">3x conversion rate</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Challenge Solved</span>
+<p class="font-body-standard text-body-standard text-silver text-sm">Revamping checkout flows for frictionless purchasing.</p>
+</div>
+<div class="flex flex-wrap gap-xs pt-2">
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Liquid</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Vue.js</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Tailwind</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Profile 5 -->
+<article class="border border-charcoal bg-near-black rounded-DEFAULT p-md hover:border-neon-volt transition-colors relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-sm bg-neon-volt text-pure-black font-uppercase-label text-uppercase-label">KNOWLEDGE ENG</div>
+<div class="flex flex-col md:flex-row gap-md">
+<div class="w-32 h-32 md:w-48 md:h-48 shrink-0 border border-charcoal bg-surface-container-highest">
+<div class="w-full h-full bg-surface-container flex items-center justify-center text-silver">Photo placeholder</div>
+</div>
+<div class="flex-1 pt-12 md:pt-0 pr-4 md:pr-48">
+<h2 class="font-sub-heading text-sub-heading text-white mb-xs">Vikram Patel</h2>
+<div class="flex items-center gap-sm mb-sm text-silver font-uppercase-label text-uppercase-label text-[10px]">
+<span>RAG &amp; Knowledge Engineering Lead</span>
+<span class="w-1 h-1 bg-neon-volt rounded-full"></span>
+<span>India</span>
+</div>
+<div class="space-y-sm">
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Education</span>
+<p class="font-body-standard text-body-standard text-white text-sm">M.S. in Information Systems</p>
+</div>
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Core Expertise</span>
+<p class="font-body-standard text-body-standard text-white text-sm">Retrieval-Augmented Generation, Semantic Search</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Impact Highlight</span>
+<p class="font-body-standard text-body-standard text-white text-xl font-bold">95% query accuracy</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Challenge Solved</span>
+<p class="font-body-standard text-body-standard text-silver text-sm">Building highly accurate enterprise search systems.</p>
+</div>
+<div class="flex flex-wrap gap-xs pt-2">
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Pinecone</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">OpenAI API</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">LlamaIndex</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Profile 6 -->
+<article class="border border-charcoal bg-near-black rounded-DEFAULT p-md hover:border-neon-volt transition-colors relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-sm bg-neon-volt text-pure-black font-uppercase-label text-uppercase-label">ENTERPRISE CMS</div>
+<div class="flex flex-col md:flex-row gap-md">
+<div class="w-32 h-32 md:w-48 md:h-48 shrink-0 border border-charcoal bg-surface-container-highest">
+<div class="w-full h-full bg-surface-container flex items-center justify-center text-silver">Photo placeholder</div>
+</div>
+<div class="flex-1 pt-12 md:pt-0 pr-4 md:pr-48">
+<h2 class="font-sub-heading text-sub-heading text-white mb-xs">Marcus Johnson</h2>
+<div class="flex items-center gap-sm mb-sm text-silver font-uppercase-label text-uppercase-label text-[10px]">
+<span>CMS &amp; Enterprise WordPress Architect</span>
+<span class="w-1 h-1 bg-neon-volt rounded-full"></span>
+<span>USA</span>
+</div>
+<div class="space-y-sm">
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Education</span>
+<p class="font-body-standard text-body-standard text-white text-sm">B.S. in Computer Science</p>
+</div>
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Core Expertise</span>
+<p class="font-body-standard text-body-standard text-white text-sm">Headless CMS, High-Traffic Scalability</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Impact Highlight</span>
+<p class="font-body-standard text-body-standard text-white text-xl font-bold">100M+ monthly pageviews handled</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Challenge Solved</span>
+<p class="font-body-standard text-body-standard text-silver text-sm">Migrating legacy monolithic sites to modern headless architectures.</p>
+</div>
+<div class="flex flex-wrap gap-xs pt-2">
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">WordPress</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Next.js</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">PHP</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Profile 7 -->
+<article class="border border-charcoal bg-near-black rounded-DEFAULT p-md hover:border-neon-volt transition-colors relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-sm bg-neon-volt text-pure-black font-uppercase-label text-uppercase-label">CLOUD &amp; LLMOPS</div>
+<div class="flex flex-col md:flex-row gap-md">
+<div class="w-32 h-32 md:w-48 md:h-48 shrink-0 border border-charcoal bg-surface-container-highest">
+<div class="w-full h-full bg-surface-container flex items-center justify-center text-silver">Photo placeholder</div>
+</div>
+<div class="flex-1 pt-12 md:pt-0 pr-4 md:pr-48">
+<h2 class="font-sub-heading text-sub-heading text-white mb-xs">Priya Sharma</h2>
+<div class="flex items-center gap-sm mb-sm text-silver font-uppercase-label text-uppercase-label text-[10px]">
+<span>LLMOps &amp; Cloud Integration Engineer</span>
+<span class="w-1 h-1 bg-neon-volt rounded-full"></span>
+<span>India</span>
+</div>
+<div class="space-y-sm">
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Education</span>
+<p class="font-body-standard text-body-standard text-white text-sm">B.E. in Cloud Computing</p>
+</div>
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Core Expertise</span>
+<p class="font-body-standard text-body-standard text-white text-sm">Model Deployment, Infrastructure as Code</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Impact Highlight</span>
+<p class="font-body-standard text-body-standard text-white text-xl font-bold">Zero downtime deployments</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Challenge Solved</span>
+<p class="font-body-standard text-body-standard text-silver text-sm">Creating robust CI/CD pipelines for large language model updates.</p>
+</div>
+<div class="flex flex-wrap gap-xs pt-2">
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Docker</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Kubernetes</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Terraform</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- Profile 8 -->
+<article class="border border-charcoal bg-near-black rounded-DEFAULT p-md hover:border-neon-volt transition-colors relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-sm bg-neon-volt text-pure-black font-uppercase-label text-uppercase-label">UI/UX</div>
+<div class="flex flex-col md:flex-row gap-md">
+<div class="w-32 h-32 md:w-48 md:h-48 shrink-0 border border-charcoal bg-surface-container-highest">
+<div class="w-full h-full bg-surface-container flex items-center justify-center text-silver">Photo placeholder</div>
+</div>
+<div class="flex-1 pt-12 md:pt-0 pr-4 md:pr-48">
+<h2 class="font-sub-heading text-sub-heading text-white mb-xs">David Miller</h2>
+<div class="flex items-center gap-sm mb-sm text-silver font-uppercase-label text-uppercase-label text-[10px]">
+<span>UI/UX &amp; Interactive Front-End Developer</span>
+<span class="w-1 h-1 bg-neon-volt rounded-full"></span>
+<span>USA</span>
+</div>
+<div class="space-y-sm">
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Education</span>
+<p class="font-body-standard text-body-standard text-white text-sm">B.F.A. in Interaction Design</p>
+</div>
+<div>
+<span class="text-silver font-bold text-[10px] uppercase tracking-wider block mb-1">Core Expertise</span>
+<p class="font-body-standard text-body-standard text-white text-sm">Design Systems, WebGL Animation</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Impact Highlight</span>
+<p class="font-body-standard text-body-standard text-white text-xl font-bold">Award-winning user experiences</p>
+</div>
+<div>
+<span class="text-neon-volt font-bold text-xs uppercase tracking-wider block mb-1">Challenge Solved</span>
+<p class="font-body-standard text-body-standard text-silver text-sm">Translating complex data into intuitive, interactive visual interfaces.</p>
+</div>
+<div class="flex flex-wrap gap-xs pt-2">
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Figma</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Three.js</span>
+<span class="px-2 py-1 text-[10px] font-code-block border border-neon-volt text-neon-volt bg-surface-container">Framer Motion</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-zinc-800 pt-16 pb-8 bg-black mt-xl">
+<div class="max-w-[2200px] mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2 text-xl font-black text-white mb-4">
+<img class="h-8 w-auto" src="../assets/logo-dark.svg" alt="CornerStones logo">
+<span>CornerStones</span>
+</div>
+<div class="font-['Inter'] uppercase text-[10px] tracking-widest font-semibold text-zinc-500">
+                © 2026 CornerStones. ALL SYSTEMS NOMINAL.
+            </div>
+<div class="flex gap-6 font-['Inter'] uppercase text-[10px] tracking-widest font-semibold">
+<a class="text-zinc-500 hover:text-white hover:text-[#faff69] transition-colors" href="#">Terms</a>
+<a class="text-zinc-500 hover:text-white hover:text-[#faff69] transition-colors" href="#">Privacy</a>
+<a class="text-zinc-500 hover:text-white hover:text-[#faff69] transition-colors" href="#">Security</a>
+<a class="text-zinc-500 hover:text-white hover:text-[#faff69] transition-colors" href="#">Contact</a>
+</div>
+</div>
+</footer>
+</body></html>

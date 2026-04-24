@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CornerStones | Case Study</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=Inconsolata:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#14140b",
+                        "surface": "#14140b",
+                        "deep-charcoal": "#343434",
+                        "surface-bright": "#3a3a2f",
+                        "forest-green": "#166534",
+                        "on-error": "#690005",
+                        "on-surface": "#e5e3d3",
+                        "silver": "#a0a0a0",
+                        "primary-container": "#e5ea57",
+                        "on-secondary-fixed": "#00210b",
+                        "inverse-surface": "#e5e3d3",
+                        "primary-fixed": "#e5ea57",
+                        "on-surface-variant": "#c9c8af",
+                        "on-primary-container": "#666900",
+                        "dark-forest": "#14572f",
+                        "hover-gray": "#3a3a3a",
+                        "olive-dark": "#161600",
+                        "surface-container": "#202016",
+                        "near-black": "#141414",
+                        "inverse-on-surface": "#313126",
+                        "tertiary-fixed": "#c9e8ea",
+                        "primary-fixed-dim": "#c9ce3c",
+                        "border-olive": "#4f5100",
+                        "on-background": "#e5e3d3",
+                        "surface-variant": "#36352b",
+                        "surface-container-high": "#2b2b20",
+                        "neon-volt": "#faff69",
+                        "secondary-fixed-dim": "#8bd79b",
+                        "secondary": "#8bd79b",
+                        "on-primary-fixed-variant": "#484a00",
+                        "on-primary": "#313300",
+                        "secondary-fixed": "#a6f4b5",
+                        "primary": "#ffffff",
+                        "surface-dim": "#14140b",
+                        "inverse-primary": "#5f6200",
+                        "tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#005226",
+                        "on-error-container": "#ffdad6",
+                        "tertiary-container": "#c9e8ea",
+                        "surface-tint": "#c9ce3c",
+                        "secondary-container": "#005829",
+                        "on-tertiary-fixed-variant": "#2f4b4d",
+                        "surface-container-lowest": "#0e0f06",
+                        "on-tertiary-container": "#4c696b",
+                        "pale-yellow": "#f4f692",
+                        "on-secondary": "#003918",
+                        "tertiary-fixed-dim": "#adccce",
+                        "on-tertiary-fixed": "#002022",
+                        "on-tertiary": "#173537",
+                        "outline-variant": "#484835",
+                        "outline": "#93927c",
+                        "pure-black": "#000000",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1c1c13",
+                        "on-primary-fixed": "#1c1d00",
+                        "charcoal": "rgba(65, 65, 65, 0.8)",
+                        "on-secondary-container": "#81cc90",
+                        "error": "#ffb4ab",
+                        "surface-container-highest": "#36352b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "container-max": "2200px",
+                        "xl": "64px",
+                        "sm": "12px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "feature-heading": ["Inter", "sans-serif"],
+                        "display-mega": ["Inter", "sans-serif"],
+                        "body-standard": ["Inter", "sans-serif"],
+                        "uppercase-label": ["Inter", "sans-serif"],
+                        "code-block": ["Inconsolata", "monospace"],
+                        "body-large": ["Inter", "sans-serif"],
+                        "sub-heading": ["Inter", "sans-serif"],
+                        "display-hero": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "feature-heading": ["36px", { "lineHeight": "1.3", "letterSpacing": "normal", "fontWeight": "600" }],
+                        "display-mega": ["96px", { "lineHeight": "1.0", "letterSpacing": "normal", "fontWeight": "900" }],
+                        "body-standard": ["16px", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "400" }],
+                        "uppercase-label": ["14px", { "lineHeight": "1.43", "letterSpacing": "1.4px", "fontWeight": "600" }],
+                        "code-block": ["16px", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "600" }],
+                        "body-large": ["18px", { "lineHeight": "1.56", "letterSpacing": "normal", "fontWeight": "400" }],
+                        "sub-heading": ["24px", { "lineHeight": "1.2", "letterSpacing": "normal", "fontWeight": "700" }],
+                        "display-hero": ["72px", { "lineHeight": "1.0", "letterSpacing": "normal", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #000000; color: #e5e3d3; margin: 0; padding: 0; -webkit-font-smoothing: antialiased; }
+        .inset-shadow { box-shadow: 0px 4px 25px rgba(0,0,0,0.14) inset; }
+        .border-charcoal { border: 1px solid rgba(65, 65, 65, 0.8); }
+        .border-neon { border: 1px solid #faff69; }
+        .neon-accent { border-bottom: 2px solid #faff69; }
+    </style>
+</head>
+<body class="bg-pure-black text-on-surface font-body-standard overflow-y-scroll">
+<!-- TopAppBar -->
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md shadow-[0_4_25px_rgba(0,0,0,0.14)_inset] border-b border-white/10">
+<div class="flex justify-between items-center px-8 py-4 max-w-[2200px] mx-auto">
+<a href="../" class="flex items-center gap-2 text-2xl font-black italic tracking-tighter text-white">
+<img class="h-8 w-auto" src="../assets/logo-dark.svg" alt="CornerStones logo">
+<span>CornerStones</span>
+</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../">Home</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../services/">Services</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../squad/">Squads</a>
+<a class="font-uppercase-label text-uppercase-label text-[#faff69] border-b-2 border-[#faff69] pb-1 hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../cases/">Case Studies</a>
+<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="../pricing/">Pricing</a>
+</div>
+<button class="bg-[#faff69] text-[#141414] font-uppercase-label text-uppercase-label px-4 py-2 rounded-DEFAULT hover:bg-white transition-all active:scale-95 hidden md:block">Deploy Now</button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-white hover:text-[#faff69]">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Case Studies Navigation -->
+<section class="max-w-[2200px] mx-auto px-8 pt-32 pb-4">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-zinc-800 pb-4">
+        <a href="../cases/" class="flex items-center gap-2 text-silver hover:text-[#faff69] transition-colors font-uppercase-label text-uppercase-label text-xs">
+            <span class="material-symbols-outlined text-sm">arrow_back</span>
+            Back to All Case Studies
+        </a>
+        <div class="flex flex-wrap gap-4 font-uppercase-label text-uppercase-label text-xs">
+            <span class="text-zinc-500">Explore:</span>
+            <a href="../case_velocity/" class="text-silver hover:text-white transition-colors">Velocity</a>
+            <a href="../case_apex/" class="text-silver hover:text-white transition-colors">Apex</a>
+            <a href="../case_catalyst/" class="text-silver hover:text-white transition-colors">Catalyst</a>
+            <a href="../case_rag/" class="text-silver hover:text-white transition-colors">Sentinel</a>
+        </div>
+    </div>
+</section>
+<!-- Hero Section -->
+<section class="max-w-[2200px] mx-auto px-8 py-xl flex flex-col justify-center min-h-[716px]">
+<div class="max-w-4xl">
+<div class="w-16 h-1 bg-neon-volt mb-8"></div>
+<h1 class="font-display-mega text-display-mega text-primary mb-md tracking-tight uppercase leading-none">
+                PROJECT SENTINEL
+            </h1>
+<p class="font-body-large text-body-large text-silver max-w-2xl mb-lg">
+<strong>Industry:</strong> Investment Banking / Private Equity<br/>
+<strong>Squad:</strong> Vikram Patel (Lead) &amp; Priya Sharma<br/><br/>
+                Secure Enterprise RAG for Financial Audits. Architecting an air-gapped, role-based access control layer for enterprise-scale LLM retrieval. Ensuring data sovereignty while eliminating the manual burden of scanning 10-K reports.
+            </p>
+<div class="flex gap-4">
+<button class="bg-neon-volt text-near-black px-md py-sm rounded font-uppercase-label text-uppercase-label hover:bg-hover-gray active:text-pale-yellow active:inset-shadow transition-all border border-neon-volt">
+                    VIEW DOCUMENTATION
+                </button>
+<button class="bg-transparent text-neon-volt px-md py-sm rounded font-uppercase-label text-uppercase-label border border-border-olive hover:bg-hover-gray active:text-pale-yellow active:inset-shadow transition-all">
+                    REQUEST ARCHITECTURE DEMO
+                </button>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="max-w-[2200px] mx-auto px-8 py-xl">
+<h2 class="font-feature-heading text-feature-heading text-primary mb-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-neon-volt" style="font-variation-settings: 'FILL' 1;">warning</span>
+            THE PROBLEM: MANUAL AUDIT BOTTLENECKS
+        </h2>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<div class="bg-near-black border-charcoal rounded-lg p-lg">
+<h3 class="font-sub-heading text-sub-heading text-primary mb-md">High-Trust Financial Data</h3>
+<p class="font-body-standard text-body-standard text-silver mb-4">
+                    Investment banking and private equity analysts were spending 15+ hours per week manually scanning complex 10-K reports and financial disclosures. Utilizing standard LLMs to accelerate this introduced unacceptable compliance risks.
+                </p>
+<ul class="space-y-4 font-body-standard text-body-standard text-silver">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-neon-volt text-[20px]">close</span>
+                        Severe compliance risk if sensitive non-public data leaked across deal teams.
+                    </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-neon-volt text-[20px]">close</span>
+                        Manual risk-profile compilation took days, delaying time-to-insight for deals.
+                    </li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-neon-volt text-[20px]">close</span>
+                        Standard vector databases lack row-level, identity-aware access control.
+                    </li>
+</ul>
+</div>
+<div class="bg-near-black border-charcoal rounded-lg p-0 overflow-hidden relative group h-full min-h-[300px]">
+<img alt="Server Infrastructure" class="w-full h-full object-cover opacity-50 mix-blend-luminosity group-hover:opacity-70 transition-opacity duration-500" data-alt="abstract dark server racks with glowing green lights emphasizing data security and technological complexity" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0EAi41pEp3KGtU1rl9YMw4HVLiI9HIRZnQ3ZnMbRwx_BfyVOnHH9O5Gu6uOy-ZgSauRYuqjSJ5hmPe9bJPcjl07MwJBtuJQRanR-7_1_UXWK9rUxhEm-wRreoWwJUsh59NC0I9MZ1HsAGuYVBGvsPO-Wj-Z8xcnzb6qYpXaDOqCA4y5btXlfVtKXhxvUhxQ4igoVz1qdcxaFy5QwG8O1GIbUCZaegBgLGmO0fS2X2N2vuiLhe4hKBgAp1ecNpKZMrPQaH89LKOa3h"/>
+<div class="absolute inset-0 bg-gradient-to-t from-near-black to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Solution Section (Code/Diagram) -->
+<section class="max-w-[2200px] mx-auto px-8 py-xl bg-surface-container-low border-y border-charcoal my-xl">
+<h2 class="font-feature-heading text-feature-heading text-primary mb-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-neon-volt" style="font-variation-settings: 'FILL' 1;">schema</span>
+            THE SOLUTION: AIR-GAPPED RAG &amp; PGVECTOR
+        </h2>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-1 flex flex-col gap-8">
+<div class="bg-near-black border-neon rounded-lg p-md inset-shadow">
+<h4 class="font-uppercase-label text-uppercase-label text-neon-volt mb-2">pgvector Storage</h4>
+<p class="font-body-standard text-body-standard text-silver">Secure, on-premise embeddings stored using pgvector within an air-gapped environment, ensuring zero external data leakage.</p>
+</div>
+<div class="bg-near-black border-charcoal rounded-lg p-md">
+<h4 class="font-uppercase-label text-uppercase-label text-silver mb-2">RBAC Integration</h4>
+<p class="font-body-standard text-body-standard text-silver">Dynamic evaluation of user claims against deal-team classification tags, enforcing strict information barriers in real-time.</p>
+</div>
+</div>
+<div class="lg:col-span-2 bg-near-black border-charcoal rounded-lg p-md">
+<div class="flex items-center gap-2 mb-4 border-b border-charcoal pb-2">
+<span class="material-symbols-outlined text-silver text-[16px]">terminal</span>
+<span class="font-code-block text-code-block text-silver text-sm">rbac_pgvector_pipeline.py</span>
+</div>
+<pre class="font-code-block text-code-block text-silver overflow-x-auto whitespace-pre-wrap"><code>
+<span class="text-neon-volt">def</span> <span class="text-primary">secure_financial_search</span>(query: <span class="text-[#8bd79b]">str</span>, user_context: <span class="text-[#8bd79b]">DealTeamIdentity</span>) -&gt; <span class="text-[#8bd79b]">List[FinancialDocument]</span>:
+    <span class="text-surface-variant"># 1. Extract RBAC claims and deal boundaries</span>
+    access_filters = policy_engine.generate_filters(user_context.deal_ids, user_context.clearance)
+    
+    <span class="text-surface-variant"># 2. Embed user query (Air-gapped local model)</span>
+    query_embedding = local_embedding_model.embed(query)
+    
+    <span class="text-surface-variant"># 3. Perform pre-filtered similarity search in pgvector DB</span>
+    <span class="text-surface-variant"># CRITICAL: RLS (Row Level Security) and metadata filtering applied</span>
+    results = pgvector_db.search(
+        vector=query_embedding,
+        top_k=5,
+        filter_metadata={<span class="text-neon-volt">"$and"</span>: access_filters}
+    )
+    
+    <span class="text-neon-volt">return</span> audit_logger.log_retrieval(user_context.id, results)
+                </code></pre>
+</div>
+</div>
+</section>
+<!-- Outcome / Metrics Section -->
+<section class="max-w-[2200px] mx-auto px-8 py-xl">
+<h2 class="font-feature-heading text-feature-heading text-primary mb-lg flex items-center gap-4">
+<span class="material-symbols-outlined text-neon-volt" style="font-variation-settings: 'FILL' 1;">monitoring</span>
+            IMPACT METRICS
+        </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-near-black border-charcoal rounded-lg p-lg flex flex-col justify-center items-center text-center">
+<div class="font-display-hero text-display-hero text-primary mb-2">98<span class="text-neon-volt">%</span></div>
+<div class="font-uppercase-label text-uppercase-label text-silver">Factual Accuracy</div>
+</div>
+<div class="bg-near-black border-neon rounded-lg p-lg flex flex-col justify-center items-center text-center inset-shadow relative overflow-hidden">
+<div class="absolute inset-0 bg-neon-volt opacity-5"></div>
+<div class="font-display-hero text-display-hero text-primary mb-2 relative z-10">100<span class="text-neon-volt">%</span></div>
+<div class="font-uppercase-label text-uppercase-label text-silver relative z-10">Compliance Achieved</div>
+</div>
+<div class="bg-near-black border-charcoal rounded-lg p-lg flex flex-col justify-center items-center text-center">
+<div class="font-display-hero text-display-hero text-primary mb-2">MINS</div>
+<div class="font-uppercase-label text-uppercase-label text-silver">Risk-Profile Compilation (vs. Days)</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6 max-w-[2200px] mx-auto bg-black border-t border-zinc-800 mt-xl">
+<div class="flex items-center gap-2 text-xl font-black text-white mb-4">
+<img class="h-8 w-auto" src="../assets/logo-dark.svg" alt="CornerStones logo">
+<span>CornerStones</span>
+</div>
+<div class="flex flex-wrap gap-6 justify-center">
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">GDPR_COMPLIANT</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">ISO_27001</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">PRIVACY_POLICY</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">GITHUB</a>
+<a class="font-inter text-[10px] tracking-widest uppercase font-bold text-zinc-500 hover:text-white transition-colors cursor-pointer" href="#">LINKEDIN</a>
+</div>
+<div class="font-inter text-[10px] tracking-widest uppercase font-bold text-[#faff69]">
+            © 2026 CornerStones. ALL SYSTEMS NOMINAL.
+        </div>
+</footer>
+</body></html>
