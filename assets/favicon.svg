@@ -1,0 +1,21 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 256 256"
+  width="256"
+  height="256"
+>
+  <!-- Outer green shape -->
+  <path
+    d="M32 32 H176 L224 80 V224 H80 L32 176 Z"
+    fill="#B4D03A"
+  />
+
+  <!-- Inner dark square -->
+  <rect
+    x="96"
+    y="96"
+    width="64"
+    height="64"
+    fill="#294F58"
+  />
+</svg>

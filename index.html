@@ -3,6 +3,21 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta name="description" content="CornerStones - A technical agency specializing in web development, mobile apps, and digital solutions. Transform your vision into reality." />
+<meta name="keywords" content="technical agency, web development, mobile apps, digital solutions, software development" />
+<meta name="author" content="CornerStones" />
+<meta name="robots" content="index, follow" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://cornerstones.dev/" />
+<meta property="og:title" content="CornerStones | Technical Agency" />
+<meta property="og:description" content="A technical agency specializing in web development, mobile apps, and digital solutions." />
+<meta property="og:image" content="https://cornerstones.dev/assets/logos/favicon.svg" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content="https://cornerstones.dev/" />
+<meta property="twitter:title" content="CornerStones | Technical Agency" />
+<meta property="twitter:description" content="A technical agency specializing in web development, mobile apps, and digital solutions." />
+<meta property="twitter:image" content="https://cornerstones.dev/assets/logos/favicon.svg" />
+<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
 <title>CornerStones | Technical Agency</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=Inconsolata:wght@600&amp;display=swap" rel="stylesheet"/>
@@ -116,15 +131,62 @@
         body { background-color: #14140b; color: #e5e3d3; margin: 0; padding: 0; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
         .fill-icon { font-variation-settings: 'FILL' 1; }
+        
+        /* Mobile Menu Styles */
+        #mobile-menu {
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 40;
+            transition: left 0.3s ease;
+            padding-top: 80px;
+            overflow-y: auto;
+        }
+        
+        #mobile-menu.active {
+            left: 0;
+        }
+        
+        .mobile-menu-link {
+            display: block;
+            padding: 16px 20px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.2s;
+        }
+        
+        .mobile-menu-link:hover {
+            background: rgba(250, 255, 105, 0.1);
+            color: #faff69;
+        }
+        
+        .hamburger-menu {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger-menu {
+                display: block !important;
+            }
+        }
     </style>
+
 </head>
 <body class="antialiased min-h-screen flex flex-col overflow-y-scroll">
+<!-- Skip to Main Content Link -->
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 bg-neon-volt text-pure-black px-4 py-2 font-bold">Skip to main content</a>
+
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md shadow-[0_4_25px_rgba(0,0,0,0.14)_inset] border-b border-white/10">
-<div class="flex justify-between items-center px-8 py-4 max-w-[2200px] mx-auto">
+<div class="flex justify-between items-center px-4 md:px-8 py-4 max-w-[2200px] mx-auto w-full">
 <a href="./" class="flex items-center gap-2 text-2xl font-black italic tracking-tighter text-white">
 <img class="h-8 w-auto" src="./assets/logo-dark.svg" alt="CornerStones logo">
-<span>CornerStones</span>
+<span class="hidden sm:inline">CornerStones</span>
 </a>
 <div class="hidden md:flex gap-8 items-center">
 <a class="font-uppercase-label text-uppercase-label text-[#faff69] border-b-2 border-[#faff69] pb-1 hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="./">Home</a>
@@ -135,13 +197,25 @@
 </div>
 <button class="bg-[#faff69] text-[#141414] font-uppercase-label text-uppercase-label px-4 py-2 rounded-DEFAULT hover:bg-white transition-all active:scale-95 hidden md:block">Deploy Now</button>
 <!-- Mobile Menu Toggle -->
-<button class="md:hidden text-white hover:text-[#faff69]">
+<button id="hamburger-btn" class="hamburger-menu text-white hover:text-[#faff69] p-2 rounded" aria-label="Toggle menu">
 <span class="material-symbols-outlined text-3xl">menu</span>
 </button>
 </div>
 </nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+<a href="./" class="mobile-menu-link">Home</a>
+<a href="./services/" class="mobile-menu-link">Services</a>
+<a href="./squad/" class="mobile-menu-link">Squads</a>
+<a href="./cases/" class="mobile-menu-link">Case Studies</a>
+<a href="./pricing/" class="mobile-menu-link">Pricing</a>
+<div style="padding: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
+<button class="w-full bg-[#faff69] text-[#141414] font-uppercase-label text-uppercase-label px-4 py-3 rounded hover:bg-white transition-all">Deploy Now</button>
+</div>
+</div>
 <!-- Canvas -->
-<main class="flex-grow pt-32 pb-xl px-4 md:px-8 max-w-container-max mx-auto w-full">
+<main id="main-content" class="flex-grow pt-32 pb-xl px-4 md:px-8 max-w-container-max mx-auto w-full">
 <!-- Hero Section -->
 <section class="mb-xl text-center md:text-left grid grid-cols-1 md:grid-cols-2 gap-lg items-center mt-xl">
 <div>
@@ -517,4 +591,47 @@ Security is foundational. We employ strict RBAC (Role-Based Access Control), adh
 </div>
 </div>
 </footer>
-</body></html>
+</body>
+
+<script>
+// Mobile Menu Toggle
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburgerBtn = document.getElementById('hamburger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (hamburgerBtn && mobileMenu) {
+    hamburgerBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileMenu.classList.toggle('active');
+      hamburgerBtn.classList.toggle('active');
+    });
+
+    // Close menu when clicking on a link
+    const menuLinks = mobileMenu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+        hamburgerBtn.classList.remove('active');
+      });
+    });
+
+    // Close menu when pressing Escape
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        mobileMenu.classList.remove('active');
+        hamburgerBtn.classList.remove('active');
+      }
+    });
+
+    // Close menu when clicking outside (on the backdrop)
+    mobileMenu.addEventListener('click', function(e) {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.remove('active');
+        hamburgerBtn.classList.remove('active');
+      }
+    });
+  }
+});
+</script>
+
+</html>
