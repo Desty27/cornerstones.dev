@@ -1,6 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600&family=Roboto:wght@400;500;700&display=swap');
 
 /* ========================================
+   FORCE DESKTOP LAYOUT ON ALL SCREENS
+   ======================================== */
+
+/* Override all mobile-specific media queries */
+@media (max-width: 768px) {
+  * {
+    /* Reset all mobile overrides */
+  }
+}
+
+/* Always show desktop navigation */
+#hamburger-btn {
+  display: none !important;
+}
+
+#mobile-menu {
+  display: none !important;
+}
+
+.site-menu {
+  display: flex !important;
+}
+
+.contact-full {
+  display: flex !important;
+}
+
+.contact-mobile {
+  display: none !important;
+}
+
+.mobile-hamburger {
+  display: none !important;
+}
+
+.mobile-top-label {
+  display: none !important;
+}
+
+.mobile-menu {
+  display: none !important;
+}
+
+/* ========================================
    MOBILE RESPONSIVE - CORE UTILITIES
    ======================================== */
 
