@@ -1,645 +1,737 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=1280" name="viewport"/>
-<meta name="description" content="CornerStones - A technical agency specializing in web development, mobile apps, and digital solutions. Transform your vision into reality." />
-<meta name="keywords" content="technical agency, web development, mobile apps, digital solutions, software development" />
-<meta name="author" content="CornerStones" />
-<meta name="robots" content="index, follow" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://cornerstones.dev/" />
-<meta property="og:title" content="CornerStones | Technical Agency" />
-<meta property="og:description" content="A technical agency specializing in web development, mobile apps, and digital solutions." />
-<meta property="og:image" content="https://cornerstones.dev/assets/logos/favicon.svg" />
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content="https://cornerstones.dev/" />
-<meta property="twitter:title" content="CornerStones | Technical Agency" />
-<meta property="twitter:description" content="A technical agency specializing in web development, mobile apps, and digital solutions." />
-<meta property="twitter:image" content="https://cornerstones.dev/assets/logos/favicon.svg" />
-<link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-<title>CornerStones | Technical Agency</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=Inconsolata:wght@600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "border-olive": "#4f5100",
-                        "on-tertiary-container": "#4c696b",
-                        "tertiary": "#ffffff",
-                        "primary-fixed-dim": "#c9ce3c",
-                        "surface": "#14140b",
-                        "primary-container": "#e5ea57",
-                        "on-background": "#e5e3d3",
-                        "on-primary-container": "#666900",
-                        "neon-volt": "#faff69",
-                        "on-primary-fixed-variant": "#484a00",
-                        "charcoal": "rgba(65, 65, 65, 0.8)",
-                        "pure-black": "#000000",
-                        "on-secondary-fixed": "#00210b",
-                        "surface-bright": "#3a3a2f",
-                        "hover-gray": "#3a3a3a",
-                        "on-error-container": "#ffdad6",
-                        "deep-charcoal": "#343434",
-                        "on-primary-fixed": "#1c1d00",
-                        "surface-container-lowest": "#0e0f06",
-                        "on-tertiary": "#173537",
-                        "inverse-on-surface": "#313126",
-                        "on-secondary": "#003918",
-                        "on-tertiary-fixed": "#002022",
-                        "surface-dim": "#14140b",
-                        "primary": "#ffffff",
-                        "surface-container-low": "#1c1c13",
-                        "surface-container-high": "#2b2b20",
-                        "on-secondary-fixed-variant": "#005226",
-                        "pale-yellow": "#f4f692",
-                        "tertiary-container": "#c9e8ea",
-                        "on-tertiary-fixed-variant": "#2f4b4d",
-                        "on-error": "#690005",
-                        "on-secondary-container": "#81cc90",
-                        "olive-dark": "#161600",
-                        "forest-green": "#166534",
-                        "tertiary-fixed-dim": "#adccce",
-                        "surface-variant": "#36352b",
-                        "outline": "#93927c",
-                        "on-primary": "#313300",
-                        "inverse-surface": "#e5e3d3",
-                        "tertiary-fixed": "#c9e8ea",
-                        "surface-container": "#202016",
-                        "secondary-fixed": "#a6f4b5",
-                        "background": "#14140b",
-                        "secondary": "#8bd79b",
-                        "inverse-primary": "#5f6200",
-                        "outline-variant": "#484835",
-                        "dark-forest": "#14572f",
-                        "surface-container-highest": "#36352b",
-                        "secondary-fixed-dim": "#8bd79b",
-                        "on-surface": "#e5e3d3",
-                        "on-surface-variant": "#c9c8af",
-                        "primary-fixed": "#e5ea57",
-                        "surface-tint": "#c9ce3c",
-                        "near-black": "#141414",
-                        "silver": "#a0a0a0",
-                        "error-container": "#93000a",
-                        "secondary-container": "#005829",
-                        "error": "#ffb4ab"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
-                    },
-                    "spacing": {
-                        "xl": "64px",
-                        "container-max": "2200px",
-                        "md": "24px",
-                        "lg": "48px",
-                        "sm": "12px",
-                        "xs": "4px",
-                        "base": "8px"
-                    },
-                    "fontFamily": {
-                        "code-block": ["Inconsolata", "monospace"],
-                        "uppercase-label": ["Inter", "sans-serif"],
-                        "body-standard": ["Inter", "sans-serif"],
-                        "sub-heading": ["Inter", "sans-serif"],
-                        "display-mega": ["Inter", "sans-serif"],
-                        "display-hero": ["Inter", "sans-serif"],
-                        "body-large": ["Inter", "sans-serif"],
-                        "feature-heading": ["Inter", "sans-serif"]
-                    },
-                    "fontSize": {
-                        "code-block": ["16px", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "600" }],
-                        "uppercase-label": ["14px", { "lineHeight": "1.43", "letterSpacing": "1.4px", "fontWeight": "600" }],
-                        "body-standard": ["16px", { "lineHeight": "1.5", "letterSpacing": "normal", "fontWeight": "400" }],
-                        "sub-heading": ["24px", { "lineHeight": "1.2", "letterSpacing": "normal", "fontWeight": "700" }],
-                        "display-mega": ["96px", { "lineHeight": "1.0", "letterSpacing": "normal", "fontWeight": "900" }],
-                        "display-hero": ["72px", { "lineHeight": "1.0", "letterSpacing": "normal", "fontWeight": "700" }],
-                        "body-large": ["18px", { "lineHeight": "1.56", "letterSpacing": "normal", "fontWeight": "400" }],
-                        "feature-heading": ["36px", { "lineHeight": "1.3", "letterSpacing": "normal", "fontWeight": "600" }]
-                    }
-                }
-            }
-        }
-    </script>
-<style>
-        body { background-color: #14140b; color: #e5e3d3; margin: 0; padding: 0; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-        .fill-icon { font-variation-settings: 'FILL' 1; }
-        
-        /* Mobile Menu Styles */
-        #mobile-menu {
-            position: fixed;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 40;
-            transition: left 0.3s ease;
-            padding-top: 80px;
-            overflow-y: auto;
-        }
-        
-        #mobile-menu.active {
-            left: 0;
-        }
-        
-        .mobile-menu-link {
-            display: block;
-            padding: 16px 20px;
-            color: white;
-            font-size: 16px;
-            font-weight: 600;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            transition: all 0.2s;
-        }
-        
-        .mobile-menu-link:hover {
-            background: rgba(250, 255, 105, 0.1);
-            color: #faff69;
-        }
-        
-        .hamburger-menu {
-            display: none;
-        }
-        
-        @media (max-width: 768px) {
-            .hamburger-menu {
-                display: block !important;
-            }
-        }
-    </style>
+<html lang="en">
+<head>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWZMMJ5S9T"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J9WY5FXZPX"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-EWZMMJ5S9T');
+  gtag('config', 'G-J9WY5FXZPX');
 </script>
+  <meta charset="UTF-8">
+  <!-- SEO & Open Graph -->
+  <meta name="description" content="CornerStone builds premium websites, optimizes search visibility, and engineers digital growth for businesses worldwide. Launch your online presence — starting at $60.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cornerstones.dev/">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CornerStone">
+  <meta property="og:title" content="CornerStone — Digital Growth Studio">
+  <meta property="og:description" content="Premium websites, SEO & digital growth for businesses worldwide. Websites from $60. No tech skills needed.">
+  <meta property="og:url" content="https://cornerstones.dev/">
+  <meta property="og:image" content="https://cornerstones.dev/assets/favicon.svg">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="CornerStone — Digital Growth Studio">
+  <meta name="twitter:description" content="Premium websites, SEO & digital growth for businesses worldwide. Websites from $60. No tech skills needed.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "CornerStone",
+  "description": "Digital growth studio offering website engineering, SEO, and performance optimization for businesses worldwide.",
+  "url": "https://cornerstones.dev",
+  "email": "contact@cornerstones.dev",
+  "telephone": "+916370704148",
+  "sameAs": [],
+  "priceRange": "$$",
+  "knowsAbout": ["Website Engineering", "Jamstack", "Core Web Vitals", "SEO", "CMS", "CRM", "Accessibility"]
+}
+</script>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CornerStone — Digital Growth Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ── Pricing Offer Popup ── */
+    #offer-popup {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      z-index: 9999;
+      width: min(360px, calc(100vw - 32px));
+      background: linear-gradient(145deg, #0f1826, #111d2e);
+      border: 1px solid rgba(58,84,208,0.45);
+      border-radius: 20px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.04) inset;
+      padding: 20px 20px 18px;
+      transform: translateY(calc(100% + 40px));
+      opacity: 0;
+      transition: transform 0.45s cubic-bezier(0.22,1,0.36,1), opacity 0.35s ease;
+      pointer-events: none;
+    }
+    #offer-popup.visible {
+      transform: translateY(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    #offer-popup .op-close {
+      position: absolute;
+      top: 12px;
+      right: 14px;
+      background: rgba(255,255,255,0.08);
+      border: none;
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      cursor: pointer;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s;
+    }
+    #offer-popup .op-close:hover { background: rgba(255,255,255,0.16); }
+    #offer-popup .op-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(180,208,58,0.16);
+      color: #b4d03a;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+    #offer-popup h4 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.3;
+      padding-right: 16px;
+    }
+    #offer-popup .op-sub {
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      margin: 0 0 14px;
+      line-height: 1.5;
+    }
+    #offer-popup .op-prices {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    #offer-popup .op-price-item {
+      flex: 1;
+      min-width: 120px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+    #offer-popup .op-price-item .name {
+      font-size: 11px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+    #offer-popup .op-price-item .old {
+      font-size: 12px;
+      text-decoration: line-through;
+      text-decoration-color: #ff5252;
+      color: rgba(255,255,255,0.4);
+      font-weight: 600;
+    }
+    #offer-popup .op-price-item .now {
+      font-size: 19px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.1;
+    }
+    #offer-popup .op-timer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    #offer-popup .op-timer .lbl {
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      white-space: nowrap;
+    }
+    #offer-popup .op-timer-blocks {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+    #offer-popup .op-tblock {
+      background: rgba(58,84,208,0.22);
+      border: 1px solid rgba(58,84,208,0.4);
+      border-radius: 7px;
+      padding: 4px 8px;
+      text-align: center;
+      min-width: 38px;
+    }
+    #offer-popup .op-tblock .n {
+      display: block;
+      font-size: 16px;
+      font-weight: 800;
+      color: #fff;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+    }
+    #offer-popup .op-tblock .u {
+      display: block;
+      font-size: 9px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    #offer-popup .op-tsep {
+      font-size: 14px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.3);
+    }
+    #offer-popup .op-cta {
+      display: block;
+      text-align: center;
+      background: linear-gradient(90deg, #3a54d0, #5a6dff);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 11px 20px;
+      border-radius: 12px;
+      transition: opacity .2s, transform .15s;
+      letter-spacing: 0.2px;
+    }
+    #offer-popup .op-cta:hover { opacity: .88; transform: translateY(-1px); }
+    #offer-popup .op-free {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #3acf78;
+      justify-content: center;
+    }
+    @media (max-width: 480px) {
+      #offer-popup {
+        bottom: 16px;
+        right: 16px;
+        left: 16px;
+        width: auto;
+      }
+    }
+    /* ── Floating testimonial popups ── */
+    .testi-float {
+      position: fixed;
+      bottom: 80px;
+      left: 24px;
+      z-index: 8888;
+      max-width: 320px;
+      background: linear-gradient(145deg, #0d1526, #111d2e);
+      border: 1px solid rgba(180,208,58,0.28);
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+      transform: translateX(calc(-100% - 40px));
+      opacity: 0;
+      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease;
+      pointer-events: none;
+    }
+    .testi-float.show {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .testi-float .tf-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .testi-float .tf-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(180,208,58,0.4), rgba(58,84,208,0.3));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
+    }
+    .testi-float .tf-name { font-size: 13px; font-weight: 700; }
+    .testi-float .tf-role { font-size: 11px; color: var(--muted); }
+    .testi-float .tf-stars { color: var(--primary); font-size: 12px; letter-spacing: 1px; margin-bottom: 8px; }
+    .testi-float .tf-quote { font-size: 13px; color: var(--muted); line-height: 1.6; font-style: italic; }
+    .testi-float .tf-close {
+      position: absolute; top: 10px; right: 12px;
+      background: rgba(255,255,255,0.07); border: none; border-radius: 50%;
+      width: 22px; height: 22px; cursor: pointer; color: var(--muted);
+      font-size: 12px; display: flex; align-items: center; justify-content: center;
+    }
+  </style>
 </head>
-<body class="antialiased min-h-screen flex flex-col overflow-y-scroll">
-<!-- Skip to Main Content Link -->
-<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 bg-neon-volt text-pure-black px-4 py-2 font-bold">Skip to main content</a>
+<body>
+  <div id="smooth-container" data-scroll-container>
+    <div class="trail"></div>
+    <div class="floating one"></div>
+    <div class="floating two"></div>
+    <div class="stripe"></div>
 
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-black/90 backdrop-blur-md shadow-[0_4_25px_rgba(0,0,0,0.14)_inset] border-b border-white/10">
-<div class="flex justify-between items-center px-4 md:px-8 py-4 max-w-[2200px] mx-auto w-full">
-<a href="./" class="flex items-center gap-2 text-2xl font-black italic tracking-tighter text-white">
-<img class="h-8 w-auto" src="./assets/logo-dark.svg" alt="CornerStones logo">
-<span class="hidden sm:inline">CornerStones</span>
-</a>
-<div class="hidden md:flex gap-8 items-center">
-<a class="font-uppercase-label text-uppercase-label text-[#faff69] border-b-2 border-[#faff69] pb-1 hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="./">Home</a>
-<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="./services/">Services</a>
-<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="./squad/">Squads</a>
-<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="./cases/">Case Studies</a>
-<a class="font-uppercase-label text-uppercase-label text-white hover:text-[#faff69] transition-colors hover:bg-[#3a3a3a] transition-all duration-200 px-2 py-1" href="./pricing/">Pricing</a>
-</div>
-<a href="https://wa.me/916370704148?text=Hi%2C%20I%27m%20interested%20in%20deploying%20a%20project.%20Can%20you%20help%20me%3F" target="_blank" class="bg-[#faff69] text-[#141414] font-uppercase-label text-uppercase-label px-4 py-2 rounded-DEFAULT hover:bg-white transition-all active:scale-95 hidden md:block inline-block text-center">Deploy Now</a>
-<!-- Mobile Menu Toggle -->
-<button id="hamburger-btn" class="hamburger-menu text-white hover:text-[#faff69] p-2 rounded" aria-label="Toggle menu">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
-</nav>
+    <nav data-scroll-section>
+      <div class="wrap">
+        <div class="brand">
+          <img class="dark-logo" src="assets/favicon.svg" alt="CornerStone logo">
+          
+          <span class="brand-name">CornerStone</span>
+        </div>
+        <button class="mobile-hamburger" aria-label="Open menu" aria-expanded="false">
+          <svg width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M0 2h22M0 8h22M0 14h22" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="site-menu" style="margin-left:18px;">
+          <a class="pill" href="pages/work.html" style="margin-right:8px;">Our Works</a>
+          <a class="pill" href="pages/services.html" style="margin-right:8px;">Services</a>
+          <a class="pill" href="pages/about.html" style="margin-right:8px;">About</a>
+          <a class="pill" href="pages/pricing.html" style="margin-right:8px;">Pricing</a>
+        </div>
+        <div class="actions" style="gap:10px; align-items:center;">
+          <button class="call-sign" aria-haspopup="dialog" title="Contact">📞 Contact</button>
+            <button class="pill mode-toggle" type="button" aria-pressed="false" aria-label="Toggle color mode" title="Toggle color mode">
+            
+            <!-- Sun icon (light mode) -->
+            <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+              <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M12 2v2"/>
+                <path d="M12 20v2"/>
+                <path d="M4.93 4.93l1.41 1.41"/>
+                <path d="M17.66 17.66l1.41 1.41"/>
+                <path d="M2 12h2"/>
+                <path d="M20 12h2"/>
+                <path d="M4.93 19.07l1.41-1.41"/>
+                <path d="M17.66 6.34l1.41-1.41"/>
+              </g>
+            </svg>
+            <!-- Moon icon (dark mode) -->
+            <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          
+          
+        </div>
+      </div>
+    </nav>
 
-<!-- Mobile Menu -->
-<div id="mobile-menu">
-<a href="./" class="mobile-menu-link">Home</a>
-<a href="./services/" class="mobile-menu-link">Services</a>
-<a href="./squad/" class="mobile-menu-link">Squads</a>
-<a href="./cases/" class="mobile-menu-link">Case Studies</a>
-<a href="./pricing/" class="mobile-menu-link">Pricing</a>
-<div style="padding: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1);">
-<a href="https://wa.me/916370704148?text=Hi%2C%20I%27m%20interested%20in%20deploying%20a%20project.%20Can%20you%20help%20me%3F" target="_blank" class="w-full bg-[#faff69] text-[#141414] font-uppercase-label text-uppercase-label px-4 py-3 rounded hover:bg-white transition-all inline-block text-center">Deploy Now</a>
-</div>
-</div>
-<!-- Canvas -->
-<main id="main-content" class="flex-grow pt-32 pb-xl px-4 md:px-8 max-w-container-max mx-auto w-full">
-<!-- Hero Section -->
-<section class="mb-xl text-center md:text-left grid grid-cols-1 md:grid-cols-2 gap-lg items-center mt-xl">
-<div>
-<h1 class="font-display-mega text-display-mega text-white mb-md uppercase tracking-tight">The Dedicated Squad Model.</h1>
-<p class="font-body-large text-body-large text-silver mb-lg max-w-2xl">High-performance engineering teams assembled to save time and increase your earnings. Specializing in Agentic AI, Secure RAG, and Custom Web Architectures.</p>
-<div class="flex flex-col sm:flex-row gap-4 mb-lg">
-<button class="bg-neon-volt text-pure-black font-uppercase-label text-uppercase-label px-6 py-4 rounded-DEFAULT hover:bg-hover-gray hover:text-pale-yellow active:shadow-[0_4_25px_rgba(0,0,0,0.14)_inset] transition-all duration-200">Assemble Your Squad</button>
-<button class="bg-transparent text-neon-volt border border-border-olive font-uppercase-label text-uppercase-label px-6 py-4 rounded-DEFAULT hover:bg-hover-gray transition-all duration-200">View 2026 Deployments</button>
-</div>
-<!-- Trust Bar -->
-<div class="flex flex-wrap gap-6 items-center text-silver font-uppercase-label text-uppercase-label opacity-70">
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-neon-volt">shield</span> SSL SECURE</span>
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-neon-volt">lock</span> GDPR COMPLIANT</span>
-<span class="flex items-center gap-2"><span class="material-symbols-outlined text-neon-volt">verified</span> ISO 27001</span>
-<span class="ml-auto flex gap-4">
-<span class="font-code-block text-code-block text-white">AWS</span>
-<span class="font-code-block text-code-block text-white">OpenAI</span>
-<span class="font-code-block text-code-block text-white">Shopify Plus</span>
-</span>
-</div>
-</div>
-<div class="hidden md:block relative h-[600px] border border-charcoal rounded-xl overflow-hidden bg-near-black p-4">
-<img alt="Cyberpunk server room with glowing green lights and infinite depth perspective" class="w-full h-full object-cover opacity-60 rounded-lg filter contrast-125 grayscale" data-alt="Cyberpunk server room with glowing green lights and infinite depth perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUA8lnE7QdvmsS5yZFlDLGe9_roPQiyFoIJKXApkW-fF32Dk_sRhJjcA_R386ocZULXc0LzrkLpU_-7zBl_q4OuzCpfAfbGzS1i4BvlsT8DXd8WifScDK753Fv3Namd4zcguVWf68611xg6AnVs6erA_uwBjkVbJbgdV6vDVmA_I5FqISI-gm46OFcmRsQF76d0WRAe7s7U5K60PWeA5No460tdc4p-vSOUOhy76vMByrz5yI807UNIZ9emQ5bg37zWQTRHDxXyGkF"/>
-<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
-<div class="absolute bottom-8 left-8 border-l-2 border-neon-volt pl-4">
-<div class="font-code-block text-code-block text-neon-volt">SYSTEM STATUS: ONLINE</div>
-<div class="font-display-hero text-display-hero text-white">99.99%</div>
-<div class="font-uppercase-label text-uppercase-label text-silver">UPTIME RECORD</div>
-</div>
-</div>
-</section>
-<!-- Problem Section -->
-<section class="py-xl border-t border-charcoal">
-<h2 class="font-display-hero text-display-hero text-white mb-lg text-center uppercase tracking-tight">Why Engineering Teams Bottleneck.</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="p-6 border border-charcoal bg-surface-container-low rounded-lg">
-<h3 class="font-feature-heading text-feature-heading text-white mb-4">The AI Hype Trap</h3>
-<p class="font-body-standard text-body-standard text-silver">Most agencies glue APIs together. We build secure, autonomous agentic workflows that actually impact your bottom line.</p>
-</div>
-<div class="p-6 border border-charcoal bg-surface-container-low rounded-lg">
-<h3 class="font-feature-heading text-feature-heading text-white mb-4">The Legacy Monolith</h3>
-<p class="font-body-standard text-body-standard text-silver">Bloated codebases are killing your conversions. We decouple and rebuild for sub-second latency.</p>
-</div>
-<div class="p-6 border border-charcoal bg-surface-container-low rounded-lg">
-<h3 class="font-feature-heading text-feature-heading text-white mb-4">The Talent Gap</h3>
-<p class="font-body-standard text-body-standard text-silver">Hiring top 1% AI and DevOps talent takes months. We deploy them to your project in 72 hours.</p>
-</div>
-</div>
-</section>
-<!-- Core Capabilities -->
-<section class="py-xl border-t border-charcoal">
-<h2 class="font-display-hero text-display-hero text-white mb-lg text-center uppercase tracking-tight">Core Capabilities.</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="p-8 border border-charcoal bg-surface-container-low rounded-lg relative overflow-hidden group">
-<div class="absolute top-0 left-0 w-1 h-full bg-neon-volt transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
-<h3 class="font-sub-heading text-sub-heading text-white mb-2">Agentic Systems &amp; Applied AI</h3>
-<p class="font-code-block text-code-block text-neon-volt mb-4">Focus: AutoGen, MCP, Multi-Agent Workflows</p>
-<p class="font-body-standard text-body-standard text-silver">Designing robust, autonomous AI agents capable of executing complex, multi-step tasks across enterprise ecosystems.</p>
-</div>
-<div class="p-8 border border-charcoal bg-surface-container-low rounded-lg relative overflow-hidden group">
-<div class="absolute top-0 left-0 w-1 h-full bg-neon-volt transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
-<h3 class="font-sub-heading text-sub-heading text-white mb-2">Secure RAG &amp; Knowledge Graphs</h3>
-<p class="font-code-block text-code-block text-neon-volt mb-4">Focus: Vector DBs, Enterprise Data Integration, Zero Hallucination</p>
-<p class="font-body-standard text-body-standard text-silver">Grounding LLMs in enterprise truth. Secure data pipelines ensuring compliance and extreme accuracy.</p>
-</div>
-<div class="p-8 border border-charcoal bg-surface-container-low rounded-lg relative overflow-hidden group">
-<div class="absolute top-0 left-0 w-1 h-full bg-neon-volt transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
-<h3 class="font-sub-heading text-sub-heading text-white mb-2">High-Performance Web &amp; Commerce</h3>
-<p class="font-code-block text-code-block text-neon-volt mb-4">Focus: Custom React/Next.js, Shopify Plus, Headless WordPress</p>
-<p class="font-body-standard text-body-standard text-silver">Sub-second load times. Composable commerce architectures designed for massive scale and extreme conversion.</p>
-</div>
-<div class="p-8 border border-charcoal bg-surface-container-low rounded-lg relative overflow-hidden group">
-<div class="absolute top-0 left-0 w-1 h-full bg-neon-volt transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
-<h3 class="font-sub-heading text-sub-heading text-white mb-2">Predictive Ops &amp; Data Architecture</h3>
-<p class="font-code-block text-code-block text-neon-volt mb-4">Focus: Airflow pipelines, MLflow, real-time telemetry</p>
-<p class="font-body-standard text-body-standard text-silver">Intelligent infrastructure that heals itself. Actionable telemetry feeding proactive operational models.</p>
-</div>
-</div>
-</section>
-<!-- The Elite Stack (The Squad) -->
-<section class="py-xl border-t border-charcoal">
-<h2 class="font-display-hero text-display-hero text-white mb-lg text-center uppercase tracking-tight">The Elite Stack.</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<!-- Team Member 1 -->
-<div class="p-6 border border-charcoal bg-surface-container-low rounded-lg flex flex-col">
-<h3 class="font-sub-heading text-sub-heading text-white mb-1">Avinash</h3>
-<p class="font-uppercase-label text-uppercase-label text-neon-volt mb-4">Principal AI Architect</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">PyTorch</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">LLM Ops</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">CUDA</span>
-</div>
-<p class="font-body-standard text-body-standard text-silver text-sm mt-auto">Architected a multi-agent system reducing enterprise support tickets by 40%.</p>
-</div>
-<!-- Team Member 2 -->
-<div class="p-6 border border-charcoal bg-surface-container-low rounded-lg flex flex-col">
-<h3 class="font-sub-heading text-sub-heading text-white mb-1">Emily</h3>
-<p class="font-uppercase-label text-uppercase-label text-neon-volt mb-4">Lead Full-Stack Engineer</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Next.js</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">TypeScript</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">GraphQL</span>
-</div>
-<p class="font-body-standard text-body-standard text-silver text-sm mt-auto">Migrated legacy monolith to decoupled architecture, improving load times by 3x.</p>
-</div>
-<!-- Team Member 3 -->
-<div class="p-6 border border-charcoal bg-surface-container-low rounded-lg flex flex-col">
-<h3 class="font-sub-heading text-sub-heading text-white mb-1">Rajesh</h3>
-<p class="font-uppercase-label text-uppercase-label text-neon-volt mb-4">Cloud Data Engineer</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Snowflake</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Airflow</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Kafka</span>
-</div>
-<p class="font-body-standard text-body-standard text-silver text-sm mt-auto">Built real-time telemetry pipelines processing 10B+ events daily.</p>
-</div>
-<!-- Team Member 4 -->
-<div class="p-6 border border-charcoal bg-surface-container-low rounded-lg flex flex-col">
-<h3 class="font-sub-heading text-sub-heading text-white mb-1">Sarah</h3>
-<p class="font-uppercase-label text-uppercase-label text-neon-volt mb-4">Security Architect</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Zero Trust</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">AWS IAM</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Pen Testing</span>
-</div>
-<p class="font-body-standard text-body-standard text-silver text-sm mt-auto">Secured enterprise RAG pipeline against prompt injection and exfiltration.</p>
-</div>
-<!-- Team Member 5 -->
-<div class="p-6 border border-charcoal bg-surface-container-low rounded-lg flex flex-col">
-<h3 class="font-sub-heading text-sub-heading text-white mb-1">Vikram</h3>
-<p class="font-uppercase-label text-uppercase-label text-neon-volt mb-4">DevOps Lead</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Kubernetes</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Terraform</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">CI/CD</span>
-</div>
-<p class="font-body-standard text-body-standard text-silver text-sm mt-auto">Reduced deployment times from days to minutes with zero-downtime clusters.</p>
-</div>
-<!-- Team Member 6 -->
-<div class="p-6 border border-charcoal bg-surface-container-low rounded-lg flex flex-col">
-<h3 class="font-sub-heading text-sub-heading text-white mb-1">Marcus</h3>
-<p class="font-uppercase-label text-uppercase-label text-neon-volt mb-4">UI/UX Engineer</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">React</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Tailwind</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Figma API</span>
-</div>
-<p class="font-body-standard text-body-standard text-silver text-sm mt-auto">Created composable design systems adopted across 12 product lines.</p>
-</div>
-<!-- Team Member 7 -->
-<div class="p-6 border border-charcoal bg-surface-container-low rounded-lg flex flex-col">
-<h3 class="font-sub-heading text-sub-heading text-white mb-1">Priya</h3>
-<p class="font-uppercase-label text-uppercase-label text-neon-volt mb-4">Commerce Architect</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Shopify Plus</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Liquid</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Hydrogen</span>
-</div>
-<p class="font-body-standard text-body-standard text-silver text-sm mt-auto">Scaled headless commerce setup to handle $50M+ BFCM weekend volume.</p>
-</div>
-<!-- Team Member 8 -->
-<div class="p-6 border border-charcoal bg-surface-container-low rounded-lg flex flex-col">
-<h3 class="font-sub-heading text-sub-heading text-white mb-1">David</h3>
-<p class="font-uppercase-label text-uppercase-label text-neon-volt mb-4">Systems Engineer</p>
-<div class="flex flex-wrap gap-2 mb-4">
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Rust</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">Go</span>
-<span class="px-2 py-1 bg-[#2b2b20] text-silver text-xs rounded border border-[#484835]">WASM</span>
-</div>
-<p class="font-body-standard text-body-standard text-silver text-sm mt-auto">Rewrote critical path microservices in Rust, dropping latency by 85%.</p>
-</div>
-</div>
-</section>
-<!-- 2026 Deployments (Case Studies) -->
-<section class="py-xl border-t border-charcoal">
-<h2 class="font-display-hero text-display-hero text-white mb-lg text-center uppercase tracking-tight">2026 Deployments.</h2>
-<div class="space-y-12">
-<!-- Project Catalyst -->
-<div class="border border-charcoal rounded-lg bg-surface-container-low p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-<div>
-<h3 class="font-feature-heading text-feature-heading text-white mb-2">Project Catalyst</h3>
-<p class="font-code-block text-code-block text-neon-volt mb-6">FinTech Autonomous Onboarding</p>
-<div class="mb-4">
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Problem</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm">KYC/AML reviews taking 3+ days, leading to high drop-off rates.</p>
-</div>
-<div class="mb-4">
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Architecture</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm">Multi-agent LangChain workflow validating documents against secure vector DBs via MCP.</p>
-</div>
-<div>
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Impact</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm text-neon-volt">Onboarding reduced to 4 minutes. 32% increase in activated accounts.</p>
-</div>
-</div>
-<div class="bg-black border border-[#484835] rounded-md p-4 flex items-center justify-center font-code-block text-xs text-silver opacity-80">
-[ User Input ] --&gt; [ Orchestrator Agent ] --&gt; [ Vector DB ]<br/>
-                        |<br/>
-                        v<br/>
-                 [ Compliance API ] --&gt; [ Decision ]
-</div>
-</div>
-<!-- Project Velocity -->
-<div class="border border-charcoal rounded-lg bg-surface-container-low p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-<div>
-<h3 class="font-feature-heading text-feature-heading text-white mb-2">Project Velocity</h3>
-<p class="font-code-block text-code-block text-neon-volt mb-6">Headless Commerce Migration</p>
-<div class="mb-4">
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Problem</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm">Legacy Magento stack crashing under holiday load.</p>
-</div>
-<div class="mb-4">
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Architecture</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm">Next.js edge front-end + Shopify Plus backend, cached via Vercel.</p>
-</div>
-<div>
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Impact</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm text-neon-volt">0 downtime during BFCM. Conversion rate up 18%.</p>
-</div>
-</div>
-<div class="bg-black border border-[#484835] rounded-md p-4 flex items-center justify-center font-code-block text-xs text-silver opacity-80">
-[ Next.js Edge ] &lt;--&gt; [ GraphQL Layer ] &lt;--&gt; [ Shopify API ]<br/>
-        |<br/>
-        v<br/>
-[ Edge Cache (Vercel) ]
-</div>
-</div>
-<!-- Project Sentinel -->
-<div class="border border-charcoal rounded-lg bg-surface-container-low p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-<div>
-<h3 class="font-feature-heading text-feature-heading text-white mb-2">Project Sentinel</h3>
-<p class="font-code-block text-code-block text-neon-volt mb-6">Enterprise Secure RAG</p>
-<div class="mb-4">
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Problem</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm">Internal knowledge base impossible to search securely by different departments.</p>
-</div>
-<div class="mb-4">
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Architecture</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm">Milvus Vector DB with strict RBAC integrated into a custom LLM gateway.</p>
-</div>
-<div>
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Impact</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm text-neon-volt">100% compliance maintained. Search time reduced from hours to seconds.</p>
-</div>
-</div>
-<div class="bg-black border border-[#484835] rounded-md p-4 flex items-center justify-center font-code-block text-xs text-silver opacity-80">
-[ Employee Query ] --&gt; [ LLM Gateway (RBAC) ] --&gt; [ Embedding ]<br/>
-                                            |<br/>
-                                            v<br/>
-                                       [ Vector DB ]
-</div>
-</div>
-<!-- Project Apex -->
-<div class="border border-charcoal rounded-lg bg-surface-container-low p-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-<div>
-<h3 class="font-feature-heading text-feature-heading text-white mb-2">Project Apex</h3>
-<p class="font-code-block text-code-block text-neon-volt mb-6">Predictive Operations Dashboard</p>
-<div class="mb-4">
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Problem</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm">Reactive maintenance causing unpredicted supply chain halts.</p>
-</div>
-<div class="mb-4">
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Architecture</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm">Kafka streaming -&gt; Snowflake -&gt; MLflow predictive models -&gt; React Dashboard.</p>
-</div>
-<div>
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-1">Impact</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm text-neon-volt">95% accuracy in predicting machine failure 48hrs in advance.</p>
-</div>
-</div>
-<div class="bg-black border border-[#484835] rounded-md p-4 flex items-center justify-center font-code-block text-xs text-silver opacity-80">
-[ IoT Sensors ] --&gt; [ Kafka ] --&gt; [ Snowflake ]<br/>
-                                   |<br/>
-                                   v<br/>
-              [ React Dash ] &lt;-- [ MLflow Models ]
-</div>
-</div>
-</div>
-</section>
-<!-- Engagement Models -->
-<section class="py-xl border-t border-charcoal">
-<h2 class="font-display-hero text-display-hero text-white mb-lg text-center uppercase tracking-tight">Engagement Models.</h2>
-<div class="flex flex-col md:flex-row justify-center items-start gap-8 mb-12">
-<div class="flex-1 text-center">
-<div class="w-12 h-12 rounded-full bg-[#2b2b20] border-2 border-neon-volt text-neon-volt flex items-center justify-center font-black text-xl mx-auto mb-4">1</div>
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-2">Discovery Audit</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm">Deep dive into your current architecture and bottleneck analysis.</p>
-</div>
-<div class="hidden md:block w-8 border-t-2 border-charcoal mt-6"></div>
-<div class="flex-1 text-center">
-<div class="w-12 h-12 rounded-full bg-[#2b2b20] border-2 border-neon-volt text-neon-volt flex items-center justify-center font-black text-xl mx-auto mb-4">2</div>
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-2">Squad Assembly</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm">Curating the exact mix of talent required for your specific stack.</p>
-</div>
-<div class="hidden md:block w-8 border-t-2 border-charcoal mt-6"></div>
-<div class="flex-1 text-center">
-<div class="w-12 h-12 rounded-full bg-[#2b2b20] border-2 border-neon-volt text-neon-volt flex items-center justify-center font-black text-xl mx-auto mb-4">3</div>
-<h4 class="font-uppercase-label text-uppercase-label text-white mb-2">Sprint Execution</h4>
-<p class="font-body-standard text-body-standard text-silver text-sm">Rapid deployment, continuous integration, and transparent reporting.</p>
-</div>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-<div class="border border-charcoal bg-surface-container-low p-8 rounded-lg text-center">
-<h3 class="font-sub-heading text-sub-heading text-white mb-2">Dedicated Squad</h3>
-<p class="font-code-block text-code-block text-silver mb-4">Monthly Retainer</p>
-<p class="font-body-standard text-body-standard text-silver mb-6">A fully integrated, autonomous team acting as your external engineering department.</p>
-<a href="https://wa.me/916370704148?text=Hi%2C%20I%27d%20like%20to%20inquire%20about%20your%20availability%20for%20a%20project." target="_blank" class="bg-transparent text-white border border-charcoal font-uppercase-label text-uppercase-label px-6 py-3 rounded-DEFAULT hover:bg-hover-gray transition-all w-full inline-block text-center">Inquire Availability</a>
-</div>
-<div class="border border-neon-volt bg-surface-container-low p-8 rounded-lg text-center relative overflow-hidden">
-<div class="absolute top-0 right-0 bg-neon-volt text-black text-[10px] font-black uppercase px-2 py-1 tracking-widest">Most Popular</div>
-<h3 class="font-sub-heading text-sub-heading text-white mb-2">Custom Builds</h3>
-<p class="font-code-block text-code-block text-silver mb-4">Milestone-Based</p>
-<p class="font-body-standard text-body-standard text-silver mb-6">Fixed-scope projects designed to deliver specific architectural transformations.</p>
-<a href="https://wa.me/916370704148?text=Hi%2C%20I%27d%20like%20to%20request%20a%20proposal%20for%20my%20project." target="_blank" class="bg-neon-volt text-black font-uppercase-label text-uppercase-label px-6 py-3 rounded-DEFAULT hover:bg-[#e5ea57] transition-all w-full inline-block text-center">Request Proposal</a>
-</div>
-</div>
-</section>
-<!-- FAQ -->
-<section class="py-xl border-t border-charcoal">
-<h2 class="font-display-hero text-display-hero text-white mb-lg text-center uppercase tracking-tight">System FAQ.</h2>
-<div class="space-y-4 max-w-4xl mx-auto">
-<details class="bg-surface-container-low border border-charcoal rounded-lg [&amp;_summary::-webkit-details-marker]:hidden">
-<summary class="font-sub-heading text-lg text-white p-6 cursor-pointer flex justify-between items-center">
-Timezones &amp; Communication
-<span class="material-symbols-outlined text-neon-volt">expand_more</span>
-</summary>
-<div class="px-6 pb-6 font-body-standard text-body-standard text-silver">
-We operate primarily in US timezones (EST/PST). Core overlapping hours are established during kickoff to ensure synchronous alignment, while asynchronous deep work happens around the clock.
-</div>
-</details>
-<details class="bg-surface-container-low border border-charcoal rounded-lg [&amp;_summary::-webkit-details-marker]:hidden">
-<summary class="font-sub-heading text-lg text-white p-6 cursor-pointer flex justify-between items-center">
-IP Ownership
-<span class="material-symbols-outlined text-neon-volt">expand_more</span>
-</summary>
-<div class="px-6 pb-6 font-body-standard text-body-standard text-silver">
-You own 100% of the Intellectual Property. All code, architectures, and data pipelines we build for you are transferred fully upon milestone completion.
-</div>
-</details>
-<details class="bg-surface-container-low border border-charcoal rounded-lg [&amp;_summary::-webkit-details-marker]:hidden">
-<summary class="font-sub-heading text-lg text-white p-6 cursor-pointer flex justify-between items-center">
-Data Handling &amp; Security
-<span class="material-symbols-outlined text-neon-volt">expand_more</span>
-</summary>
-<div class="px-6 pb-6 font-body-standard text-body-standard text-silver">
-Security is foundational. We employ strict RBAC (Role-Based Access Control), adhere to ISO 27001 standards, and ensure full GDPR compliance. Data is encrypted in transit and at rest.
-</div>
-</details>
-</div>
-</section>
-</main>
-<!-- Footer -->
-<footer class="bg-black w-full py-16 px-8 border-t border-[#414141]">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[2200px] mx-auto">
-<div>
-<div class="flex items-center gap-2 text-xl font-black text-white mb-4">
-<img class="h-8 w-auto" src="./assets/logo-dark.svg" alt="CornerStones logo">
-<span>CornerStones</span>
-</div>
-<p class="font-['Inter'] text-xs font-semibold uppercase tracking-wider text-[#faff69]">© 2026 CornerStones. HIGH PERFORMANCE INFRASTRUCTURE.</p>
-</div>
-<div class="flex flex-col gap-2">
-<a class="font-['Inter'] text-xs font-semibold uppercase tracking-wider text-[#a0a0a0] hover:text-white transition-colors cursor-pointer" href="#">Documentation</a>
-<a class="font-['Inter'] text-xs font-semibold uppercase tracking-wider text-[#a0a0a0] hover:text-white transition-colors cursor-pointer" href="#">System Status</a>
-</div>
-<div class="flex flex-col gap-2">
-<a class="font-['Inter'] text-xs font-semibold uppercase tracking-wider text-[#a0a0a0] hover:text-white transition-colors cursor-pointer" href="#">Privacy Policy</a>
-<a class="font-['Inter'] text-xs font-semibold uppercase tracking-wider text-[#a0a0a0] hover:text-white transition-colors cursor-pointer" href="#">Terms of Service</a>
-</div>
-<div>
-<a href="https://wa.me/916370704148?text=Hi%2C%20I%27d%20like%20to%20book%20a%20technical%20discovery%20call." target="_blank" class="bg-forest-green text-white font-uppercase-label text-uppercase-label px-4 py-2 rounded-DEFAULT w-full mb-2 inline-block text-center">Book a Technical Discovery Call</a>
-<div class="font-body-standard text-body-standard text-silver text-sm text-center">Stop battling technical debt. Start shipping.</div>
-</div>
-</div>
-</footer>
-</body>
+    <!-- Mobile side menu overlay -->
+    <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu">✕</button>
+        <nav class="mobile-links">
+          <a href="pages/work.html">Our Works</a>
+          <a href="pages/services.html">Services</a>
+          <a href="pages/about.html">About</a>
+          <a href="pages/pricing.html" style="color:var(--primary); font-weight:800;">Pricing</a>
+          <a href="pages/websites.html">Website in a Day</a>
+          <a href="pages/leads.html">Get found locally</a>
+          <a href="pages/reviews.html">Reputation</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="mobile-menu-contact">
+          <a href="tel:+916370704148">+91 6370704148</a>
+          <a href="mailto:contact@cornerstones.dev">contact@cornerstones.dev</a>
+        </div>
+      </div>
+    </div>
+    <!-- Mobile hero line (visible on small screens only) -->
+    <div class="mobile-hero-line">Get Found. Get Trust. Get Business.</div>
 
+    <!-- Contact popup overlay -->
+    <div id="contact-popup-overlay" class="contact-popup-overlay" aria-hidden="true">
+      <div class="contact-popup" role="dialog" aria-modal="true" aria-labelledby="contact-popup-title">
+        <button id="contact-popup-close" class="close-btn" aria-label="Close">✕</button>
+        <h3 id="contact-popup-title">Contact CornerStone</h3>
+        <p><strong>Phone:</strong> <a href="tel:+916370704148">+91 6370704148</a></p>
+        <p><strong>Email:</strong> <a href="mailto:contact@cornerstones.dev">contact@cornerstones.dev</a></p>
+        <p><a href="https://forms.gle/LvEvNb67DZYXDyLV6" target="_blank" rel="noopener">Contact us / Book via form</a></p>
+      </div>
+    </div>
+
+    <header data-scroll-section>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J9WY5FXZPX"></script>
 <script>
-// Mobile Menu Toggle
-document.addEventListener('DOMContentLoaded', function() {
-  const hamburgerBtn = document.getElementById('hamburger-btn');
-  const mobileMenu = document.getElementById('mobile-menu');
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  if (hamburgerBtn && mobileMenu) {
-    hamburgerBtn.addEventListener('click', function(e) {
-      e.stopPropagation();
-      mobileMenu.classList.toggle('active');
-      hamburgerBtn.classList.toggle('active');
-    });
-
-    // Close menu when clicking on a link
-    const menuLinks = mobileMenu.querySelectorAll('a');
-    menuLinks.forEach(link => {
-      link.addEventListener('click', function() {
-        mobileMenu.classList.remove('active');
-        hamburgerBtn.classList.remove('active');
-      });
-    });
-
-    // Close menu when pressing Escape
-    document.addEventListener('keydown', function(event) {
-      if (event.key === 'Escape') {
-        mobileMenu.classList.remove('active');
-        hamburgerBtn.classList.remove('active');
-      }
-    });
-
-    // Close menu when clicking outside (on the backdrop)
-    mobileMenu.addEventListener('click', function(e) {
-      if (e.target === mobileMenu) {
-        mobileMenu.classList.remove('active');
-        hamburgerBtn.classList.remove('active');
-      }
-    });
-  }
-});
+  gtag('config', 'G-J9WY5FXZPX');
 </script>
+      <div class="wrap hero">
+        <div>
+          <div class="label">Digital Growth Studio</div>
+          <h1 class="reveal-text" style="font-size: clamp(44px, 8vw, 80px);">Get Found. Get Trust. Get Business.</h1>
+          <p class="lede">We help businesses show up online, build credibility, and turn visitors into real leads, messages, and customers.</p>
+          <div class="actions">
+            <a class="btn" href="pages/work.html">See what we build</a>
+            <a class="btn secondary" href="#process">How we deliver</a>
+          </div>
+        </div>
 
+        <div class="hero-card reveal">
+          <h3>What you get fast</h3>
+          <p style="color: var(--muted); margin:0;">Simple outcomes without tech talk.</p>
+          <div class="ticker">
+            <div class="ticker-row"><span>Website that feels premium on phone</span><strong>Live in 24Hrs</strong></div>
+            <div class="ticker-row"><span>More enquiries from Google + social media</span><strong>Optimised SEO</strong></div>
+            <div class="ticker-row"><span>Reviews + reply automation</span><strong>Customer Engagement</strong></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main data-scroll-section>
+      <section id="services" class="anchor-pad">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="label">Services</div>
+              <h2>Built for business owners who want results without the hassle.</h2>
+            </div>
+            <a class="pill" href="pages/work.html#pages">Explore live builds</a>
+          </div>
+          <div class="cards">
+            <a class="card reveal" href="pages/websites.html">
+              <span class="brand-accent" aria-hidden="true"></span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+              <div class="chip">Jamstack Sites</div>
+              <h3>Core Business Launch Site</h3>
+              <p>We engineer a fast, mobile-first static site on global edge infrastructure so you start converting visitors immediately.</p>
+            </a>
+            <a class="card reveal" href="pages/services.html">
+              <span class="brand-accent" aria-hidden="true"></span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              <div class="chip">Tailored Stack</div>
+              <h3>Dynamic Growth Site</h3>
+              <p>A full-stack, conversion-optimized site with CMS, analytics, and SEO architecture built for scale.</p>
+            </a>
+            <a class="card reveal" href="pages/pricing.html">
+              <span class="brand-accent" aria-hidden="true"></span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              <div class="chip">Modular Services</div>
+              <h3>Performance & Optimization</h3>
+              <p>Speed audits, accessibility compliance, CMS migrations, and CRM engineering — modular blocks you add as you grow.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="anchor-pad">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="label">Process</div>
+              <h2>Simple, guided steps to launch.</h2>
+            </div>
+            <span class="pill">Two-week launch windows</span>
+          </div>
+          <div class="process">
+            <div class="step reveal" data-step="01">
+              <h3>Strategy Intensive</h3>
+              <p>We understand your business, city, and customers, then pick the quickest wins.</p>
+            </div>
+            <div class="step reveal" data-step="02">
+              <h3>Design & Build</h3>
+              <p>We write the words, design the look, and build pages that work great on mobile.</p>
+            </div>
+            <div class="step reveal" data-step="03">
+              <h3>Launch & Scale</h3>
+              <p>We connect Google, maps, and social, then keep an eye on calls and forms so you see results.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="proof" class="anchor-pad">
+        <div class="wrap">
+          <div class="testimonials-section">
+            <h3 style="margin-bottom:12px;">What our clients say</h3>
+            <div class="testimonials-grid">
+              <div class="testimonial">
+                <p class="quote">"Since our new website launch, table bookings have doubled. The site is smooth and mobile-friendly — customers keep coming!"</p>
+                <p class="meta"><span class="reviewer">— R. Kumar</span><span class="business">, Restaurant Owner</span></p>
+              </div>
+              <div class="testimonial">
+                <p class="quote">"The new site feels fast and polished. We saw a spike in online reviews and more walk-ins — business up noticeably."</p>
+                <p class="meta"><span class="reviewer">— S. Mehra</span><span class="business">, Beauty Salon</span></p>
+              </div>
+              <div class="testimonial">
+                <p class="quote">"Website navigation is effortless. Our search visibility climbed — leads and conversions rose within weeks."</p>
+                <p class="meta"><span class="reviewer">— A. Singh</span><span class="business">, Travel Agency</span></p>
+              </div>
+              <div class="testimonial">
+                <p class="quote">"Beautiful, quick site — customers find us easily now and our footfall has increased. Ratings are looking much better."</p>
+                <p class="meta"><span class="reviewer">— P. Verma</span><span class="business">, Boutique Retail</span></p>
+              </div>
+              <div class="testimonial">
+                <p class="quote">"Site performance is fantastic. More people call us from the website and our store ratings have improved."</p>
+                <p class="meta"><span class="reviewer">— D. Patel</span><span class="business">, Electronics Store</span></p>
+              </div>
+              <div class="testimonial">
+                <p class="quote">"Smooth booking flow and clearer menus boosted orders. New customers keep coming in."</p>
+                <p class="meta"><span class="reviewer">— A. Rao</span><span class="business">, Café Owner</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="anchor-pad">
+        <div class="wrap cta reveal">
+          <h3>Ready to build your digital foundation?</h3>
+          <p>Tell us your goal; we’ll reply with a tailored sprint plan within one business day.</p>
+          <div class="actions" style="justify-content:center;">
+            <a class="btn" href="tel:+916370704148">+91 6370704148</a>
+            <a class="btn" href="mailto:contact@cornerstones.dev?subject=Project%20Inquiry">contact@cornerstones.dev</a>
+            <a class="btn secondary" href="pages/services.html">View services</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="tech" class="anchor-pad">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="label">Services You Can Add</div>
+              <h2>Helpful add-ons that make a visible difference.</h2>
+            </div>
+            <span class="pill">Optional, high-impact</span>
+          </div>
+          <div class="cards">
+            <div class="card reveal">
+              <span class="brand-accent" aria-hidden="true"></span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              <h3>ADA &amp; Accessibility Compliance</h3>
+              <p>Full WCAG audit and remediation so your site is usable by everyone and meets international accessibility standards.</p>
+            </div>
+            <div class="card reveal">
+              <span class="brand-accent" aria-hidden="true"></span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <h3>Core Web Vitals &amp; Speed Optimization</h3>
+              <p>Performance engineering to hit green scores across LCP, FID, and CLS — faster load times mean higher conversions.</p>
+            </div>
+            <div class="card reveal">
+              <span class="brand-accent" aria-hidden="true"></span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              <h3>CMS Setup &amp; Migrations</h3>
+              <p>Headless CMS architecture or WordPress migration — structured content management that scales with your team.</p>
+            </div>
+            <div class="card reveal">
+              <span class="brand-accent" aria-hidden="true"></span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <h3>CRM / SRM Engineering</h3>
+              <p>Purpose-built customer and supplier relationship systems tailored to your workflow — not a generic off-the-shelf tool.</p>
+            </div>
+            <div class="card reveal">
+              <span class="brand-accent" aria-hidden="true"></span>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              <h3>Custom UI/UX Audits</h3>
+              <p>Layout de-cluttering, conversion funnel analysis, and interface redesign recommendations backed by real user data.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="anchor-pad">
+        <div class="wrap">
+          <div class="section-head">
+            <div>
+              <div class="label">Why Us</div>
+              <h2>No tech jargon. Just results.</h2>
+            </div>
+            <span class="pill">Global reach, clear outcomes</span>
+          </div>
+          <div style="color:var(--muted);">
+            <p><strong>The 24/7 Salesperson:</strong> Your shop may close at night, but a website answers customers any time — showing your services, price, and opening hours even at 2 AM.</p>
+            <p><strong>The Digital Visiting Card:</strong> Most customers search online before they visit. A simple, professional website proves you are real and trustworthy.</p>
+            <p><strong>Own your presence:</strong> Facebook and Instagram can change the rules; a website is your owned spot on the internet you control.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer data-scroll-section>
+      <div class="wrap footer-grid">
+        <div>
+          <div class="brand">
+            <img class="dark-logo" src="assets/favicon.svg" alt="CornerStone logo">
+            
+            <span class="brand-name">CornerStone</span>
+          </div>
+          <p style="margin:10px 0 0;">Digital marketing studio for brands that want momentum, not just maintenance.</p>
+        </div>
+        <div>
+          <p class="footer-heading"><strong>Contact</strong></p>
+          <a href="mailto:contact@cornerstones.dev">contact@cornerstones.dev</a><br>
+          <span>+91 6370704148</span>
+        </div>
+        <div>
+          <p class="footer-heading"><strong>Links</strong></p>
+          <a href="pages/services.html">Services</a><br>
+          <a href="#process">Process</a><br>
+          <a href="#proof">Proof</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating testimonials -->
+    <div id="tf-popup" class="testi-float" role="status" aria-live="polite" aria-atomic="true">
+      <button class="tf-close" id="tf-close" aria-label="Dismiss">✕</button>
+      <div class="tf-top">
+        <div class="tf-avatar" id="tf-avatar">😊</div>
+        <div>
+          <div class="tf-name" id="tf-name">Loading…</div>
+          <div class="tf-role" id="tf-role"></div>
+        </div>
+      </div>
+      <div class="tf-stars" id="tf-stars">★★★★★</div>
+      <div class="tf-quote" id="tf-quote"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script src="script.js"></script>
+
+  <!-- ══ Pricing Offer Popup ══ -->
+  <div id="offer-popup" role="dialog" aria-label="Limited time pricing offer" aria-modal="false">
+    <button class="op-close" id="op-close-btn" aria-label="Dismiss offer">✕</button>
+    <div class="op-badge">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+      Launch Pricing
+    </div>
+    <h4>Premium sites, engineered to convert.</h4>
+    <p class="op-sub">Flat-rate website packages — no hidden fees, deployed on global edge infrastructure.</p>
+    <div class="op-prices">
+      <div class="op-price-item">
+        <div class="name">Starter</div>
+        <div class="now" data-price="starter">$60</div>
+      </div>
+      <div class="op-price-item" style="border-color:rgba(58,84,208,0.4); background:rgba(58,84,208,0.12);">
+        <div class="name">Professional</div>
+        <div class="now" data-price="professional">$190</div>
+      </div>
+    </div>
+    <div class="op-timer">
+      <span class="lbl">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        Ends in
+      </span>
+      <div class="op-timer-blocks">
+        <div class="op-tblock"><span class="n" id="op-h">12</span><span class="u">hr</span></div>
+        <span class="op-tsep">:</span>
+        <div class="op-tblock"><span class="n" id="op-m">00</span><span class="u">min</span></div>
+        <span class="op-tsep">:</span>
+        <div class="op-tblock"><span class="n" id="op-s">00</span><span class="u">sec</span></div>
+      </div>
+    </div>
+    <a class="op-cta" href="pages/pricing.html">View all packages →</a>
+    <div class="op-free">✓ Deployed on serverless global edge</div>
+  </div>
+
+  <script>
+    (function () {
+      var DISMISS_KEY = 'cs_offer_dismissed';
+      var STORAGE_KEY = 'cs_offer_end';
+      var DURATION_MS = 12 * 60 * 60 * 1000;
+      var popup = document.getElementById('offer-popup');
+      var closeBtn = document.getElementById('op-close-btn');
+      var timerInterval;
+
+      function pad(n) { return String(n).padStart(2, '0'); }
+
+      function getEndTime() {
+        var stored = localStorage.getItem(STORAGE_KEY);
+        if (stored) {
+          var t = parseInt(stored, 10);
+          if (t > Date.now()) return t;
+        }
+        var fresh = Date.now() + DURATION_MS;
+        localStorage.setItem(STORAGE_KEY, fresh);
+        return fresh;
+      }
+
+      function tick(endTime) {
+        var diff = endTime - Date.now();
+        if (diff <= 0) {
+          endTime = Date.now() + DURATION_MS;
+          localStorage.setItem(STORAGE_KEY, endTime);
+          diff = DURATION_MS;
+        }
+        document.getElementById('op-h').textContent = pad(Math.floor(diff / 3600000));
+        document.getElementById('op-m').textContent = pad(Math.floor((diff % 3600000) / 60000));
+        document.getElementById('op-s').textContent = pad(Math.floor((diff % 60000) / 1000));
+      }
+
+      function showPopup() {
+        var endTime = getEndTime();
+        tick(endTime);
+        timerInterval = setInterval(function () { tick(getEndTime()); }, 1000);
+        setTimeout(function () { popup.classList.add('visible'); }, 2200);
+      }
+
+      function dismissPopup() {
+        popup.classList.remove('visible');
+        clearInterval(timerInterval);
+        /* Don't suppress for 24h — show again on next visit */
+      }
+
+      if (closeBtn) closeBtn.addEventListener('click', dismissPopup);
+
+      /* Show on load (delay 2.2s so page settles) */
+      showPopup();
+    })();
+
+    /* ── Floating testimonials ── */
+    var testimonials = [
+      { emoji:'⚕️', name:'Dr. P. Sharma', role:'Dermatology Clinic', stars:'★★★★★', quote:'"CornerStone built our website and set up the chatbot. Patient enquiries doubled — without hiring extra staff."' },
+      { emoji:'📊', name:'R. Mehta', role:'Accounting Firm', stars:'★★★★★', quote:'"Their CRM is built exactly around how we manage clients. No more spreadsheets — everything is tracked and automated."' },
+      { emoji:'🏋️', name:'A. Verma', role:'Fitness Centre', stars:'★★★★☆', quote:'"The AI receptionist handles after-hours calls and books trial sessions. We haven\'t missed a lead since."' },
+      { emoji:'🏨', name:'S. Rao', role:'Boutique Hotel', stars:'★★★★★', quote:'"Review management brought us from 3.8 to 4.9 stars on Google. Bookings went up 40% in 3 months."' },
+      { emoji:'🏠', name:'V. Joshi', role:'Interior Designer', stars:'★★★★★', quote:'"The website looks incredible and ranks on search. Clients now find us — we stopped relying on referrals alone."' },
+      { emoji:'🦷', name:'Dr. R. Patel', role:'Dental Clinic', stars:'★★★★★', quote:'"Booking via the chatbot runs itself. I just check my schedule and see appointments already confirmed."' }
+    ];
+
+    var popup = document.getElementById('tf-popup');
+    var closeBtn = document.getElementById('tf-close');
+    var current = 0;
+    var dismissed = false;
+    var timer;
+
+    function showNext() {
+      if (dismissed) return;
+      var t = testimonials[current % testimonials.length];
+      document.getElementById('tf-avatar').textContent = t.emoji;
+      document.getElementById('tf-name').textContent = t.name;
+      document.getElementById('tf-role').textContent = t.role;
+      document.getElementById('tf-stars').textContent = t.stars;
+      document.getElementById('tf-quote').textContent = t.quote;
+      popup.classList.add('show');
+      current++;
+      timer = setTimeout(function() {
+        popup.classList.remove('show');
+        setTimeout(showNext, 3500);
+      }, 6000);
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        dismissed = true;
+        clearTimeout(timer);
+        popup.classList.remove('show');
+      });
+    }
+
+    // Start after 3s delay
+    setTimeout(showNext, 3000);
+  </script>
+  <script src="pricing-engine.js"></script>
+</body>
 </html>

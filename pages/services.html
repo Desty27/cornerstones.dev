@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J9WY5FXZPX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J9WY5FXZPX');
+</script>
+  <meta charset="UTF-8">
+  <meta name="description" content="CornerStone offers website engineering, performance optimization, CMS migrations, CRM systems, accessibility compliance, and UI/UX audits for businesses worldwide.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cornerstones.dev/pages/services.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CornerStone">
+  <meta property="og:title" content="Services — CornerStone | Website Engineering & Digital Growth">
+  <meta property="og:description" content="From websites to AI receptionists — CornerStone builds the full digital stack your business needs to grow.">
+  <meta property="og:url" content="https://cornerstones.dev/pages/services.html">
+  <meta property="og:image" content="https://cornerstones.dev/assets/favicon.svg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Services — CornerStone">
+  <meta name="twitter:description" content="Websites, SEO, performance optimization, CMS, CRM & more for businesses worldwide.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services — CornerStone | Website Engineering & Digital Growth</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ── Services page ── */
+    .services-hero {
+      padding: 80px 0 48px;
+      text-align: center;
+    }
+    .services-hero .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--primary);
+      background: rgba(180,208,58,0.12);
+      border: 1px solid rgba(180,208,58,0.25);
+      border-radius: 99px;
+      padding: 4px 14px;
+      margin-bottom: 20px;
+    }
+    .services-hero h1 {
+      font-size: clamp(32px, 6vw, 64px);
+      font-weight: 900;
+      line-height: 1.05;
+      margin: 0 0 16px;
+    }
+    .services-hero p {
+      color: var(--muted);
+      font-size: 18px;
+      max-width: 580px;
+      margin: 0 auto 32px;
+    }
+
+    /* ── Category label ── */
+    .cat-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 64px 0 24px;
+    }
+    .cat-label .line { flex: 1; height: 1px; background: var(--border); }
+    .cat-label span {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* ── Service cards ── */
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .svc-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .svc-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background: radial-gradient(circle at 30% 30%, rgba(180,208,58,0.07), transparent 60%);
+    }
+    .svc-card:hover { transform: translateY(-5px); border-color: rgba(180,208,58,0.35); box-shadow: 0 20px 50px rgba(0,0,0,0.3); }
+    .svc-card:hover::before { opacity: 1; }
+    .svc-card .icon { font-size: 36px; margin-bottom: 16px; display: block; }
+    .svc-card .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 3px 10px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+    }
+    .badge-core { background: rgba(58,84,208,0.18); color: #7a99ff; border: 1px solid rgba(58,84,208,0.3); }
+    .badge-ai { background: rgba(180,208,58,0.15); color: var(--primary); border: 1px solid rgba(180,208,58,0.3); }
+    .badge-custom { background: rgba(255,140,50,0.12); color: #ffaa55; border: 1px solid rgba(255,140,50,0.25); }
+    .svc-card h3 { font-size: 20px; font-weight: 800; margin: 0 0 10px; }
+    .svc-card p { color: var(--muted); font-size: 14px; line-height: 1.65; margin: 0 0 18px; }
+    .svc-card ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .svc-card ul li { font-size: 13px; color: var(--muted); display: flex; align-items: flex-start; gap: 8px; }
+    .svc-card ul li::before { content: '✓'; color: var(--primary); font-weight: 800; flex-shrink: 0; margin-top: 1px; }
+    .svc-card .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 20px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      transition: gap 0.2s ease;
+    }
+    .svc-card .cta-link:hover { gap: 10px; }
+
+    /* ── Highlighted (wide) card ── */
+    .svc-card.wide { grid-column: 1 / -1; }
+    .svc-card.wide .inner { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    @media (max-width: 700px) { .svc-card.wide .inner { grid-template-columns: 1fr; } }
+
+    /* ── Floating testimonial popups ── */
+    .testi-float {
+      position: fixed;
+      bottom: 80px;
+      left: 24px;
+      z-index: 8888;
+      max-width: 320px;
+      background: linear-gradient(145deg, #0d1526, #111d2e);
+      border: 1px solid rgba(180,208,58,0.28);
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.55);
+      transform: translateX(calc(-100% - 40px));
+      opacity: 0;
+      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), opacity 0.4s ease;
+      pointer-events: none;
+    }
+    .testi-float.show {
+      transform: translateX(0);
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .testi-float .tf-top { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+    .testi-float .tf-avatar {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, rgba(180,208,58,0.4), rgba(58,84,208,0.3));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
+    }
+    .testi-float .tf-name { font-size: 13px; font-weight: 700; }
+    .testi-float .tf-role { font-size: 11px; color: var(--muted); }
+    .testi-float .tf-stars { color: var(--primary); font-size: 12px; letter-spacing: 1px; margin-bottom: 8px; }
+    .testi-float .tf-quote { font-size: 13px; color: var(--muted); line-height: 1.6; font-style: italic; }
+    .testi-float .tf-close {
+      position: absolute; top: 10px; right: 12px;
+      background: rgba(255,255,255,0.07); border: none; border-radius: 50%;
+      width: 22px; height: 22px; cursor: pointer; color: var(--muted);
+      font-size: 12px; display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ── Process strip ── */
+    .process-strip {
+      display: flex;
+      gap: 0;
+      margin: 48px 0;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .process-step {
+      flex: 1;
+      padding: 24px 20px;
+      border-right: 1px solid var(--border);
+      text-align: center;
+    }
+    .process-step:last-child { border-right: none; }
+    .process-step .num {
+      font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;
+      color: var(--primary); margin-bottom: 8px;
+    }
+    .process-step h3 { font-size: 15px; font-weight: 700; margin: 0 0 6px; }
+    .process-step p { font-size: 13px; color: var(--muted); margin: 0; }
+    @media (max-width: 640px) {
+      .process-strip { flex-direction: column; }
+      .process-step { border-right: none; border-bottom: 1px solid var(--border); }
+      .process-step:last-child { border-bottom: none; }
+    }
+
+    /* ── CTA section ── */
+    .services-cta {
+      text-align: center;
+      padding: 64px 0 80px;
+    }
+    .services-cta h2 { font-size: clamp(24px, 4vw, 40px); font-weight: 900; margin: 0 0 12px; }
+    .services-cta p { color: var(--muted); margin: 0 0 28px; }
+
+    /* ── Responsive nav override ── */
+    @media (max-width: 768px) { .svc-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+<div id="contact-popup-overlay" class="contact-popup-overlay" aria-hidden="true">
+    <div class="contact-popup" role="dialog" aria-modal="true" aria-labelledby="contact-popup-title">
+      <button id="contact-popup-close" class="close-btn" aria-label="Close">✕</button>
+      <h3 id="contact-popup-title">Contact CornerStone</h3>
+      <p><strong>Phone:</strong> <a href="tel:+916370704148">+91 6370704148</a></p>
+      <p><strong>Email:</strong> <a href="mailto:contact@cornerstones.dev">contact@cornerstones.dev</a></p>
+      <p><a href="https://forms.gle/LvEvNb67DZYXDyLV6" target="_blank" rel="noopener">Contact us / Book via form</a></p>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu">✕</button>
+      <nav class="mobile-links">
+        <a href="../index.html">Home</a>
+        <a href="services.html" style="color:var(--primary); font-weight:800;">Services</a>
+        <a href="work.html">Our Works</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="websites.html">Website in a Day</a>
+        <a href="leads.html">Get found locally</a>
+        <a href="reviews.html">Reputation</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="mobile-menu-contact">
+        <a href="tel:+916370704148">+91 6370704148</a>
+        <a href="mailto:contact@cornerstones.dev">contact@cornerstones.dev</a>
+      </div>
+    </div>
+  </div>
+
+  <nav>
+    <div class="wrap">
+        <a href="../index.html" class="brand" style="text-decoration:none;">
+          <img class="dark-logo" src="../assets/favicon.svg" alt="CornerStone logo">
+          <span class="brand-name">CornerStone</span>
+        </a>
+        <button class="mobile-hamburger" aria-label="Open menu" aria-expanded="false">
+          <svg width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M0 2h22M0 8h22M0 14h22" stroke-linecap="round" />
+          </svg>
+        </button>
+        <div class="site-menu" style="margin-left:18px;">
+          <a class="pill" href="work.html" style="margin-right:8px;">Our Works</a>
+          <a class="pill active" href="services.html" style="margin-right:8px; background:rgba(180,208,58,0.18); color:var(--primary);">Services</a>
+          <a class="pill" href="pricing.html" style="margin-right:8px;">Pricing</a>
+        </div>
+        <div class="actions" style="gap:10px; align-items:center; margin-left:auto;">
+          <button class="call-sign" aria-haspopup="dialog" title="Contact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; margin-right:4px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Contact</button>
+            <button class="pill mode-toggle" type="button" aria-pressed="false" aria-label="Toggle color mode" title="Toggle color mode">
+            
+            <!-- Sun icon (light mode) -->
+            <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
+              <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+                <path d="M12 2v2"/>
+                <path d="M12 20v2"/>
+                <path d="M4.93 4.93l1.41 1.41"/>
+                <path d="M17.66 17.66l1.41 1.41"/>
+                <path d="M2 12h2"/>
+                <path d="M20 12h2"/>
+                <path d="M4.93 19.07l1.41-1.41"/>
+                <path d="M17.66 6.34l1.41-1.41"/>
+              </g>
+            </svg>
+            <!-- Moon icon (dark mode) -->
+            <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          
+          
+        </div>
+      </div>
+  </nav>
+
+  <main>
+    <div class="wrap">
+
+      <!-- Hero -->
+      <section class="services-hero reveal">
+        <span class="eyebrow">What We Build For You</span>
+        <h1>Every service your<br><span style="color:var(--primary);">digital growth</span> needs</h1>
+        <p>From a beautiful website to an AI receptionist — we handle the tech so you can focus on running your business.</p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <a class="btn call-sign" href="../index.html#contact">Book a free consultation</a>
+          <a class="btn secondary" href="pricing.html">See pricing</a>
+        </div>
+      </section>
+
+      <!-- ── CORE DIGITAL SERVICES ── -->
+      <div class="cat-label reveal">
+        <div class="line"></div>
+        <span>Core Digital Services</span>
+        <div class="line"></div>
+      </div>
+
+      <div class="svc-grid">
+        <!-- Core Launch Site -->
+        <div class="svc-card reveal" data-service="website" data-action="navigate" data-href="websites.html">
+          <div class="brand-accent"></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+          <span class="badge badge-core">Jamstack</span>
+          <h3>Core Business Launch Site</h3>
+          <p>Static-first, conversion-focused sites deployed on global edge infrastructure — engineered for speed and SEO from day one.</p>
+          <ul>
+            <li>Hugo / static framework architecture</li>
+            <li>Serverless global edge deployment (CDN)</li>
+            <li>SEO &amp; schema markup baked into every page</li>
+            <li>Google Analytics with admin access</li>
+            <li>Core Web Vitals optimized out of the box</li>
+          </ul>
+          <a class="cta-link" href="websites.html">Explore website builds →</a>
+        </div>
+
+        <!-- Dynamic Growth Site -->
+        <div class="svc-card reveal" data-service="professional" data-action="navigate" data-href="pricing.html">
+          <div class="brand-accent"></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          <span class="badge badge-core">Tailored Stack</span>
+          <h3>Dynamic Business Growth Site</h3>
+          <p>Full-stack, CMS-integrated sites with custom domains — built for conversions, content management, and long-term scale.</p>
+          <ul>
+            <li>Custom domain &amp; professional email</li>
+            <li>CMS integration for content management</li>
+            <li>Advanced SEO &amp; structured data</li>
+            <li>Contact forms, chat &amp; lead capture</li>
+            <li>30-day post-launch support included</li>
+          </ul>
+          <a class="cta-link" href="pricing.html">See pricing →</a>
+        </div>
+
+        <!-- Website Overhaul -->
+        <div class="svc-card reveal" data-service="overhaul" data-action="navigate" data-href="pricing.html">
+          <div class="brand-accent"></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>
+          <span class="badge badge-custom">Premium</span>
+          <h3>Custom Website Overhaul</h3>
+          <p>Complete redesign, performance audit, and modern stack migration for existing sites that need a premium refresh.</p>
+          <ul>
+            <li>Full UI/UX audit &amp; redesign</li>
+            <li>Performance &amp; accessibility remediation</li>
+            <li>Content migration &amp; SEO preservation</li>
+            <li>Modern stack migration (Jamstack/Next.js)</li>
+            <li>60-day post-launch support</li>
+          </ul>
+          <a class="cta-link" href="pricing.html">See pricing →</a>
+        </div>
+      </div>
+
+      <!-- ── OPTIMIZATION & COMPLIANCE ── -->
+      <div class="cat-label reveal">
+        <div class="line"></div>
+        <span>Optimization &amp; Compliance</span>
+        <div class="line"></div>
+      </div>
+
+      <div class="svc-grid">
+        <!-- ADA Compliance -->
+        <div class="svc-card reveal" data-service="ada" data-action="navigate" data-href="pricing.html#modular-services">
+          <div class="brand-accent"></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          <span class="badge badge-ai">Compliance</span>
+          <h3>ADA &amp; Accessibility (WCAG)</h3>
+          <p>Full WCAG 2.1 AA audit and remediation — ensure your site is usable by everyone and meets international accessibility standards.</p>
+          <ul>
+            <li>Automated + manual accessibility testing</li>
+            <li>Color contrast, ARIA &amp; keyboard nav fixes</li>
+            <li>Screen reader verification (NVDA, VoiceOver)</li>
+            <li>Documented compliance report</li>
+          </ul>
+          <a class="cta-link" href="pricing.html#modular-services">See pricing →</a>
+        </div>
+
+        <!-- Speed Optimization -->
+        <div class="svc-card reveal" data-service="speed" data-action="navigate" data-href="pricing.html#modular-services">
+          <div class="brand-accent"></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <span class="badge badge-ai">Performance</span>
+          <h3>Core Web Vitals &amp; Speed</h3>
+          <p>Performance engineering to hit green Lighthouse scores — faster load times mean higher conversions and better SEO ranking.</p>
+          <ul>
+            <li>Lighthouse &amp; WebPageTest deep audit</li>
+            <li>LCP, CLS &amp; FID optimization</li>
+            <li>Image optimization &amp; critical CSS</li>
+            <li>Edge caching &amp; asset compression</li>
+          </ul>
+          <a class="cta-link" href="pricing.html#modular-services">See pricing →</a>
+        </div>
+      </div>
+
+      <!-- ── SYSTEMS & CONTENT ── -->
+      <div class="cat-label reveal">
+        <div class="line"></div>
+        <span>Systems &amp; Content Architecture</span>
+        <div class="line"></div>
+      </div>
+
+      <div class="svc-grid">
+        <!-- CMS -->
+        <div class="svc-card reveal" data-service="cms" data-action="navigate" data-href="pricing.html#modular-services">
+          <div class="brand-accent"></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+          <span class="badge badge-custom">Content</span>
+          <h3>CMS Setup &amp; Migrations</h3>
+          <p>Headless CMS architecture or platform migration — structured content management that scales with your team and workflow.</p>
+          <ul>
+            <li>WordPress, Sanity, Strapi or Contentful</li>
+            <li>Content migration with SEO preservation</li>
+            <li>Custom fields &amp; editorial workflows</li>
+            <li>Team training &amp; documentation</li>
+          </ul>
+          <a class="cta-link" href="pricing.html#modular-services">See pricing →</a>
+        </div>
+
+        <!-- CRM/SRM -->
+        <div class="svc-card reveal" data-service="crm" data-action="navigate" data-href="pricing.html#modular-services">
+          <div class="brand-accent"></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          <span class="badge badge-custom">Systems</span>
+          <h3>CRM / SRM Engineering</h3>
+          <p>Purpose-built customer and supplier relationship management — tailored to how your business operates, not a generic SaaS tool.</p>
+          <ul>
+            <li>Pipeline design &amp; lead tracking</li>
+            <li>Email, calendar &amp; API integrations</li>
+            <li>Workflow automation &amp; notifications</li>
+            <li>Role-based access &amp; mobile dashboard</li>
+          </ul>
+          <a class="cta-link" href="pricing.html#modular-services">See pricing →</a>
+        </div>
+
+        <!-- UI/UX Audit -->
+        <div class="svc-card reveal" data-service="audit" data-action="navigate" data-href="pricing.html#modular-services">
+          <div class="brand-accent"></div>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--brand-dark)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          <span class="badge badge-custom">Design</span>
+          <h3>Custom UI/UX Audits</h3>
+          <p>Layout de-cluttering, conversion funnel analysis, and interface redesign recommendations backed by real user behavior data.</p>
+          <ul>
+            <li>Heuristic evaluation &amp; UX review</li>
+            <li>Conversion funnel analysis</li>
+            <li>Visual hierarchy optimization</li>
+            <li>Prioritized recommendations with mockups</li>
+          </ul>
+          <a class="cta-link" href="pricing.html#modular-services">See pricing →</a>
+        </div>
+      </div>
+
+      <!-- Process strip -->
+      <div class="process-strip reveal">
+        <div class="process-step">
+          <div class="num">Step 01</div>
+          <h3>Discovery Call</h3>
+          <p>We understand your business, goals, and gaps — no jargon, just clarity.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">Step 02</div>
+          <h3>Custom Proposal</h3>
+          <p>You get a tailored plan with clear scope, timeline, and fixed pricing.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">Step 03</div>
+          <h3>Build &amp; Launch</h3>
+          <p>We build fast, test thoroughly, and hand over with full training.</p>
+        </div>
+        <div class="process-step">
+          <div class="num">Step 04</div>
+          <h3>Grow Together</h3>
+          <p>Ongoing support, updates, and strategy to keep you ahead.</p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <section class="services-cta reveal">
+        <h2>Not sure which service fits?</h2>
+        <p>Tell us about your business and we'll recommend the right stack — free consultation, no pressure.</p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <a class="btn call-sign" href="../index.html#contact">Book a free call →</a>
+          <a class="btn secondary" href="tel:+916370704148"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; margin-right:4px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> +91 6370704148</a>
+        </div>
+      </section>
+
+    </div><!-- /wrap -->
+  </main>
+
+  <!-- Floating testimonials -->
+  <div id="tf-popup" class="testi-float" role="status" aria-live="polite" aria-atomic="true">
+    <button class="tf-close" id="tf-close" aria-label="Dismiss">✕</button>
+    <div class="tf-top">
+      <div class="tf-avatar" id="tf-avatar">😊</div>
+      <div>
+        <div class="tf-name" id="tf-name">Loading…</div>
+        <div class="tf-role" id="tf-role"></div>
+      </div>
+    </div>
+    <div class="tf-stars" id="tf-stars">★★★★★</div>
+    <div class="tf-quote" id="tf-quote"></div>
+  </div>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="brand">
+        <img class="dark-logo" src="../assets/favicon.svg" alt="CornerStone logo">
+        <span class="brand-name">CornerStone</span>
+      </div>
+      <div>
+        <p class="footer-heading"><strong>Contact</strong></p>
+        <a href="mailto:contact@cornerstones.dev">contact@cornerstones.dev</a><br>
+        <a href="tel:+916370704148">+91 6370704148</a>
+      </div>
+      <div>
+        <p class="footer-heading"><strong>Links</strong></p>
+        <a href="../index.html">Home</a><br>
+        <a href="services.html">Services</a><br>
+        <a href="work.html">Our Works</a><br>
+        <a href="pricing.html">Pricing</a><br>
+        <a href="leads.html">Local SEO</a><br>
+        <a href="reviews.html">Reviews</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+  (function() {
+    /* ── Floating testimonials ── */
+    var testimonials = [
+      { emoji:'⚕️', name:'Dr. P. Sharma', role:'Dermatology Clinic', stars:'★★★★★', quote:'"CornerStone built our website and set up the chatbot. Patient enquiries doubled — without hiring extra staff."' },
+      { emoji:'📊', name:'R. Mehta', role:'Accounting Firm', stars:'★★★★★', quote:'"Their CRM is built exactly around how we manage clients. No more spreadsheets — everything is tracked and automated."' },
+      { emoji:'🏋️', name:'A. Verma', role:'Fitness Centre', stars:'★★★★☆', quote:'"The AI receptionist handles after-hours calls and books trial sessions. We haven\'t missed a lead since."' },
+      { emoji:'🏨', name:'S. Rao', role:'Boutique Hotel', stars:'★★★★★', quote:'"Review management brought us from 3.8 to 4.9 stars on Google. Bookings went up 40% in 3 months."' },
+      { emoji:'🏠', name:'V. Joshi', role:'Interior Designer', stars:'★★★★★', quote:'"The website looks incredible and ranks on search. Clients now find us — we stopped relying on referrals alone."' },
+      { emoji:'🦷', name:'Dr. R. Patel', role:'Dental Clinic', stars:'★★★★★', quote:'"Booking via the chatbot runs itself. I just check my schedule and see appointments already confirmed."' }
+    ];
+
+    var popup = document.getElementById('tf-popup');
+    var closeBtn = document.getElementById('tf-close');
+    var current = 0;
+    var dismissed = false;
+    var timer;
+
+    function showNext() {
+      if (dismissed) return;
+      var t = testimonials[current % testimonials.length];
+      document.getElementById('tf-avatar').textContent = t.emoji;
+      document.getElementById('tf-name').textContent = t.name;
+      document.getElementById('tf-role').textContent = t.role;
+      document.getElementById('tf-stars').textContent = t.stars;
+      document.getElementById('tf-quote').textContent = t.quote;
+      popup.classList.add('show');
+      current++;
+      timer = setTimeout(function() {
+        popup.classList.remove('show');
+        setTimeout(showNext, 3500);
+      }, 6000);
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function() {
+        dismissed = true;
+        clearTimeout(timer);
+        popup.classList.remove('show');
+      });
+    }
+
+    // Start after 3s delay
+    setTimeout(showNext, 3000);
+
+    /* ── Service card click handling ── */
+    const whatsappPhone = '916370704148';
+    const cards = document.querySelectorAll('.svc-card[data-action]');
+    
+    cards.forEach(card => {
+      const action = card.dataset.action;
+      const message = card.dataset.message;
+      const href = card.dataset.href;
+      
+      card.addEventListener('click', function(e) {
+        // Don't trigger if clicking on a link
+        if (e.target.tagName === 'A' || e.target.closest('a')) {
+          return;
+        }
+        
+        if (action === 'navigate' && href) {
+          window.location.href = href;
+        } else if (action === 'whatsapp' && message) {
+          const encodedMessage = encodeURIComponent(message);
+          const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${encodedMessage}`;
+          window.open(whatsappUrl, '_blank');
+        }
+      });
+    });
+  })();
+  </script>
+</body>
+</html>

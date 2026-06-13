@@ -1,0 +1,10 @@
+pe"></div>
+
+  <!-- Offer banner -->
+  <div class="offer-banner">
+    🔥 Limited-time launch offer — <span>Save up to ₹4,000</span> on website packages. Offer ends when the timer hits zero!
+  </div>
+
+  <nav>
+    <div class="wrap">
+      <div class="bra

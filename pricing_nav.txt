@@ -1,0 +1,21 @@
+<nav>
+    <div class="wrap">
+      <div class="brand">
+        <img class="dark-logo" src="../assets/favicon.svg" alt="CornerStone logo">
+        <span class="brand-name">CornerStone</span>
+      </div>
+      <button class="mobile-hamburger" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M0 2h22M0 8h22M0 14h22" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="site-menu" style="margin-left:18px;">
+        <a class="pill" href="work.html" style="margin-right:8px;">Our Works</a>
+        <a class="pill" href="services.html" style="margin-right:8px;">Services</a>
+        <a class="pill active" href="pricing.html" style="margin-right:8px; background:rgba(58,84,208,0.18); color:var(--primary);">Pricing</a>
+      </div>
+      <div class="actions" style="gap:10px; align-items:center;">
+        <button class="call-sign" aria-haspopup="dialog" title="Contact">📞 Contact</button>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J9WY5FXZPX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J9WY5FXZPX');
+</script>
+  <meta charset="UTF-8">
+  <!-- SEO & Open Graph -->
+  <meta name="description" content="Transparent pricing for CornerStone's website engineering and digital growth services. Core sites from $60. Professional packages with SEO, CMS & performance optimization.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://cornerstones.dev/pages/pricing.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="CornerStone">
+  <meta property="og:title" content="Pricing — CornerStone | Websites from $60">
+  <meta property="og:description" content="Core and Professional website packages, plus modular optimization services. No hidden fees, no lock-in contracts.">
+  <meta property="og:url" content="https://cornerstones.dev/pages/pricing.html">
+  <meta property="og:image" content="https://cornerstones.dev/assets/favicon.svg">
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Pricing — CornerStone | Websites from $60">
+  <meta name="twitter:description" content="Core and Professional website packages, plus modular optimization services. No hidden fees, no lock-in contracts.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing &amp; Packages — CornerStone | Website Engineering &amp; Digital Growth</title>  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ── Pricing-page-specific overrides ── */
+    :root {
+      --gold: #b4b800;
+      --gold-light: rgba(180,208,58,0.18);
+      --red-strike: #ff5252;
+      --green-badge: rgba(58,208,120,0.18);
+      --green-text: #3acf78;
+      --timer-bg: rgba(58,84,208,0.18);
+    }
+
+    /* ── Offer banner ── */
+    .offer-banner {
+      background: linear-gradient(90deg, rgba(58,84,208,0.28), rgba(180,208,58,0.22));
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+    .offer-banner span { color: var(--secondary); }
+
+    /* ── Timer ── */
+    .timer-wrap {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0 0;
+      flex-wrap: wrap;
+    }
+    .timer-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .timer-blocks {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+    .timer-block {
+      background: var(--timer-bg);
+      border: 1px solid rgba(58,84,208,0.35);
+      border-radius: 8px;
+      padding: 6px 10px;
+      min-width: 48px;
+      text-align: center;
+    }
+    .timer-block .num {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--text);
+      font-variant-numeric: tabular-nums;
+    }
+    .timer-block .unit {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+    .timer-sep {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--muted);
+      line-height: 1;
+      margin-top: -4px;
+    }
+    .timer-expired-note {
+      font-size: 13px;
+      color: var(--red-strike);
+      font-weight: 700;
+    }
+
+    /* ── Price display ── */
+    .price-tag {
+      margin: 14px 0 4px;
+    }
+    .price-now {
+      font-size: 32px;
+      font-weight: 900;
+      color: var(--text);
+      line-height: 1.1;
+    }
+    .price-now span {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+    .price-badge {
+      display: inline-block;
+      background: var(--green-badge);
+      color: var(--green-text);
+      font-size: 12px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .renewal-note {
+      font-size: 12px;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    /* ── Package card ── */
+    .pkg-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .pkg-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 24px 24px;
+      position: relative;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .pkg-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 48px rgba(0,0,0,0.4);
+    }
+    .pkg-card.featured {
+      border-color: rgba(58,84,208,0.55);
+      background: linear-gradient(160deg, rgba(58,84,208,0.12), var(--card));
+    }
+    .pkg-card .popular-tag {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(90deg, var(--primary), #6a7dff);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 16px;
+      border-radius: 20px;
+      letter-spacing: 0.6px;
+      white-space: nowrap;
+    }
+    .pkg-name {
+      font-size: 17px;
+      font-weight: 800;
+      margin: 0 0 2px;
+    }
+    .pkg-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 4px;
+    }
+    .pkg-features {
+      list-style: none;
+      padding: 0;
+      margin: 14px 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .pkg-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+    .pkg-features li .icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: rgba(58,208,120,0.18);
+      color: var(--green-text);
+      font-size: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+    .pkg-cta {
+      display: block;
+      text-align: center;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      transition: opacity .2s, transform .15s;
+    }
+    .pkg-cta:hover { opacity: .88; transform: translateY(-1px); }
+    .pkg-cta.primary {
+      background: linear-gradient(90deg, var(--primary), #5a6dff);
+      color: #fff;
+    }
+    .pkg-cta.secondary {
+      background: var(--gold-light);
+      color: var(--secondary);
+      border: 1px solid rgba(180,208,58,0.35);
+    }
+
+    /* ── DM Section ── */
+    .dm-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 28px;
+    }
+    .dm-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .dm-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 48px rgba(0,0,0,0.35);
+    }
+    .dm-card.highlight {
+      border-color: rgba(180,208,58,0.45);
+      background: linear-gradient(160deg, rgba(180,208,58,0.08), var(--card));
+    }
+    .dm-card .dm-icon {
+      margin-bottom: 10px;
+    }
+    .dm-card h3 {
+      margin: 0 0 6px;
+      font-size: 16px;
+    }
+    .dm-card p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0 0 14px;
+      line-height: 1.55;
+    }
+    .dm-items {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-bottom: 16px;
+    }
+    .dm-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .dm-item .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--secondary);
+      flex-shrink: 0;
+    }
+    .dm-price {
+      font-size: 24px;
+      font-weight: 900;
+      color: var(--text);
+    }
+    .dm-price span { font-size: 14px; font-weight: 500; color: var(--muted); }
+
+    /* ── Comparison table ── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+    .compare-table th, .compare-table td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    .compare-table th {
+      font-weight: 800;
+      color: var(--text);
+      background: rgba(58,84,208,0.08);
+    }
+    .compare-table td { color: var(--muted); }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .check { color: var(--green-text); font-weight: 700; }
+    .compare-table .cross { color: var(--red-strike); }
+    @media (max-width: 600px) {
+      .compare-table { font-size: 12px; }
+      .compare-table th, .compare-table td { padding: 9px 10px; }
+    }
+
+    /* ── FAQ section ── */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+    .faq-q {
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      user-select: none;
+    }
+    .faq-q .arrow {
+      transition: transform .3s;
+      flex-shrink: 0;
+      color: var(--muted);
+    }
+    .faq-item.open .faq-q .arrow { transform: rotate(180deg); }
+    .faq-a {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .25s;
+    }
+    .faq-item.open .faq-a {
+      max-height: 300px;
+      padding-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="trail"></div>
+  <div class="floating one"></div>
+  <div class="floating two"></div>
+  <div class="stripe"></div>
+
+  <!-- Offer banner -->
+  <div class="offer-banner">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; margin-right:4px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+    Launch pricing — <span>Flat-rate packages</span> for premium website engineering. No hidden fees!
+  </div>
+
+  <nav>
+    <div class="wrap">
+      <a href="../index.html" class="brand">
+        <img class="dark-logo" src="../assets/favicon.svg" alt="CornerStone logo">
+        <span class="brand-name">CornerStone</span>
+      </a>
+      <button class="mobile-hamburger" aria-label="Open menu" aria-expanded="false">
+        <svg width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M0 2h22M0 8h22M0 14h22" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="site-menu" style="margin-left:18px;">
+        <a class="pill" href="work.html" style="margin-right:8px;">Our Works</a>
+        <a class="pill" href="services.html" style="margin-right:8px;">Services</a>
+        <a class="pill active" href="pricing.html" style="margin-right:8px; background:rgba(58,84,208,0.18); color:var(--primary);">Pricing</a>
+      </div>
+      <div class="actions" style="gap:10px; align-items:center;">
+        <button class="call-sign" aria-haspopup="dialog" title="Contact">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; margin-right:4px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          Contact
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact popup -->
+  <div id="contact-popup-overlay" class="contact-popup-overlay" aria-hidden="true">
+    <div class="contact-popup" role="dialog" aria-modal="true" aria-labelledby="contact-popup-title">
+      <button id="contact-popup-close" class="close-btn" aria-label="Close">✕</button>
+      <h3 id="contact-popup-title">Contact CornerStone</h3>
+      <p><strong>Phone:</strong> <a href="tel:+916370704148">+91 6370704148</a></p>
+      <p><strong>Email:</strong> <a href="mailto:contact@cornerstones.dev">contact@cornerstones.dev</a></p>
+      <p><a href="https://forms.gle/LvEvNb67DZYXDyLV6" target="_blank" rel="noopener">Contact us / Book via form</a></p>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <button id="mobile-menu-close" class="mobile-menu-close" aria-label="Close menu">✕</button>
+      <nav class="mobile-links">
+        <a href="work.html">Our Works</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html" style="color:var(--primary); font-weight:800;">Pricing</a>
+        <a href="websites.html">Website in a Day</a>
+        <a href="leads.html">Get found locally</a>
+        <a href="reviews.html">Reputation</a>
+        <a href="../index.html#contact">Contact</a>
+      </nav>
+      <div class="mobile-menu-contact">
+        <a href="tel:+916370704148">+91 6370704148</a>
+        <a href="mailto:contact@cornerstones.dev">contact@cornerstones.dev</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-hero-line">Transparent pricing. Real results. No hidden fees.</div>
+
+  <header>
+    <div class="wrap hero">
+      <div>
+        <div class="label">Transparent Pricing</div>
+        <h1 class="reveal-text" style="font-size:clamp(32px,6.5vw,60px); font-weight:800; margin:0 0 12px;">
+          Modular packages built for growth — no surprises.
+        </h1>
+        <p class="lede">Everything you need to launch online, build credibility, and convert visitors into customers. Clear packages, flat-rate pricing, zero hidden fees.</p>
+        <div class="actions">
+          <a class="btn call-sign" href="../index.html#contact">Get a free consultation →</a>
+          <a class="btn secondary" href="#website-packages">See packages</a>
+        </div>
+
+        <!-- Countdown timer -->
+        <div class="timer-wrap">
+          <span class="timer-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            Offer ends in
+          </span>
+          <div class="timer-blocks">
+            <div class="timer-block">
+              <div class="num" id="t-h">12</div>
+              <div class="unit">hrs</div>
+            </div>
+            <div class="timer-sep">:</div>
+            <div class="timer-block">
+              <div class="num" id="t-m">00</div>
+              <div class="unit">min</div>
+            </div>
+            <div class="timer-sep">:</div>
+            <div class="timer-block">
+              <div class="num" id="t-s">00</div>
+              <div class="unit">sec</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card reveal" style="padding:24px; display:grid; gap:14px;">
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <h3 style="margin:0;">Rate Card Snapshot</h3>
+          <span class="chip" style="background:rgba(180,208,58,0.18);">2025 Rates</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px;">
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 12px; background:rgba(0,0,0,0.22); border-radius:10px; border:1px solid var(--border);">
+            <div>
+              <div style="font-weight:700; font-size:14px;">Core Launch Site</div>
+              <div style="font-size:12px; color:var(--muted);">Static / Jamstack framework</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:18px; font-weight:900; color:var(--text);" data-price="starter">$60</div>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 12px; background:rgba(58,84,208,0.1); border-radius:10px; border:1px solid rgba(58,84,208,0.3);">
+            <div>
+              <div style="font-weight:700; font-size:14px;">Dynamic Growth Site</div>
+              <div style="font-size:12px; color:var(--muted);">Tailored stack + CMS</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:18px; font-weight:900; color:var(--text);" data-price="professional">$190</div>
+            </div>
+          </div>
+          <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 12px; background:rgba(180,208,58,0.06); border-radius:10px; border:1px solid rgba(180,208,58,0.22);">
+            <div>
+              <div style="font-weight:700; font-size:14px;">Website Overhaul</div>
+              <div style="font-size:12px; color:var(--muted);">Premium redesign &amp; audit</div>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:18px; font-weight:900; color:var(--text);"><span>from </span><span data-price="overhaul">$300</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═══════════════════════════════════ WEBSITE PACKAGES ═══════════════════════════════════ -->
+    <section id="website-packages" class="anchor-pad">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="label">Website Engineering</div>
+            <h2>Choose a package that fits your growth stage.</h2>
+          </div>
+          <span class="pill">Flat-rate investment</span>
+        </div>
+
+        <div class="pkg-grid">
+          <!-- Starter -->
+          <div class="pkg-card reveal">
+            <div class="chip" style="margin-bottom:12px;">Starter</div>
+            <div class="pkg-name">Core Business Launch Site</div>
+            <div class="pkg-sub">Hugo / Static framework — deployed on global edge</div>
+            <div class="price-tag">
+              <div class="price-now" data-price="starter">$60</div>
+            </div>
+            <p class="renewal-note">Flat-rate, one-time build fee</p>
+            <ul class="pkg-features">
+              <li><span class="icon">✓</span> Static site on Jamstack architecture</li>
+              <li><span class="icon">✓</span> Multi-page responsive layout</li>
+              <li><span class="icon">✓</span> Mobile-first, Core Web Vitals optimized</li>
+              <li><span class="icon">✓</span> Google Analytics setup with admin access</li>
+              <li><span class="icon">✓</span> Contact form &amp; CTA integration</li>
+              <li><span class="icon">✓</span> Basic on-page SEO (meta tags, headings, schema)</li>
+              <li><span class="icon">✓</span> Deployed on serverless global edge (CDN)</li>
+            </ul>
+            <a class="pkg-cta secondary call-sign" href="../index.html#contact">Get Started →</a>
+          </div>
+
+          <!-- Professional (Featured) -->
+          <div class="pkg-card featured reveal">
+            <div class="popular-tag">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; margin-right:2px;"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+              Most Popular
+            </div>
+            <div class="chip" style="margin-bottom:12px; background:rgba(58,84,208,0.22);">Professional</div>
+            <div class="pkg-name">Dynamic Business Growth Site</div>
+            <div class="pkg-sub">Tailored stack — built for conversions &amp; scale</div>
+            <div class="price-tag">
+              <div class="price-now" data-price="professional">$190</div>
+            </div>
+            <p class="renewal-note">Flat-rate, one-time build fee</p>
+            <ul class="pkg-features">
+              <li><span class="icon">✓</span> Custom domain <em>(yourbusiness.com)</em></li>
+              <li><span class="icon">✓</span> Dynamic pages with CMS integration</li>
+              <li><span class="icon">✓</span> Professional email <em>(info@yourbusiness.com)</em></li>
+              <li><span class="icon">✓</span> Google Analytics with admin access</li>
+              <li><span class="icon">✓</span> Advanced on-page SEO &amp; schema markup</li>
+              <li><span class="icon">✓</span> Contact form, chat widget &amp; lead capture</li>
+              <li><span class="icon">✓</span> Speed &amp; Core Web Vitals optimization</li>
+              <li><span class="icon">✓</span> Serverless deployment on global edge</li>
+              <li><span class="icon">✓</span> 30-day post-launch support included</li>
+            </ul>
+            <a class="pkg-cta primary call-sign" href="../index.html#contact">Get This Package →</a>
+          </div>
+
+          <!-- Overhaul -->
+          <div class="pkg-card reveal">
+            <div class="chip" style="margin-bottom:12px; background:rgba(180,208,58,0.18);">Premium</div>
+            <div class="pkg-name">Custom Website Overhaul</div>
+            <div class="pkg-sub">Premium redesign, audit &amp; migration</div>
+            <div class="price-tag">
+              <div class="price-now"><span>from </span><span data-price="overhaul">$300</span></div>
+            </div>
+            <p class="renewal-note">Scoped per-project</p>
+            <ul class="pkg-features">
+              <li><span class="icon">✓</span> Full UI/UX audit &amp; redesign</li>
+              <li><span class="icon">✓</span> Performance &amp; accessibility remediation</li>
+              <li><span class="icon">✓</span> Content migration &amp; restructuring</li>
+              <li><span class="icon">✓</span> SEO preservation &amp; redirect mapping</li>
+              <li><span class="icon">✓</span> Modern stack migration (Jamstack/Next.js)</li>
+              <li><span class="icon">✓</span> Analytics &amp; conversion tracking setup</li>
+            </ul>
+            <a class="pkg-cta secondary call-sign" href="../index.html#contact">Discuss Your Project →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ COMPARISON TABLE ═══════════════════════ -->
+    <section class="anchor-pad" style="padding-top:0;">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="label">Side-by-side</div>
+            <h2>Which package is right for you?</h2>
+          </div>
+          <span class="pill">Compare features</span>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th style="min-width:200px;">Feature</th>
+                <th>Starter</th>
+                <th>Professional</th>
+                <th>Overhaul</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Architecture</td><td>Static / Jamstack</td><td>Dynamic / Tailored Stack</td><td>Full Redesign</td></tr>
+              <tr><td>Custom domain</td><td class="cross">✗ Subdomain</td><td class="check">✓ Yes</td><td class="check">✓ Yes</td></tr>
+              <tr><td>Responsive design</td><td class="check">✓ Yes</td><td class="check">✓ Yes</td><td class="check">✓ Yes</td></tr>
+              <tr><td>Google Analytics</td><td class="check">✓ Yes</td><td class="check">✓ Yes</td><td class="check">✓ Yes</td></tr>
+              <tr><td>Professional email</td><td class="cross">✗ No</td><td class="check">✓ Yes</td><td class="check">✓ Yes</td></tr>
+              <tr><td>CMS integration</td><td class="cross">✗ No</td><td class="check">✓ Yes</td><td class="check">✓ Yes</td></tr>
+              <tr><td>Advanced SEO &amp; schema</td><td class="cross">✗ Basic</td><td class="check">✓ Full</td><td class="check">✓ Full</td></tr>
+              <tr><td>Core Web Vitals tuning</td><td class="check">✓ Basic</td><td class="check">✓ Advanced</td><td class="check">✓ Deep audit</td></tr>
+              <tr><td>Post-launch support</td><td class="cross">✗ No</td><td class="check">✓ 30 days</td><td class="check">✓ 60 days</td></tr>
+              <tr><td>Price</td><td><strong data-price="starter">$60</strong></td><td><strong data-price="professional">$190</strong></td><td><strong>from <span data-price="overhaul">$300</span></strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ MODULAR SERVICES ═══════════════════════════════════ -->
+    <section id="modular-services" class="anchor-pad">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="label">Modular Services</div>
+            <h2>Add-on architectural blocks to scale your digital presence.</h2>
+          </div>
+          <span class="pill">Flat-rate modules</span>
+        </div>
+        <p style="color:var(--muted); max-width:640px; margin:0 0 4px;">Each module is a standalone engagement — no lock-in contracts. Combine with any website package or use independently.</p>
+
+        <div class="dm-grid">
+
+          <!-- ADA Compliance -->
+          <div class="dm-card reveal">
+            <div class="dm-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+            </div>
+            <div class="chip" style="margin-bottom:10px;">Accessibility</div>
+            <h3>ADA &amp; Web Accessibility (WCAG)</h3>
+            <p>Full WCAG compliance audit and remediation — ensure your site is usable by everyone and meets international accessibility standards.</p>
+            <div class="dm-items">
+              <div class="dm-item"><div class="dot"></div><strong>WCAG 2.1 AA Audit</strong> — Automated + manual testing across all pages</div>
+              <div class="dm-item"><div class="dot"></div><strong>Remediation</strong> — Color contrast, ARIA labels, keyboard navigation fixes</div>
+              <div class="dm-item"><div class="dot"></div><strong>Compliance Report</strong> — Documented proof of accessibility compliance</div>
+              <div class="dm-item"><div class="dot"></div><strong>Screen Reader Testing</strong> — Verified with NVDA, VoiceOver &amp; JAWS</div>
+            </div>
+            <div class="dm-price" data-price-from="ada">From $90</div>
+            <a class="pkg-cta secondary call-sign" href="../index.html#contact" style="margin-top:16px; display:block; text-align:center;">Get Compliant →</a>
+          </div>
+
+          <!-- Speed Optimization -->
+          <div class="dm-card highlight reveal">
+            <div class="dm-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <div class="chip" style="margin-bottom:10px; background:rgba(180,208,58,0.18);">Performance</div>
+            <h3>Core Web Vitals &amp; Speed Optimization</h3>
+            <p>Performance engineering to hit green scores across all Core Web Vitals — faster load times directly increase conversions and SEO ranking.</p>
+            <div class="dm-items">
+              <div class="dm-item"><div class="dot"></div><strong>Performance Audit</strong> — Lighthouse, WebPageTest &amp; real-user metrics</div>
+              <div class="dm-item"><div class="dot"></div><strong>LCP Optimization</strong> — Image optimization, critical CSS, preloading</div>
+              <div class="dm-item"><div class="dot"></div><strong>CLS &amp; FID Fixes</strong> — Layout stability &amp; interaction responsiveness</div>
+              <div class="dm-item"><div class="dot"></div><strong>CDN &amp; Caching</strong> — Edge caching, compression &amp; asset optimization</div>
+            </div>
+            <div class="dm-price" data-price-from="speed">From $150</div>
+            <a class="pkg-cta primary call-sign" href="../index.html#contact" style="margin-top:16px; display:block; text-align:center;">Optimize Now →</a>
+          </div>
+
+          <!-- CMS -->
+          <div class="dm-card reveal">
+            <div class="dm-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+            </div>
+            <div class="chip" style="margin-bottom:10px; background:rgba(58,84,208,0.16);">Content</div>
+            <h3>CMS Setup &amp; Migrations</h3>
+            <p>Headless CMS architecture or platform migration — structured content management that scales with your team and workflow.</p>
+            <div class="dm-items">
+              <div class="dm-item"><div class="dot"></div><strong>Platform Selection</strong> — WordPress, Sanity, Strapi, or Contentful</div>
+              <div class="dm-item"><div class="dot"></div><strong>Content Migration</strong> — Structured data transfer with SEO preservation</div>
+              <div class="dm-item"><div class="dot"></div><strong>Custom Fields &amp; Workflows</strong> — Tailored to your content model</div>
+              <div class="dm-item"><div class="dot"></div><strong>Team Training</strong> — Documentation &amp; onboarding for your editors</div>
+            </div>
+            <div class="dm-price" data-price-from="cms">From $250</div>
+            <a class="pkg-cta secondary call-sign" href="../index.html#contact" style="margin-top:16px; display:block; text-align:center;">Setup CMS →</a>
+          </div>
+
+          <!-- CRM/SRM -->
+          <div class="dm-card reveal">
+            <div class="dm-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <div class="chip" style="margin-bottom:10px;">Systems</div>
+            <h3>CRM / SRM Setup &amp; Maintenance</h3>
+            <p>Purpose-built customer and supplier relationship management — tailored to how your business actually operates, not a generic SaaS tool.</p>
+            <div class="dm-items">
+              <div class="dm-item"><div class="dot"></div><strong>Pipeline Design</strong> — Lead tracking, follow-ups &amp; deal stages</div>
+              <div class="dm-item"><div class="dot"></div><strong>Integrations</strong> — Email, calendar, forms &amp; API connections</div>
+              <div class="dm-item"><div class="dot"></div><strong>Automation</strong> — Workflow triggers, notifications &amp; reporting</div>
+              <div class="dm-item"><div class="dot"></div><strong>Role-Based Access</strong> — Team permissions &amp; mobile dashboard</div>
+            </div>
+            <div class="dm-price" data-price-from="crm">From $290</div>
+            <a class="pkg-cta secondary call-sign" href="../index.html#contact" style="margin-top:16px; display:block; text-align:center;">Build CRM →</a>
+          </div>
+
+          <!-- UI/UX Audit -->
+          <div class="dm-card reveal">
+            <div class="dm-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+            </div>
+            <div class="chip" style="margin-bottom:10px;">Design</div>
+            <h3>Custom UI/UX Audits &amp; De-Cluttering</h3>
+            <p>Layout analysis, conversion funnel optimization, and interface redesign recommendations backed by real user behavior data.</p>
+            <div class="dm-items">
+              <div class="dm-item"><div class="dot"></div><strong>Heuristic Evaluation</strong> — Expert review against UX best practices</div>
+              <div class="dm-item"><div class="dot"></div><strong>Conversion Analysis</strong> — Funnel drop-off identification &amp; fixes</div>
+              <div class="dm-item"><div class="dot"></div><strong>Layout Optimization</strong> — Visual hierarchy &amp; information architecture</div>
+              <div class="dm-item"><div class="dot"></div><strong>Actionable Report</strong> — Prioritized recommendations with mockups</div>
+            </div>
+            <div class="dm-price" data-price-from="audit">From $190</div>
+            <a class="pkg-cta secondary call-sign" href="../index.html#contact" style="margin-top:16px; display:block; text-align:center;">Start Audit →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ STATS STRIP ═══════════════════════ -->
+    <section class="anchor-pad" style="padding-top:0;">
+      <div class="wrap">
+        <div style="display:flex; flex-wrap:wrap; gap:12px;">
+          <div class="stat reveal" style="flex:1; min-width:160px; text-align:center;">
+            <strong>50+</strong>
+            <span style="color:var(--muted);">Sites engineered</span>
+          </div>
+          <div class="stat reveal" style="flex:1; min-width:160px; text-align:center;">
+            <strong>4.9★ avg</strong>
+            <span style="color:var(--muted);">Client satisfaction</span>
+          </div>
+          <div class="stat reveal" style="flex:1; min-width:160px; text-align:center;">
+            <strong>$0 hidden</strong>
+            <span style="color:var(--muted);">No surprise fees ever</span>
+          </div>
+          <div class="stat reveal" style="flex:1; min-width:160px; text-align:center;">
+            <strong>24h support</strong>
+            <span style="color:var(--muted);">Email + form</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ FAQ ═══════════════════════ -->
+    <section id="faq" class="anchor-pad">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="label">FAQ</div>
+            <h2>Common questions answered.</h2>
+          </div>
+          <span class="pill">Quick answers</span>
+        </div>
+        <div style="max-width:720px;">
+          <div class="faq-item">
+            <div class="faq-q" id="fq1" aria-expanded="false" role="button" tabindex="0">
+              What's included in each website package?
+              <span class="arrow">▾</span>
+            </div>
+            <div class="faq-a" aria-labelledby="fq1">
+              The Starter package includes a static Jamstack site with responsive design, basic SEO, analytics, and edge deployment. The Professional package adds a custom domain, CMS integration, professional email, advanced SEO, and 30-day post-launch support. The Overhaul is a custom-scoped engagement for redesigns and migrations.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" id="fq2" aria-expanded="false" role="button" tabindex="0">
+              Are these one-time fees or subscriptions?
+              <span class="arrow">▾</span>
+            </div>
+            <div class="faq-a" aria-labelledby="fq2">
+              Website packages are flat-rate, one-time build fees. Domain renewals are annual (standard registrar rates, no markup). Modular services are also flat-rate per engagement unless otherwise scoped.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" id="fq3" aria-expanded="false" role="button" tabindex="0">
+              Can I upgrade from Starter to Professional later?
+              <span class="arrow">▾</span>
+            </div>
+            <div class="faq-a" aria-labelledby="fq3">
+              Absolutely. We can migrate your Starter site to a custom domain and upgrade all features at any time. We'll only charge the difference and help make the transition seamless.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" id="fq4" aria-expanded="false" role="button" tabindex="0">
+              What currencies do you accept?
+              <span class="arrow">▾</span>
+            </div>
+            <div class="faq-a" aria-labelledby="fq4">
+              We accept payments in USD, EUR, GBP, CHF, CAD, and AUD. Prices on this page automatically adjust to your region. All invoices are issued in your preferred currency.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" id="fq5" aria-expanded="false" role="button" tabindex="0">
+              How long does it take to build and launch?
+              <span class="arrow">▾</span>
+            </div>
+            <div class="faq-a" aria-labelledby="fq5">
+              Starter sites are typically live within 24–48 hours of receiving your content. Professional sites take 3–5 business days including domain configuration, CMS setup, and SEO foundations. Overhaul projects are scoped individually.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-q" id="fq6" aria-expanded="false" role="button" tabindex="0">
+              Can I combine packages with modular services?
+              <span class="arrow">▾</span>
+            </div>
+            <div class="faq-a" aria-labelledby="fq6">
+              Yes! Most clients pair a website package with one or more modular services (e.g., Professional + Speed Optimization + CMS). Contact us for a bundled quote — we often offer savings for combined engagements.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════ CTA ═══════════════════════ -->
+    <section class="anchor-pad">
+      <div class="wrap cta reveal" style="background:linear-gradient(120deg, rgba(58,84,208,0.22), rgba(180,208,58,0.18));">
+        <h3>Ready to get started?</h3>
+        <p>Talk to us — we'll recommend the right package for your business goals and budget. No pressure, no spam.</p>
+        <div class="actions" style="justify-content:center;">
+          <a class="btn call-sign" href="../index.html#contact">Book a free consultation →</a>
+          <a class="btn secondary" href="tel:+916370704148">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; margin-right:4px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            Call now
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="brand">
+        <img class="dark-logo" src="../assets/favicon.svg" alt="CornerStone logo">
+        <span class="brand-name">CornerStone</span>
+      </div>
+      <div>
+        <p class="footer-heading"><strong>Contact</strong></p>
+        <div style="font-weight:700; margin-bottom:6px;">+91 6370704148</div>
+        <a href="mailto:contact@cornerstones.dev">contact@cornerstones.dev</a>
+      </div>
+      <div>
+        <p class="footer-heading"><strong>Links</strong></p>
+        <a href="services.html">Services</a><br>
+        <a href="pricing.html">Pricing</a><br>
+        <a href="work.html">Our Works</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script src="../pricing-engine.js"></script>
+  <script>
+    /* ── Countdown Timer Logic ── */
+    (function () {
+      const STORAGE_KEY = 'cs_offer_end';
+      const DURATION_MS = 12 * 60 * 60 * 1000; // 12 hours
+      let endTime;
+
+      function getEndTime() {
+        const stored = localStorage.getItem(STORAGE_KEY);
+        if (stored) {
+          const t = parseInt(stored, 10);
+          // If stored end time is still in the future, use it; else reset
+          if (t > Date.now()) return t;
+        }
+        const fresh = Date.now() + DURATION_MS;
+        localStorage.setItem(STORAGE_KEY, fresh);
+        return fresh;
+      }
+
+      function pad(n) { return String(n).padStart(2, '0'); }
+
+      function tick() {
+        const now = Date.now();
+        let diff = endTime - now;
+        if (diff <= 0) {
+          // Auto-reset for next 12h cycle
+          endTime = Date.now() + DURATION_MS;
+          localStorage.setItem(STORAGE_KEY, endTime);
+          diff = DURATION_MS;
+        }
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+        document.getElementById('t-h').textContent = pad(h);
+        document.getElementById('t-m').textContent = pad(m);
+        document.getElementById('t-s').textContent = pad(s);
+      }
+
+      endTime = getEndTime();
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    /* ── FAQ accordion ── */
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
+        if (!isOpen) item.classList.add('open');
+      });
+      btn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+      });
+    });
+  </script>
+</body>
+</html>

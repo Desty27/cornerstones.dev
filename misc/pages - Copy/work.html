@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J9WY5FXZPX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J9WY5FXZPX');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CornerStone — Work Samples</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <div class="trail"></div>
+  <div class="floating one"></div>
+  <div class="floating two"></div>
+  <div class="stripe"></div>
+
+  <nav>
+    <div class="wrap">
+      <div class="brand">
+        <img class="dark-logo" src="../assets/logo-dark.svg" alt="CornerStone logo dark">
+        <img class="light-logo" src="../assets/logo-light.svg" alt="CornerStone logo light">
+        <span class="brand-name">CornerStone</span>
+      </div>
+      <div style="margin-left: 10px;"></div>
+      <a class="pill" href="../index.html">Back to Home</a>
+      <div style="margin-left:auto; font-weight:700;">
+        +91 6370704148 • <a href="mailto:contact@corner-stone.me" style="color:inherit; text-decoration:underline;">contact@corner-stone.me</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="anchor-pad" id="live-templates">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="label">Live</div>
+            <h2 class="reveal-text">Preview templates by industry</h2>
+          </div>
+        </div>
+
+        <div class="industry-controls" style="margin:18px 0; display:flex; gap:12px; align-items:center;">
+          <label for="industrySelect" style="font-weight:600;">Industry</label>
+          <select id="industrySelect" style="padding:8px 10px;">
+            <option value="../Restaurantly/index.html">Food / Restaurant</option>
+            <option value="../hotelier-1.0.0/index.html">Hotels</option>
+            <option value="../a-world-1.0.0/index.html">Travel</option>
+            <option value="../webuild-1.0.0/index.html">Construction / Contractors</option>
+            <option value="../proman-1.0.0/index.html">Startups</option>
+          </select>
+          <button id="openNew" class="pill" style="margin-left:8px;">Open in new tab</button>
+        </div>
+
+        <div class="preview-frame" style="border:1px solid #e6e6e6; border-radius:6px; overflow:hidden">
+          <iframe id="previewFrame" src="../Restaurantly/index.html" title="Template preview" style="width:100%; height:600px; border:0; display:block;"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="anchor-pad" id="pages">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="label">Examples</div>
+            <h2 class="reveal-text">See simple templates you can use for your business.</h2>
+          </div>
+          <span class="pill">Ready to copy</span>
+        </div>
+
+        <div class="cards">
+          <a class="card reveal" href="websites.html">
+            <div class="chip">Web</div>
+            <h3>Launch Site</h3>
+            <p>A fast, phone-first homepage with clear CTAs so customers call or message.</p>
+          </a>
+          <a class="card reveal" href="leads.html">
+            <div class="chip">Leads</div>
+            <h3>Lead Page</h3>
+            <p>A short, focused page that captures interest and hands leads straight to you.</p>
+          </a>
+          <a class="card reveal" href="reviews.html">
+            <div class="chip">Reputation</div>
+            <h3>Review Flow</h3>
+            <p>Easy requests and public testimonials that help new customers trust you.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div class="brand">
+        <img class="dark-logo" src="../assets/logo-dark.svg" alt="CornerStone logo dark">
+        <img class="light-logo" src="../assets/logo-light.svg" alt="CornerStone logo light">
+        <span class="brand-name">CornerStone</span>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <div style="font-weight:700; margin-bottom:6px;">+91 6370704148</div>
+        <a href="mailto:contact@corner-stone.me">contact@corner-stone.me</a>
+      </div>
+      <div>
+        <h4>Links</h4>
+        <a href="../index.html#services">Services</a><br>
+        <a href="../index.html#process">Process</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+  <script>
+    (function(){
+      var sel = document.getElementById('industrySelect');
+      var iframe = document.getElementById('previewFrame');
+      var openBtn = document.getElementById('openNew');
+      if(!sel || !iframe) return;
+      sel.addEventListener('change', function(){
+        iframe.src = this.value;
+      });
+      if(openBtn){
+        openBtn.addEventListener('click', function(){
+          var url = sel.value;
+          try{
+            var a = document.createElement('a');
+            a.href = url;
+            window.open(a.href, '_blank');
+          }catch(e){
+            window.open(url, '_blank');
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

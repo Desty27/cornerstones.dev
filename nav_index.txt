@@ -1,0 +1,10 @@
+
+<body>
+  <div id="smooth-container" data-scroll-container>
+    <div class="trail"></div>
+    <div class="floating one"></div>
+    <div class="floating two"></div>
+    <div class="stripe"></div>
+
+    <nav data-scroll-section>
+      <div class="wrap">
