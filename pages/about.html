@@ -320,46 +320,38 @@
       }
     }
   </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-  <nav data-scroll-section>
-    <div class="wrap">
-      <a href="../index.html" class="brand">
-        <img class="dark-logo" src="../assets/favicon.svg" alt="CornerStone logo">
-        <span class="brand-name">CornerStone</span>
+  <nav data-scroll-section class="w-full fixed top-0 z-50 bg-black/90 backdrop-blur-md border-b border-zinc-800 px-6 py-4 flex items-center justify-between">
+    <div class="flex-1 flex justify-start items-center">
+      <a href="../index.html" class="flex items-center gap-2 no-underline">
+        <img class="dark-logo w-8 h-8" src="../assets/favicon.svg" alt="CornerStone logo">
+        <span class="text-white font-['Space_Grotesk'] font-bold text-xl tracking-tight">CornerStone</span>
       </a>
-      <button class="mobile-hamburger" aria-label="Open menu" aria-expanded="false">
-        <svg width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6">
+    </div>
+    <div class="hidden md:flex items-center justify-center gap-2">
+      <a href="work.html" class="px-4 py-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors no-underline">Portfolio</a>
+      <a href="services.html" class="px-4 py-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors no-underline">Services</a>
+      <a href="about.html" class="px-4 py-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors no-underline">About</a>
+      <a href="pricing.html" class="px-4 py-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors no-underline">Pricing</a>
+    </div>
+    <div class="flex-1 flex justify-end items-center gap-3">
+      <button class="call-sign hidden md:inline-flex px-4 py-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors" aria-haspopup="dialog" title="Contact">Contact</button>
+      <button class="mode-toggle hidden md:flex p-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors" type="button" aria-pressed="false" aria-label="Toggle color mode" title="Toggle color mode">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+      <a href="pricing.html" class="hidden md:inline-flex px-5 py-2 text-[#06070f] font-bold bg-[#B4D03A] rounded-full hover:opacity-90 transition-opacity no-underline">Get a site →</a>
+      <button class="mobile-hamburger md:hidden text-white p-2" aria-label="Open menu" aria-expanded="false">
+        <svg class="w-6 h-6" width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="1.6">
           <path d="M0 2h22M0 8h22M0 14h22" stroke-linecap="round" />
         </svg>
       </button>
-      <div class="site-menu" style="margin-left:18px;">
-        <a class="pill" href="work.html" style="margin-right:8px;">Our Works</a>
-        <a class="pill" href="services.html" style="margin-right:8px;">Services</a>
-        <a class="pill" href="about.html" style="margin-right:8px; color: var(--primary);">About</a>
-        <a class="pill" href="pricing.html" style="margin-right:8px;">Pricing</a>
-      </div>
-      <div class="actions" style="gap:10px; align-items:center;">
-        <button class="call-sign" aria-haspopup="dialog" title="Contact"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px; margin-right:4px;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg> Contact</button>
-        <button class="pill mode-toggle" type="button" aria-pressed="false" aria-label="Toggle color mode" title="Toggle color mode">
-          <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
-            <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-              <path d="M12 2v2"/>
-              <path d="M12 20v2"/>
-              <path d="M4.93 4.93l1.41 1.41"/>
-              <path d="M17.66 17.66l1.41 1.41"/>
-              <path d="M2 12h2"/>
-              <path d="M20 12h2"/>
-              <path d="M4.93 19.07l1.41-1.41"/>
-              <path d="M17.66 6.34l1.41-1.41"/>
-            </g>
-          </svg>
-          <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </div>
     </div>
   </nav>
 

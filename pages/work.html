@@ -115,46 +115,357 @@
       text-overflow: ellipsis;
     }
   </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Mobile Tailwind & Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+  <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "lime": "#B4D03A",
+                        "background": "#121414",
+                        "surface": "#1e2020",
+                        "on-surface": "#e2e2e2",
+                        "primary": "#d0ed54"
+                    },
+                    "spacing": {
+                        "block-gap": "64px",
+                        "gutter": "24px",
+                        "margin-desktop": "48px",
+                        "base": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "display": ["Anton"],
+                        "body": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["100px", { "lineHeight": "90px", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "44px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+  <style>
+  
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .bg-grid-pattern {
+            background-size: 40px 40px;
+            background-image: 
+                linear-gradient(to right, rgba(180, 208, 58, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(180, 208, 58, 0.05) 1px, transparent 1px);
+        }
+
+        .brutalist-shadow-lime {
+            box-shadow: 6px 6px 0px 0px #000000;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.6; }
+        }
+        .glow-effect {
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        body {
+            background-color: #121414;
+        }
+    
+  </style>
 </head>
 <body>
-  <div class="trail"></div>
-  <div class="floating one"></div>
-  <div class="floating two"></div>
-  <div class="stripe"></div>
+  <!-- ========================================================================= -->
+  <!-- 📱 MOBILE UI (Visible < 768px)                                            -->
+  <!-- ========================================================================= -->
+  <div class="block md:hidden">
+    <!-- Global Sticky Top Nav -->
+<header class="w-full sticky top-0 z-[100] h-16 border-b-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] flex justify-between items-center px-margin-mobile text-black" style="background-color: #B4D03A !important;">
+  <a href="../index.html" class="flex items-center gap-2 no-underline text-black">
+    <img src="../assets/logo-light.svg" alt="CornerStone logo" class="w-6 h-6 object-contain">
+    <span class="font-display text-[22px] font-black tracking-tighter uppercase text-black" style="font-family: 'Anton', sans-serif !important;">CornerStone</span>
+  </a>
+  <button class="font-label-bold text-label-bold text-black border-2 border-black px-3 py-1 uppercase bg-white hover:bg-black hover:text-white transition-colors active:translate-x-[2px] active:translate-y-[2px] active:shadow-none shadow-[2px_2px_0px_0px_rgba(0,0,0,1)]">MENU</button>
+</header>
+<main>
+<!-- Awe-Inspiring Hero -->
+<section class="min-h-[85vh] flex flex-col justify-center px-4 relative overflow-hidden bg-black border-b-[3px] border-white/10">
+<div class="absolute inset-0 bg-grid-pattern opacity-40 z-0"></div>
+<div class="absolute top-1/4 -right-20 w-64 h-64 bg-lime/10 rounded-full blur-[100px] glow-effect"></div>
+<div class="relative z-10 flex flex-col">
+<h1 class="font-display text-display-xl uppercase tracking-tighter mb-8">
+                    WE<br>BUILD<br><span class="text-lime">DIGITAL</span><br>MACHINES.
+                </h1>
+<a class="bg-lime text-black font-display text-2xl uppercase py-5 px-6 border-[3px] border-black brutalist-shadow-lime w-full text-center hover:translate-y-[2px] hover:translate-x-[2px] transition-all" href="#portfolio">
+                    VIEW THE WORK ↓
+                </a>
+</div>
+</section>
+<!-- Interactive Portfolio Gallery -->
+<section class="py-16 bg-zinc-950" id="portfolio">
+<div class="px-4 mb-10">
+<h2 class="font-display text-4xl uppercase mb-6 tracking-tight">SELECTED_WORKS</h2>
+<div class="flex gap-3 overflow-x-auto hide-scrollbar sticky top-[84px] z-40 bg-zinc-950/80 backdrop-blur-md py-4 -mx-4 px-4">
+<button class="bg-lime text-black px-5 py-2 font-bold uppercase text-xs border-2 border-black shadow-[3px_3px_0px_0px_#000]">All</button>
+<button class="bg-zinc-900 text-white px-5 py-2 font-bold uppercase text-xs border-2 border-white/10">AI Agents</button>
+<button class="bg-zinc-900 text-white px-5 py-2 font-bold uppercase text-xs border-2 border-white/10">E-Commerce</button>
+<button class="bg-zinc-900 text-white px-5 py-2 font-bold uppercase text-xs border-2 border-white/10">SaaS</button>
+</div>
+</div>
+<div id="mobile-portfolio-cards" class="flex gap-6 overflow-x-auto px-4 pb-6 hide-scrollbar snap-x snap-mandatory"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var cardsContainer = document.getElementById('mobile-portfolio-cards');
+    if (!cardsContainer) return;
+
+    var filterButtons = document.querySelectorAll('#portfolio button');
+    
+    function filterProjects(category) {
+      if (!window.PROJECTS) return [];
+      if (category === 'all') return window.PROJECTS;
+      if (category === 'ai agents') {
+        return window.PROJECTS.filter(function(p) {
+          return p.niche === 'healthcare' || p.tech.indexOf('OpenAI') > -1 || p.tech.indexOf('LangChain') > -1;
+        });
+      }
+      if (category === 'e-commerce') {
+        return window.PROJECTS.filter(function(p) {
+          return p.niche === 'ecommerce';
+        });
+      }
+      if (category === 'saas') {
+        return window.PROJECTS.filter(function(p) {
+          return p.niche === 'cloud' || p.niche === 'logistics' || p.niche === 'media' || p.niche === 'realestate' || p.name.indexOf('Horizon') > -1;
+        });
+      }
+      return window.PROJECTS;
+    }
+
+    function renderMobileCards(filtered) {
+      cardsContainer.innerHTML = '';
+      if (filtered.length === 0) {
+        cardsContainer.innerHTML = '<div class="text-zinc-500 font-bold uppercase text-xs p-6">No projects found.</div>';
+        return;
+      }
+      filtered.forEach(function(p) {
+        var card = document.createElement('div');
+        card.className = 'flex-shrink-0 w-[280px] sm:w-[320px] snap-start border-2 border-white/20 rounded-xl overflow-hidden bg-zinc-900 flex flex-col transition-all duration-300';
+        card.innerHTML =
+          '<div class="w-full bg-zinc-950 border-b border-zinc-800 overflow-hidden relative" style="aspect-ratio: 384/688;">' +
+            '<img src="../' + p.image_url + '" alt="' + p.name + '" class="w-full h-full object-cover" loading="lazy">' +
+          '</div>' +
+          '<div class="p-4 flex flex-col flex-grow bg-black">' +
+            '<div class="flex justify-between items-center mb-1">' +
+              '<h3 class="font-display text-base uppercase tracking-tight text-white">' + p.name + '</h3>' +
+              '<span class="text-lime text-[14px] leading-none">' + p.flag + '</span>' +
+            '</div>' +
+            '<span class="text-lime-400 font-bold text-[10px] tracking-widest block mb-1">' + p.rating + '</span>' +
+            '<p class="text-zinc-400 text-xs italic mt-1 leading-relaxed">"' + p.comment + '"</p>' +
+            '<div class="flex justify-between items-center mt-auto pt-2 border-t border-zinc-800/60 text-[10px] text-lime-400">' +
+              '<span class="font-bold text-white truncate mr-2">' + p.tagline + '</span>' +
+              '<span class="font-bold text-white flex-shrink-0">' + p.metric + '</span>' +
+            '</div>' +
+          '</div>';
+        cardsContainer.appendChild(card);
+      });
+    }
+
+    var tries = 0;
+    function init() {
+      if (window.PROJECTS) {
+        renderMobileCards(window.PROJECTS);
+      } else if (tries < 50) {
+        tries++;
+        setTimeout(init, 100);
+      }
+    }
+    init();
+
+    filterButtons.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        filterButtons.forEach(function(b) {
+          b.className = 'bg-zinc-900 text-white px-5 py-2 font-bold uppercase text-xs border-2 border-white/10';
+        });
+        btn.className = 'bg-lime text-black px-5 py-2 font-bold uppercase text-xs border-2 border-black shadow-[3px_3px_0px_0px_#000]';
+
+        var cat = btn.textContent.toLowerCase().trim();
+        var filtered = filterProjects(cat);
+        renderMobileCards(filtered);
+      });
+    });
+  });
+</script>
+</section>
+<!-- Services Bento Box -->
+<section class="py-20 px-4 bg-black">
+<h2 class="font-display text-4xl uppercase mb-10 text-center">WHAT WE DO</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- AI Card -->
+<div class="glass-card p-8 rounded-2xl relative overflow-hidden group">
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-lime/20 rounded-full blur-[60px]"></div>
+<span class="material-symbols-outlined text-lime mb-4 text-4xl">auto_awesome</span>
+<h3 class="font-display text-2xl uppercase mb-3">AI &amp; AUTOMATIONS</h3>
+<p class="text-zinc-400 text-sm">Deploy custom LLM agents that handle support, lead gen, and internal workflows 24/7.</p>
+</div>
+<!-- Web Apps -->
+<div class="glass-card p-8 rounded-2xl border-white/5">
+<span class="material-symbols-outlined text-white mb-4 text-4xl">terminal</span>
+<h3 class="font-display text-2xl uppercase mb-3">FULL-STACK APPS</h3>
+<p class="text-zinc-400 text-sm">Industrial-grade React/Next.js architectures built for speed and conversion.</p>
+</div>
+<!-- UI/UX -->
+<div class="glass-card p-8 rounded-2xl md:col-span-2 border-white/5">
+<span class="material-symbols-outlined text-white mb-4 text-4xl">token</span>
+<h3 class="font-display text-2xl uppercase mb-3">UI/UX REDOS</h3>
+<p class="text-zinc-400 text-sm">We take your "ugly-but-functional" software and turn it into a high-end digital asset.</p>
+</div>
+</div>
+</section>
+<!-- Clear Pricing Brief -->
+<section class="py-20 px-4 bg-zinc-950">
+<div class="text-center mb-12">
+<h2 class="font-display text-3xl uppercase mb-2">NO AGENCY BLOAT.</h2>
+<p class="text-zinc-500 font-bold uppercase tracking-widest text-[10px]">Clear Pricing. Direct Results.</p>
+</div>
+<div class="flex flex-col gap-6">
+<!-- Tier 1 -->
+<div class="bg-black border-2 border-zinc-800 p-6 rounded-lg relative">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-display text-xl">THE STARTER</h4>
+<span class="text-xl font-bold font-display">$99</span>
+</div>
+<ul class="text-xs text-zinc-400 space-y-3 mb-6">
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime"></span> Single Landing Page</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime"></span> Basic Automation Set</li>
+<li class="flex items-center gap-2"><span class="w-1 h-1 bg-lime"></span> 7-Day Delivery</li>
+</ul>
+<button class="w-full py-3 border border-white/10 text-xs font-bold uppercase tracking-widest">Select Plan</button>
+</div>
+<!-- Tier 2 - POPULAR -->
+<div class="bg-black border-[3px] border-lime p-6 rounded-lg relative">
+<div class="absolute -top-3 right-6 bg-lime text-black text-[10px] font-bold px-3 py-1 uppercase tracking-tighter">POPULAR</div>
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-display text-xl">FULL BUILD</h4>
+<span class="text-xl font-bold font-display text-lime">$299+</span>
+</div>
+<ul class="text-xs text-zinc-300 space-y-3 mb-6">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-lime"></span> Custom SaaS / Web App</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-lime"></span> Advanced AI Integrations</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-lime"></span> Premium Branding Kit</li>
+</ul>
+<button class="w-full py-3 bg-lime text-black text-xs font-bold uppercase tracking-widest">Start Building</button>
+</div>
+</div>
+</section>
+<!-- Grand Finale -->
+<section class="py-24 px-4 bg-black border-t-2 border-white/5">
+<div class="text-center mb-12">
+<h2 class="font-display text-display-xl uppercase text-lime mb-4">READY TO UPGRADE?</h2>
+<p class="text-zinc-500 font-bold uppercase text-xs">BOOK A 15-MIN DISCOVERY PROTOCOL</p>
+</div>
+<div class="bg-zinc-900/50 rounded-2xl border border-white/10 p-2 overflow-hidden relative shadow-[0_0_50px_rgba(180,208,58,0.05)]">
+  <!-- Calendly inline widget begin -->
+  <div class="calendly-inline-widget" data-url="https://calendly.com/avinash-singh-270504/30min?background_color=000000&text_color=d0de86&primary_color=b2cd3c" style="min-width:320px;height:700px;"></div>
+  <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+  <!-- Calendly inline widget end -->
+</div>
+</section>
+</main>
+<!-- Global Sticky Bottom Nav -->
+<nav class="!fixed !bottom-0 !left-0 !right-0 !top-auto !z-[100] flex justify-around items-stretch h-16 bg-surface-container-lowest border-t-2 border-on-surface md:hidden">
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 w-1/4 hover:bg-primary-container hover:text-on-primary-container transition-colors" href="../index.html">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-bold text-[10px] uppercase">HOME</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-primary text-on-primary p-2 w-1/4 border-x-2 border-on-surface active:scale-95 transition-transform" href="work.html">
+<span class="material-symbols-outlined mb-1">grid_view</span>
+<span class="font-label-bold text-[10px] uppercase">WORKS</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 w-1/4 hover:bg-primary-container hover:text-on-primary-container transition-colors border-r-2 border-on-surface" href="pricing.html">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">payments</span>
+<span class="font-label-bold text-[10px] uppercase">PRICING</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant p-2 w-1/4 hover:bg-primary-container hover:text-on-primary-container transition-colors" href="contact.html">
+<span class="material-symbols-outlined mb-1">mail</span>
+<span class="font-label-bold text-[10px] uppercase">CONTACT</span>
+</a>
+</nav>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 🖥️ DESKTOP UI (Visible >= 768px)                                          -->
+  <!-- ========================================================================= -->
+  <div class="hidden md:block">
+    <div class="trail"></div>
+    <div class="floating one"></div>
+    <div class="floating two"></div>
+    <div class="stripe"></div>
 
   <!-- ── NAV ─────────────────────────────────────────────────── -->
-  <nav>
-    <div class="wrap">
-      <a href="../index.html" class="brand" style="text-decoration:none;">
-        <img class="dark-logo" src="../assets/favicon.svg" alt="CornerStone logo">
-        <span class="brand-name">CornerStone</span>
+  <nav class="w-full fixed top-0 z-50 bg-black/90 backdrop-blur-md border-b border-zinc-800 px-6 py-4 flex items-center justify-between">
+    <div class="flex-1 flex justify-start items-center">
+      <a href="../index.html" class="flex items-center gap-2 no-underline">
+        <img class="dark-logo w-8 h-8" src="../assets/favicon.svg" alt="CornerStone logo">
+        <span class="text-white font-['Space_Grotesk'] font-bold text-xl tracking-tight">CornerStone</span>
       </a>
-      <button class="mobile-hamburger" aria-label="Open menu" aria-expanded="false">
-        <svg width="22" height="16" viewBox="0 0 22 16" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="1.6">
+    </div>
+    <div class="hidden md:flex items-center justify-center gap-2">
+      <a href="work.html" class="px-4 py-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors no-underline">Portfolio</a>
+      <a href="services.html" class="px-4 py-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors no-underline">Services</a>
+      <a href="about.html" class="px-4 py-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors no-underline">About</a>
+      <a href="pricing.html" class="px-4 py-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors no-underline">Pricing</a>
+    </div>
+    <div class="flex-1 flex justify-end items-center gap-3">
+      <a href="contact.html" class="call-sign hidden md:inline-flex px-4 py-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors no-underline">Contact</a>
+      <button class="mode-toggle hidden md:flex p-2 text-white bg-zinc-900 border border-zinc-800 rounded-full hover:bg-zinc-800 transition-colors" type="button" aria-pressed="false" aria-label="Toggle color mode" title="Toggle color mode">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+        </svg>
+      </button>
+      <a href="pricing.html" class="hidden md:inline-flex px-5 py-2 text-[#06070f] font-bold bg-[#B4D03A] rounded-full hover:opacity-90 transition-opacity no-underline">Get a site →</a>
+      <button class="mobile-hamburger md:hidden text-white p-2" aria-label="Open menu" aria-expanded="false">
+        <svg class="w-6 h-6" width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="1.6">
           <path d="M0 2h22M0 8h22M0 14h22" stroke-linecap="round" />
         </svg>
       </button>
-      <div class="site-menu" style="margin-left:16px; display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
-        <a class="pill" href="services.html" style="margin-right:8px;">Services</a>
-        <a class="pill active" href="work.html" style="margin-right:8px; background:rgba(180,208,58,0.18); color:var(--primary);">Our Works</a>
-        <a class="pill" href="pricing.html" style="margin-right:8px;">Pricing</a>
-      </div>
-      <div class="actions" style="margin-left:auto; display:flex; gap:10px; align-items:center;">
-        <button class="call-sign" aria-haspopup="dialog" title="Contact">📞 Contact</button>
-        <button class="pill mode-toggle" type="button" aria-pressed="false" aria-label="Toggle color mode" title="Toggle color mode">
-          <svg class="icon icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>
-            <g stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
-              <path d="M12 2v2"/><path d="M12 20v2"/><path d="M4.93 4.93l1.41 1.41"/>
-              <path d="M17.66 17.66l1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/>
-              <path d="M4.93 19.07l1.41-1.41"/><path d="M17.66 6.34l1.41-1.41"/>
-            </g>
-          </svg>
-          <svg class="icon icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </button>
-      </div>
     </div>
   </nav>
 
@@ -163,9 +474,23 @@
     <div class="contact-popup" role="dialog" aria-modal="true" aria-labelledby="contact-popup-title">
       <button id="contact-popup-close" class="close-btn" aria-label="Close">✕</button>
       <h3 id="contact-popup-title">Contact CornerStone</h3>
-      <p><strong>Phone:</strong> <a href="tel:+916370704148">+91 6370704148</a></p>
       <p><strong>Email:</strong> <a href="mailto:contact@cornerstones.dev">contact@cornerstones.dev</a></p>
-      <p><a href="https://forms.gle/LvEvNb67DZYXDyLV6" target="_blank" rel="noopener">Contact us / Book via form</a></p>
+      <p><strong>Let's Talk:</strong> <a href="https://calendly.com/avinash-singh-270504/30min" target="_blank" rel="noopener">Schedule a discovery call</a></p>
+      <p><strong>Quick Chat:</strong></p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/aveeeenash/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://discord.gg/FY9CumCs" target="_blank" rel="noopener" class="social-link" aria-label="Discord">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1569 2.4189z"/></svg>
+          Discord
+        </a>
+        <a href="https://t.me/boi_o_boi" target="_blank" rel="noopener" class="social-link" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+          Telegram
+        </a>
+      </div>
     </div>
   </div>
 
@@ -287,6 +612,7 @@
       </div>
     </div>
   </footer>
+</div>
 
   <script src="../script.js"></script>
   <script>
@@ -456,3 +782,4 @@
   </script>
 </body>
 </html>
+
